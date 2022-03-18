@@ -35,10 +35,10 @@ Data Structure &amp; Algorithm in Python
 > * [3] It is used in many algorithms (divide and conquer, greedy and dynamic programming).
 
 > When to choose recursion?
-> * When we can easily breakdown a problem into similar subproblem.
-> * When we are fine with extra overhead (both time and space) that comes with it.
-> * When we need a quick working solution instead of efficient one.
-> * When traverse a tree
+> * [1] When we can easily breakdown a problem into similar subproblem.
+> * [2] When we are fine with extra overhead (both time and space) that comes with it.
+> * [3] When we need a quick working solution instead of efficient one.
+> * [4] When traverse a tree
 > * Design an algorithm to compute n th
 > * Write code to list the n ...
 > * Implement a method to compute all.
@@ -68,3 +68,34 @@ Data Structure &amp; Algorithm in Python
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159007306-8b25f583-609b-449b-8e1f-c53d109c774e.png">
 
 `We usually implement in the cases we know that a problem can be divided into similar sub problems.`
+
+### [2-4] `How to write recursion in 3 steps?`
+
+```bash
+Step 1: Recursive case - the flow
+
+e.g) n! = n * (n-1)!
+=> return n * factorial(n-1)
+
+and use it for a method calls part
+```
+
+```bash
+Step 2: Base case - the stopping criterion
+#1! = 1
+```
+
+```bash
+Step 3: Unintentional case - the constraint
+```
+
+```python
+def factorial(n):
+    assert n >=0 and int(n) == n, 'The number must be postitive integer only!'
+    if n == 1:
+        return 1
+    else:
+        return n* factorial(n-1)
+
+print(factorial(1.5))
+```
