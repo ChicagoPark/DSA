@@ -116,3 +116,27 @@ O(logN): When we look some value in sorted array, we can select one value and co
 * Space complexity: O(1)
 
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159119581-61aed1ae-2916-4fed-ae6c-3dd10d4bd945.png">
+
+
+### [3-3] Measure the Big O
+
+* Basic Measurement
+
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159121173-98d8b2d4-16e4-4bcc-b9f2-1c9aa11c2c36.png">
+
+* Measure the single resursive code
+
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159121730-b131e64e-1680-45e5-add0-08598e7516a8.png">
+
+
+* Measure the multiple resursive code
+
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159121731-ea47551b-e819-4d80-9b21-176736b51ab8.png">
+
+
+<!--
+[3-2-1] Add VS Multiply
+
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159120259-06f6bc06-2a11-4c1c-8d47-233e439a6dc3.png">
+
+-->
