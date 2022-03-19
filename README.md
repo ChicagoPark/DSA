@@ -95,3 +95,6 @@ def factorial(n):
     else:
         return n* factorial(n-1)
 ```
+
+## [3] Big O
+> Big O is the language and metric we use to describe the efficiency of algorithms.
