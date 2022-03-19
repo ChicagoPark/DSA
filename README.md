@@ -108,6 +108,7 @@ def factorial(n):
 O(logN): When we look some value in sorted array, we can select one value and compare with target number, and we can reduce the considering area by two.
 
 ### [3-2] Space Complexity
+> Space Complexity is necessary `extra` area.
 
 * Space complexity: O(n)
 
@@ -133,6 +134,21 @@ O(logN): When we look some value in sorted array, we can select one value and co
 
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159121731-ea47551b-e819-4d80-9b21-176736b51ab8.png">
 
+## [4] Arrays
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159123723-5dc342e8-1c0d-4e4e-ab09-ec7d2c627f8d.png">
+
+> * In computer science, an array is a data structure consisting of a `collection of elements which have same type`, each identified by at least one array index or key. An array is stored such that the position of each element can be computed from its index by a mathematical formula.
+
+> * When do we need an Array?
+>   * When we know the number of variables that we need and need to assign them efficiently.
+
+### [4-1] Array in Python
+
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159124283-c99bacf5-84c0-49b2-b386-e227f4fbbe64.png">
+
+### [4-#] Question about Array
+* When we need bigger array, what we need to do?
+    * Make a bigger array and then copy from the smaller array to the bigger one.
 
 <!--
 [3-2-1] Add VS Multiply
