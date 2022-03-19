@@ -71,23 +71,21 @@ Data Structure &amp; Algorithm in Python
 
 ### [2-4] `How to write recursion in 3 steps?`
 
+#### Step 1: Recursive case - the flow
 ```bash
-Step 1: Recursive case - the flow
-
 e.g) n! = n * (n-1)!
 => return n * factorial(n-1)
 
 and use it for a method calls part
 ```
 
+#### Step 2: Base case - the stopping criterion
 ```bash
-Step 2: Base case - the stopping criterion
 #1! = 1
 ```
 
-```bash
-Step 3: Unintentional case - the constraint
-```
+#### Step 3: Unintentional case - the constraint
+
 
 ```python
 def factorial(n):
