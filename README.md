@@ -98,3 +98,21 @@ def factorial(n):
 
 ## [3] Big O
 > Big O is the language and metric we use to describe the efficiency of algorithms.
+
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159118600-aae6d54c-c041-47b1-b74d-7ac5e41371a6.png">
+
+### [3-1] Algorithm run time complexities
+
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159118671-933b8eb1-3fd7-47d2-8059-ccec38eb4452.png">
+
+O(logN): When we look some value in sorted array, we can select one value and compare with target number, and we can reduce the considering area by two.
+
+### [3-2] Space Complexity
+
+* Space complexity: O(n)
+
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159119580-0b113d38-6001-420d-9b39-90e5afce7ba2.png">
+
+* Space complexity: O(1)
+
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159119581-61aed1ae-2916-4fed-ae6c-3dd10d4bd945.png">
