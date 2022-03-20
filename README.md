@@ -140,7 +140,7 @@ O(logN): When we look some value in sorted array, we can select one value and co
 > * In computer science, an array is a data structure consisting of a `collection of elements which have same type`, each identified by at least one array index or key. An array is stored such that the position of each element can be computed from its index by a mathematical formula.
 
 > * When do we need an Array?
->   * When we know the number of variables that we need and need to assign them efficiently.
+>   * When we know the number of variables that we need to assign them efficiently.
 
 ### [4-1] Array in Python
 
