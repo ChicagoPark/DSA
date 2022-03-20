@@ -54,7 +54,7 @@ Data Structure &amp; Algorithm in Python
 > 1. Performing the same operation multiple times with different inputs
 > 2. In every step we try smaller inputs to make the problem smaller.
 > 3. `Base condition` is needed to stop the recursion, otherwise infinite loop will occur.
-> 4. All the recursive algorithms can be implemented through 'iterative solutions'.
+> 4. All the recursive algorithms can be implemented through `iterative solutions`
 
 ### [2-2] How Recursion works?
 
