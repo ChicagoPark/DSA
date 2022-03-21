@@ -155,6 +155,17 @@ O(logN): When we look some value in sorted array, we can select one value and co
 * When we need bigger array, what we need to do?
     * Make a bigger array and then copy from the smaller array to the bigger one.
 
+## [5] Lists
+> A mutable, or changeable, ordered sequence of element
+
+`Array VS List`
+> * Array
+> 
+>       Stronger in the arithmetic operations (e.g. Numpy)
+> * List
+> 
+>       List is flexible in 'data types'
+
 <!--
 [3-2-1] Add VS Multiply
 
