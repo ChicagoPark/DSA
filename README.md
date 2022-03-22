@@ -166,9 +166,6 @@ O(logN): When we look some value in sorted array, we can select one value and co
 > 
 >       List is flexible in 'data types'
 
-
-
-
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
 2. 최종결과에 flow 이외에 추가적으로 더해져야할 연산이 있는지.=> else 의 return 문에서 + 연산자를 추가할지말지 결정하게 된다.
