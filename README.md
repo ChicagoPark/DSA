@@ -166,6 +166,23 @@ O(logN): When we look some value in sorted array, we can select one value and co
 > 
 >       List is flexible in 'data types'
 
+
+## [6] Dictionary
+> A dictionary is a collection which is unordered, changeable, and indexed.
+
+### [6-1] Useful methods in dictionary
+* pop(key, default_value) and popitem()
+   * pop the 'Key', but if there is no key in the dictionary, it would return 'Default_value'
+   * popitem(): pop the last element
+
+* keys() and values()
+   * return the list of keys and values
+
+* .update(Another_Dictionary)
+   * concatenate two dictionaries
+   
+> When we use the 'pop' function in dictionary, we can decide among 'popitem()' and 'pop' according to our purpose.
+
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
 2. 최종결과에 flow 이외에 추가적으로 더해져야할 연산이 있는지.=> else 의 return 문에서 + 연산자를 추가할지말지 결정하게 된다.
