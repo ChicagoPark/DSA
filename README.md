@@ -230,8 +230,17 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > Application: Inside of the Finder on Mac
 
+### [8-2] Linked List in Memory
 
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230470-76f05ede-ab30-4715-836a-7fd2943a67e3.png">
 
+### [8-3] Creation of Singly Linked List
+
+* [1] Create Head and Tail nodes, initalized with NULL
+
+* [2] Create a blank Node and assign a value to it and reference to NULL
+
+* [3] Link Head and Tail with these Node
 
 
 
