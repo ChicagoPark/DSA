@@ -205,6 +205,12 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 * the last node with NULL reference is important to figure out the end of the linked list
 
+### [8-1] Difference between Linked Lists vs Arrays
+* Elements of linked list are `independent objects`.
+* Variable size - the size of a linked list is `not predefined`/
+* `Insertation and removals` in linked list are `very efficient`.
+* Random access - accessing an element is very efficient in arrays. `However, linked list cannot access specific value directly.` Should start from the head sequentially.
+
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
 2. 최종결과에 flow 이외에 추가적으로 더해져야할 연산이 있는지.=> else 의 return 문에서 + 연산자를 추가할지말지 결정하게 된다.
