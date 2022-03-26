@@ -234,34 +234,36 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230470-76f05ede-ab30-4715-836a-7fd2943a67e3.png">
 
-### [8-3] Creation of Singly Linked List
+### [8-3] `Important Intuition in Linked List`
 
-* [1] Create Head and Tail nodes, initalized with NULL
+##### 1. self.head and self.tail get the `node` of first and last node
+##### 2. process the `inputing node first` and next one is the `existing list` then `the head and tail`.
+##### 3. In the link list, `head is important criteria` to determine `whether link list is existing` or `where is the beginning` to loop inside.
+##### 4. we need have an `index variable` when we loop inside.
 
-* [2] Create a blank Node and assign a value to it and reference to NULL
+
+### [8-4] Creation of Singly Linked List
+
+* [1] Create Head and Tail nodes, initalized with None
+
+* [2] Create a blank Node Class and assign a value to it and reference to NULL
 
 * [3] Link Head and Tail with these Node
 
-
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230952-b37175f5-1afc-4f87-8de1-15edda567ddd.png">
 
+### [8-5] Delete the node in Singly Linked List
 
-[Important Intuition]
-1. self.head and self.tail get the node by itself
-2. process the inputing node first then the list then the head and tail
-3. In the `Link list`, head is important criteria to determine link list is existing or where is the beginning to loop inside.
-4. we need index variable when we loop inside
+`focus on previous node's reference variable of the deleting node`
 
-[Delete]
-focus on previous node's reference variable of the deleting node
+##### [Three cases]
+> 1. delete the first node (there is two cases (1. there is just one node in the list(self.head == self.tail)|| (2. normal linked list))
+> 
+> 2. delete the last node
+> 
+> 3. delete the middle node
 
-Three cases
-1. delete the first node (there is two more cases (1. self.head == self.tail)|| (2. else))
-2. delete the last node
-3. delete the middle node
-
-[Delete entire Singly Linked list]
-set the Head and Tail as a NULL
+> 4. `Delete entire Singly Linked list`: set the Head and Tail as a None
 
 ### [8-5] Time complexity: Array vs Linked List
 
