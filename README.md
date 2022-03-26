@@ -155,7 +155,12 @@ O(logN): When we look some value in sorted array, we can select one value and co
 * When we need bigger array, what we need to do?
     * Make a bigger array and then copy from the smaller array to the bigger one.
 
-## [5] Lists
+## [5] Tuple
+> A tuple is an `immutable sequence` of Python objects
+> 
+> Tuples are also comparable and hashable
+
+## [6] Lists
 > A mutable, or changeable, ordered sequence of element
 
 `Array VS List`
@@ -174,10 +179,10 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 # + operation: possible to be operated between list to concatenate
 ```
 
-## [6] Dictionary
+## [7] Dictionary
 > A dictionary is a collection which is unordered, changeable, and indexed.
 
-### [6-1] Useful methods in dictionary
+### [7-1] Useful methods in dictionary
 * pop(key, default_value) and popitem()
    * pop the 'Key', but if there is no key in the dictionary, it would return 'Default_value'
    * popitem(): pop the last element
@@ -190,14 +195,15 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
    
 > When we use the 'pop' function in dictionary, we can decide among 'popitem()' and 'pop' according to our purpose.
 
-## [7] Tuple
-> A tuple is an `immutable sequence` of Python objects
-> 
-> Tuples are also comparable and hashable
 
 
+## [8] Linked List
+> A form of a sequential collection and it does not have to be in order. A linked list is make up of independent nodes that may contain any type of data
+> and each node has a reference to the next node in the link
 
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160218756-76a460aa-2402-4c1c-86b4-fd94615cb3d8.png">
 
+* the last node with NULL reference is important to figure out the end of the linked list
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
