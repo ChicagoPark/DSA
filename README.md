@@ -242,9 +242,11 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 * [3] Link Head and Tail with these Node
 
+![chrome-capture-2022-2-26 (7)](https://user-images.githubusercontent.com/73331241/160230952-b37175f5-1afc-4f87-8de1-15edda567ddd.png)
 
-
-
+[Important Intuition]
+1. self.head and self.tail get the node by it self
+2. process the inputing node first then the list then the head and tail
 
 
 
