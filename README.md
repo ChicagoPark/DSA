@@ -205,6 +205,41 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 * the last node with NULL reference is important to figure out the end of the linked list
 
+### [8-1] Types of Linked Lists
+
+> `Singly Linked List`: Connect through the next reference
+> 
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230009-97e44c4b-ccf6-4ae7-98d6-71037f910f31.png">
+
+
+> `Circular Singly Linked List`: the reference of last node is not the NULL, but it has the address of starting node.
+> 
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230010-772a8ca1-52dc-416d-996b-fefdc43db1a5.png">
+> 
+> Application of this list: we can use it in the game rotation.
+
+> `Doubly Linked List`: Each node has two references
+> 
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230104-aad374b4-f943-44e0-8613-3d7411e95c0c.png">
+> 
+> Application of this list: Music Application(previous song and next song)
+
+> `Circular Doubly Linked List`: the reference of last node is not the NULL, but it has the address of starting node.
+> 
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230167-2f8db1b3-29a4-4e76-83c7-30d44d51a7fb.png">
+> 
+> Application: Inside of the Finder on Mac
+
+
+
+
+
+
+
+
+
+
+
 ### [8-1] Difference between Linked Lists vs Arrays
 * Elements of linked list are `independent objects`.
 * Variable size - the size of a linked list is `not predefined`.
