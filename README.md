@@ -166,6 +166,13 @@ O(logN): When we look some value in sorted array, we can select one value and co
 > 
 >       List is flexible in 'data types'
 
+```python
+# * operation
+print(list)   # [1,2,3]
+print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
+
+# + operation: possible to be operated between list to concatenate
+```
 
 ## [6] Dictionary
 > A dictionary is a collection which is unordered, changeable, and indexed.
@@ -182,6 +189,15 @@ O(logN): When we look some value in sorted array, we can select one value and co
    * concatenate two dictionaries
    
 > When we use the 'pop' function in dictionary, we can decide among 'popitem()' and 'pop' according to our purpose.
+
+## [7] Tuple
+> A tuple is an `immutable sequence` of Python objects
+> 
+> Tuples are also comparable and hashable
+
+
+
+
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
