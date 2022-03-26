@@ -242,12 +242,34 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 * [3] Link Head and Tail with these Node
 
-![chrome-capture-2022-2-26 (7)](https://user-images.githubusercontent.com/73331241/160230952-b37175f5-1afc-4f87-8de1-15edda567ddd.png)
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230952-b37175f5-1afc-4f87-8de1-15edda567ddd.png">
+
 
 [Important Intuition]
-1. self.head and self.tail get the node by it self
+1. self.head and self.tail get the node by itself
 2. process the inputing node first then the list then the head and tail
+3. In the `Link list`, head is important criteria to determine link list is existing or where is the beginning to loop inside.
+4. we need index variable when we loop inside
 
+[Delete]
+focus on previous node's reference variable of the deleting node
+
+Three cases
+1. delete the first node (there is two more cases (1. self.head == self.tail)|| (2. else))
+2. delete the last node
+3. delete the middle node
+
+[Delete entire Singly Linked list]
+set the Head and Tail as a NULL
+
+### [8-5] Time complexity: Array vs Linked List
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160237823-0190bbac-c47c-497c-9e4b-c64c12da889d.png">
+
+> Delete at last position: O(n): Singly linked list / O(1): Doubly linked list
+
+> Delete of array/linked list: O(n): Doubly linked list / O(1): Singly linked list
 
 
 
