@@ -239,6 +239,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ##### 2. process the `inputing node first` and next one is the `existing list` then `the head and tail`.
 ##### 3. In the link list, `head is important criteria` to determine `whether link list is existing` or `where is the beginning` to loop inside.
 ##### 4. we need to have an `index variable` when we loop inside.
+##### 5. when we `insert or delete some node from the singly linked list, we need to check `whether self.head == self.tail` after checking self.head != None
 
 
 ### [8-4] Creation of Singly Linked List
