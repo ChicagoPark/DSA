@@ -30,8 +30,8 @@ Data Structure &amp; Algorithm in Python
 > Recursion: A way of solving a problem by having a function calling itself.
 
 > Why Recursion?
-> * [1] It helps break down big problems into smaller ones and easier to use.
-> * [2] The prominent usage of recursion in data structures like trees and graphs.
+> * [1] It helps `break down big problems` into smaller ones and easier to use.
+> * [2] The prominent usage of recursion in data structures like `trees and graphs`.
 > * [3] It is used in many algorithms (divide and conquer, greedy and dynamic programming).
 
 > When to choose recursion?
@@ -39,15 +39,12 @@ Data Structure &amp; Algorithm in Python
 > * [2] When we are fine with extra overhead (both time and space) that comes with it.
 > * [3] When we need a quick working solution instead of efficient one.
 > * [4] When traverse a tree
-> * Design an algorithm to compute n th
-> * Write code to list the n ...
-> * Implement a method to compute all.
-> * Practice
+
 
 > When to avoid recursion?
-> * If time and space complexity matters for us.
-> * Recursion uses more memory. If we use embedded memory.
-> * Recursion can be slow.
+> * If time and space complexity matter for us.
+> Recursion uses more memory. If we use embedded memory.
+> Recursion can be slow.
 
 ### [2-1] Property of Recursion
 
