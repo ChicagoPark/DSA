@@ -81,6 +81,8 @@ and use it for a method calls part
 #1! = 1
 ```
 
+            When we analyze list recursively, len(LIST) should be the first stopping criterion
+
 #### Step 3: Unintentional case - the constraint
 
 
