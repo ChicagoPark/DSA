@@ -236,7 +236,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ##### 1. self.head and self.tail get the `node` of first and last node
 ##### 2. process the `inputing node first` and next one is the `existing list` then `the head and tail`.
 ##### 3. In the link list, `head is important criteria` to determine `whether link list is existing` or `where is the beginning` to loop inside.
-##### 4. we need have an `index variable` when we loop inside.
+##### 4. we need to have an `index variable` when we loop inside.
 
 
 ### [8-4] Creation of Singly Linked List
