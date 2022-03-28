@@ -233,16 +233,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230470-76f05ede-ab30-4715-836a-7fd2943a67e3.png">
 
-### [8-3] `Important Intuition in Linked List`
-
-##### 1. self.head and self.tail get the `node` of first and last node
-##### 2. process the `inputing node first` and next one is the `existing list` then `the head and tail`.
-##### 3. In the link list, `head is important criteria` to determine `whether link list is existing` or `where is the beginning` to loop inside.
-##### 4. we need to have an `index variable` when we loop inside.
-##### 5. when we `insert or delete some node from the singly linked list, we need to check `whether self.head == self.tail` after checking self.head != None
-
-
-### [8-4] Creation of Singly Linked List
+### [8-3] Creation of Singly Linked List
 
 * [1] Create Head and Tail nodes, initalized with None
 
@@ -252,7 +243,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230952-b37175f5-1afc-4f87-8de1-15edda567ddd.png">
 
-### [8-5] Delete the node in Singly Linked List
+### [8-4] Delete the node in Singly Linked List
 
 `focus on previous node's reference variable of the deleting node`
 
@@ -264,6 +255,42 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 3. delete the middle node
 
 > `Delete entire Singly Linked list`: set the Head and Tail as a None
+
+
+### [8-5] `Important Intuition in Linked List`
+> `We need to perceive deeply what is the `instance variable(self.head etc) in a linked list class` which is strong criteria in all algorithms.`
+> 
+> Insertion: Process the subsidiar trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
+
+#### (1) Singly Linked List
+
+##### 1. self.head and self.tail get the `node` of first and last node
+##### 2. process the `inputing node first` and next one is the `existing list` then `the head and tail`.
+##### 3. In the link list, `head is important criteria` to determine `whether link list is existing` or `where is the beginning` to loop inside.
+##### 4. we need to have an `index variable` when we loop inside.
+##### 5. when we `insert or delete some node from the singly linked list, we need to check `whether self.head == self.tail` after checking self.head != None
+
+#### (2) Circular Singly Linked List
+
+##### 1. how we know that is end of the list?: if node.next == self.head
+
+##### 2. CSLL has the same three cases in insertion operation
+
+            1. Insert at the beginning of linked list
+                        * First: INSERTING_NODE.next = self.head
+                        * Second: self.head = INSERTING_NODE
+                        * Third: self.last_node.node = self.head
+                        
+            2. Insert at the last location of linked list
+                        * First: INSERTING_NODE.next = self.tail.next
+                        * Second: self.tail.next = INSERTING_NODE
+                        * Third: self.tail = INSERTING_NODE
+            
+            3. Insert at the specified location of linked list
+                        * Same as Singly Linked List
+
+
+##### 4. CSLL has the same three cases in deletion operation: focus on just previous node
 
 ### [8-5] Time complexity: Array vs Linked List
 
