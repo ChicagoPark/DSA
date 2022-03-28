@@ -263,7 +263,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > 3. delete the middle node
 
-> 4. `Delete entire Singly Linked list`: set the Head and Tail as a None
+> `Delete entire Singly Linked list`: set the Head and Tail as a None
 
 ### [8-5] Time complexity: Array vs Linked List
 
