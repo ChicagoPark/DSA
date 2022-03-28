@@ -291,6 +291,11 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 
 ##### 4. CSLL has the same three cases in deletion operation: focus on just previous node
+> In CSLL, when we delete the entire list, we need to set self.tail.next as None because of CSLL structure.
+
+                        self.head = None
+                        self.tail.next = None
+                        self.tail = None
 
 ### [8-5] Time complexity: Array vs Linked List
 
