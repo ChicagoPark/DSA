@@ -263,6 +263,8 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > `We need to perceive deeply what is the `instance variable(self.head etc) in a linked list class` which is strong criteria in all algorithms.`
 > 
 > Insertion: Process the subsidiar trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
+> 
+> Deletion: We need to control surrounding nodes of target node. We don't need to access the reference variable of target node at all.
 
 #### (1) Singly Linked List
 
