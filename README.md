@@ -202,7 +202,9 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160218756-76a460aa-2402-4c1c-86b4-fd94615cb3d8.png">
 
-* the last node with NULL reference is important to figure out the end of the linked list
+* Singly: the last node with NULL reference is important to figure out the end of the linked list
+* a
+* Circular: the last node with HEAD reference is important to figure out the end of the linked list
 
 ### [8-1] Types of Linked Lists
 
