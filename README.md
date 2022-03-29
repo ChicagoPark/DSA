@@ -306,9 +306,8 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 ##### 1. Node class has `self.next` and `self.prev`
 ##### 2. connect ADDED_NODE.next, NEXT_NODE.prev 으로 먼저 연결, PREV_NODE.next = ADDED_NODE, NEXT_NODE.prev = ADDED_NODE
-##### 3. W
-##### 4. we need to have an `index variable` when we loop inside.
-##### 5. when we `insert or delete some node from the singly linked list, we need to check `whether self.head == self.tail` after checking self.head != None
+##### 3. `When we delete entire list, we need to make nodes do not be referenced by anything.` That's why we need to loop inside and make ALL_NODE.prev = None (From the node which is not referenced by other nodes, linked list is started to be eliminated.)
+
 
 
 ### [8-5] Time complexity: Array vs Linked List
