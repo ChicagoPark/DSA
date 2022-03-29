@@ -299,6 +299,16 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
                         self.tail.next = None
                         self.tail = None
 
+
+#### (3) Doubly Linked Lists
+
+##### 1. Node class has `self.next` and `self.prev`
+##### 2. connect ADDED_NODE.next, NEXT_NODE.prev 으로 먼저 연결, PREV_NODE.next = ADDED_NODE, NEXT_NODE.prev = ADDED_NODE
+##### 3. W
+##### 4. we need to have an `index variable` when we loop inside.
+##### 5. when we `insert or delete some node from the singly linked list, we need to check `whether self.head == self.tail` after checking self.head != None
+
+
 ### [8-5] Time complexity: Array vs Linked List
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160237823-0190bbac-c47c-497c-9e4b-c64c12da889d.png">
