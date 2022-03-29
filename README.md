@@ -203,7 +203,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160218756-76a460aa-2402-4c1c-86b4-fd94615cb3d8.png">
 
 * Singly: the last node with NULL reference is important to figure out the end of the linked list
-* a
+ 
 * Circular: the last node with HEAD reference is important to figure out the end of the linked list
 
 ### [8-1] Types of Linked Lists
@@ -262,7 +262,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ### [8-5] `Important Intuition in Linked List`
 > `We need to perceive deeply what is the `instance variable(self.head etc) in a linked list class` which is strong criteria in all algorithms.`
 > 
-> Insertion: Process the subsidiar trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
+> Insertion: Process the subsidiary trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
 > 
 > Deletion: We need to control surrounding nodes of target node. We don't need to access the reference variable of target node at all.
 
