@@ -264,7 +264,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > Insertion: Process the subsidiary trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
 > 
-> Deletion: We need to control surrounding nodes of target node. We don't need to access the reference variable of target node at all.
+> Deletion: We need to control surrounding nodes of target node. We need to `remove all` the `incoming direction connection` to the target node.
 > 
 > The `tip parts of Circular Linked List` are `not NULL`.
 
