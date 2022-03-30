@@ -265,6 +265,8 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > Insertion: Process the subsidiary trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
 > 
 > Deletion: We need to control surrounding nodes of target node. We don't need to access the reference variable of target node at all.
+> 
+> The `tip parts of Circular Linked List` are `not NULL`.
 
 #### (1) Singly Linked List
 
@@ -305,7 +307,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 #### (3) Doubly Linked Lists
 
 ##### 1. Node class has `self.next` and `self.prev`
-##### 2. connect ADDED_NODE.next, NEXT_NODE.prev 으로 먼저 연결, PREV_NODE.next = ADDED_NODE, NEXT_NODE.prev = ADDED_NODE
+########### 2. (Organize it again)connect the node through ADDED_NODE.next, NEXT_NODE.prev, PREV_NODE.next = ADDED_NODE, NEXT_NODE.prev = ADDED_NODE
 ##### 3. `When we delete entire list, we need to make nodes do not be referenced by anything.` That's why we need to loop inside and make ALL_NODE.prev = None (From the node which is not referenced by other nodes, linked list is started to be eliminated.)
 
 
