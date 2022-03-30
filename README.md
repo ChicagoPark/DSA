@@ -331,6 +331,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
 2. 최종결과에 flow 이외에 추가적으로 더해져야할 연산이 있는지.=> else 의 return 문에서 + 연산자를 추가할지말지 결정하게 된다.
+3. When we cover list extension task, we can put `return` at the last `outside of the conditional statement`.
 
 ## [##] Chicago Realization
 1. local variable can be used from the belonged function whether we initialize the value from the conditional argument.
