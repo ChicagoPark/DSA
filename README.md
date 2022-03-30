@@ -320,13 +320,30 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 > Delete of array/linked list: O(n): Doubly linked list / O(1): Singly linked list
 
-
-
-### [8-1] Difference between Linked Lists vs Arrays
+### [8-6] Difference between Linked Lists vs Arrays
 * Elements of linked list are `independent objects`.
 * Variable size - the size of a linked list is `not predefined`.
 * `Insertation and removals` in linked list are `very efficient`.
 * Random access - accessing an element is very efficient in arrays. `However, linked list cannot directly access to specific value.` Should start from the head sequentially.
+
+
+## [9] Stack
+> Stores items in a Last-in/First-Out manner
+> 
+> Application of Stack:Web-browsing order(back and next)
+> 
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160870120-59517d30-9f4f-495a-aa71-2ef94a224319.png">
+
+### [9-1] Stack Operations
+> push()
+> pop()
+> peek(): Check the TOP element without remove that element
+> isEmpty(): Check the list is empty or not
+> delete(): Delete entire stack
+
+### [9-2] Stack Creation
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160872083-62c3f8c9-7d88-4577-9395-63930b6e3b79.png">
+
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
