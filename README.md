@@ -344,10 +344,31 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ### [9-2] Stack Creation
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160872083-62c3f8c9-7d88-4577-9395-63930b6e3b79.png">
 
+### [9-3] Sorts of Stack
+> Stack without size limit: just Python list
+>
+> Stack with size limit: use Python list with self.maxSize argument in the class
+> 
+> Stack using linked list: self.head direct the LAST_NODE
+> 
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160958083-66a4c365-077a-4188-b986-c81d2b00ed34.png">
+> 
+> ```python
+> # [1] isEmpty() Method
+> if self.head is None:
+>           return True
+> ```
+
+### [9-4] When to use / avoid Stack
+##### [Use]
+                        LastIn/FirstOut functionality
+                        The chance of data corruption is minimum(we cannot insert the value at the middle position)
+##### [Avoid]         
+                        Random access is not possible
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
-2. 최종결과에 flow 이외에 추가적으로 더해져야할 연산이 있는지.=> else 의 return 문에서 + 연산자를 추가할지말지 결정하게 된다.
+2. According to the `necessity of additional operaiton` in the final result, we need to `determine whether add '+' operation` at the return statement in else condition. 
 3. When we cover list extension task, we can put `return` at the last `outside of the conditional statement` because all the elements should be collected.
 
 ## [##] Chicago Realization
