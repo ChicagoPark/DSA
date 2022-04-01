@@ -336,9 +336,13 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 ### [9-1] Stack Operations
 > push()
+> 
 > pop()
+> 
 > peek(): Check the TOP element without remove that element
+> 
 > isEmpty(): Check the list is empty or not
+> 
 > delete(): Delete entire stack
 
 ### [9-2] Stack Creation
@@ -375,16 +379,21 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 ### [9-1] Queue Operations
 > enqueue(): Put the value in a queue
+> 
 > dequeue(): remove the FIRST value in a queue
+> 
 > peek(): Check the FIRST element without remove that element
+> 
 > isEmpty(): Check the list is empty or not
+> 
 > isFull()
+> 
 > deleteQueue()
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
 2. According to the `necessity of additional operaiton` in the final result, we need to `determine whether add '+' operation` at the return statement in else condition. 
-3. When we cover list extension task, we can put `return` at the last `outside of the conditional statement` because all the elements should be collected.
+3. When we cover `list` extension task, we can put `return` at the last `outside of the conditional statement` because all the elements should be collected.
 
 ## [##] Chicago Realization
 1. local variable can be used from the belonged function whether we initialize the value from the conditional argument.
