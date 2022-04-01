@@ -361,10 +361,10 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 ### [9-4] When to use / avoid Stack
 ##### [Use]
-                        LastIn/FirstOut functionality
-                        The chance of data corruption is minimum(we cannot insert the value at the middle position)
+            LastIn/FirstOut functionality
+            The chance of data corruption is minimum(we cannot insert the value at the middle position)
 ##### [Avoid]         
-                        Random access is not possible
+            Random access is not possible
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
