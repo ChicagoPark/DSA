@@ -365,6 +365,21 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
             The chance of data corruption is minimum(we cannot insert the value at the middle position)
 ##### [Avoid]         
             Random access is not possible
+            
+            
+
+## [10] Queue
+> stores items in a `First-In/First-Out` manner.
+> 
+> Application of Queue: Call center phone systems
+
+### [9-1] Queue Operations
+> enqueue(): Put the value in a queue
+> dequeue(): remove the FIRST value in a queue
+> peek(): Check the FIRST element without remove that element
+> isEmpty(): Check the list is empty or not
+> isFull()
+> deleteQueue()
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
