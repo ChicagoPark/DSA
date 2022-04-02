@@ -398,6 +398,52 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ## [##] Chicago Realization
 1. local variable can be used from the belonged function whether we initialize the value from the conditional argument.
 
+## [Coding Method] Python Map Lambda
+### [1] lambda: a way of creating a little function inline, without all the syntax of a def
+
+> lambda is perfect where you have a `short computation` to write inline
+
+#### [`Soul Mate-1`] map: map() function runs a lambda function over the list [1, 2, 3, 4, 5], building a list-like collection of the results
+
+> To work with map(), `the lambda` should have `one parameter in`, representing `one element from the source list`.
+>
+> Choose a `suitable name` for the parameter, like n for a list of numbers, s for a list of strings.
+> 
+> Map is often used with lambda, but it works with a def too.
+
+```python
+num = [1,2,3,4,5]
+list(map(lambda n: 2*n, nums))
+# [2, 4, 6, 8, 10]
+
+list(map(lambda n:2**n, numbs))
+# [2, 4, 8, 16, 32]
+
+strs = ['Summer', 'is', 'coming']
+list(map(lambda s:s.upper()+'!'), strs)
+# ['SUMMER!', 'IS!', 'COMING!']
+
+# Map with def
+def double(n):
+    return n**2
+list(map(double, nums))
+# [2, 4, 6, 8, 10]
+```
+
+#### [`Soul Mate-2`] filter: takes a function and a list, and returns a subsetted list of the elements where the function returns true.
+
+```python
+strs = ['apple', 'and', 'a', 'donut']
+
+list(filter(lambda s: len(s)>3, strs))
+# ['apple', 'donut']
+
+nums = [5, 3, 6, 1, 7, 2]
+list(filter(lambda n:n%2==1, nums))
+# [5, 3, 1, 7]
+```
+
+
 <!--
 [3-2-1] Add VS Multiply
 
