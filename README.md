@@ -390,6 +390,21 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > deleteQueue()
 
+### [9-1] Queue with fixed capacity (Circular Queue)
+* Special property
+            * `self.start, self.top`
+            * `limited size`
+            * Value is filled in list
+> enqueue: put the value and change the top index
+> 
+> dequeue: pop the first value and change the start index
+> 
+> peek: print the value at the start index
+> 
+> isFull: 
+> 
+> isEmpty: 
+
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
 2. According to the `necessity of additional operaiton` in the final result, we need to `determine whether add '+' operation` at the return statement in else condition. 
