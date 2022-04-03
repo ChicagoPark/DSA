@@ -377,7 +377,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > Application of Queue: Call center phone systems
 
-### [9-1] Queue Operations
+### [10-1] Queue Operations
 > enqueue(): Put the value in a queue
 > 
 > dequeue(): remove the FIRST value in a queue
@@ -386,15 +386,28 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > isEmpty(): Check the list is empty or not
 > 
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/161405624-3d3b0236-30fc-4397-8f37-204e70dbb2f3.png">
+> 
 > isFull()
 > 
 > deleteQueue()
 
+### [10-2] Sorts of Queue
+> Queue without capacity limit: just Python list
+>
+> Queue with capacity limit: use Python list with self.maxSize argument in the class
+> 
+> Queue using linked list: self.head direct the LAST_NODE
+> 
+
 ### [9-1] Queue with fixed capacity (Circular Queue)
 * Special property
-            * `self.start, self.top`
-            * `limited size`
-            * Value is filled in list
+
+    * `self.start, self.top`
+    * 
+    * `limited size`
+    * 
+    * Value is filled in list
 > enqueue: put the value and change the top index
 > 
 > dequeue: pop the first value and change the start index
