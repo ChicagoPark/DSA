@@ -346,7 +346,16 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > delete(): Delete entire stack
 
 ### [9-2] Stack Creation
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160872083-62c3f8c9-7d88-4577-9395-63930b6e3b79.png">
+
+* Stack using List
+	
+	* Easy to implement
+	* Speed problem when it grows
+
+* Stack using Linked List
+
+	* Fast performance
+	* Implementation is not easy
 
 ### [9-3] Sorts of Stack
 > Stack without size limit: just Python list
