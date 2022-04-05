@@ -267,6 +267,10 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > Deletion: We need to control surrounding nodes of target node. We need to `remove all` the `incoming direction connection` to the target node.
 > 
 > The `tip parts of Circular Linked List` are `not NULL`.
+> 
+> `When we delete entire list, we need to make nodes do not be referenced by anything.` That's why we need to loop inside and make ALL_NODE.prev = None (From the node which is not referenced by other nodes, linked list is started to be eliminated.)
+> 
+> When we delete entire One-way list, we can set `self.head = None, self.tail = None'. Otherwise, when we delete Two-way list, we need to loop inside and make sure there is node which is referenced by some node.
 
 #### (1) Singly Linked List
 
@@ -382,6 +386,9 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
             
 
 ## [10] Queue
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/161659107-de4588e4-89e1-488c-a974-bc46f1391155.jpeg">
+> 
 > stores items in a `First-In/First-Out` manner.
 > 
 > Application of Queue: Call center phone systems
@@ -395,7 +402,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > isEmpty(): Check the list is empty or not
 > 
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/161405624-3d3b0236-30fc-4397-8f37-204e70dbb2f3.png">
+> 
 > 
 > isFull()
 > 
@@ -409,23 +416,42 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > Queue using linked list: self.head direct the LAST_NODE
 > 
 
-### [9-1] Queue with fixed capacity (Circular Queue)
+### [10-3] Queue using Linked List
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/161654786-6296978c-bbb9-4c94-babe-e54cecc8eaff.png">
+
 * Special property
 
-    * `self.start, self.top`
-    * 
-    * `limited size`
-    * 
-    * Value is filled in list
-> enqueue: put the value and change the top index
+    * class Node, class LinkedList, class Queue
+    
+    * self.head, self.tail
+
+> enqueue: add value in the linked list and change the `tail`
 > 
-> dequeue: pop the first value and change the start index
+> dequeue: change the `head` to the second element
 > 
-> peek: print the value at the start index
+> peek: return `head.value`
 > 
-> isFull: 
+> isEmpty: `if head == None:`
+>
+> delete: `head = None`, `tail = None`
+
+### [10-4] Time and Space complexity Queue: List vs Linked List
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/161657383-fdc7b834-e04b-4cef-84d4-5b9a14185618.png">
 > 
-> isEmpty: 
+> If we need to care about time and space complexity, `linked list` could be the best option.
+> 
+> If we have less elements to use, `List no capacity limit` could be the best option.
+
+### [10-5] Python Collections Module
+
+	Method
+	-deque()
+	-append()
+	-popleft()
+	-clear()
+
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
