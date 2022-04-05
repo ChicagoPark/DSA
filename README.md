@@ -402,8 +402,6 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > isEmpty(): Check the list is empty or not
 > 
-> 
-> 
 > isFull()
 > 
 > deleteQueue()
@@ -414,9 +412,30 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > Queue with capacity limit: use Python list with self.maxSize argument in the class
 > 
 > Queue using linked list: self.head direct the LAST_NODE
-> 
 
-### [10-3] Queue using Linked List
+
+### [10-3] Queue using Circular Queue
+* Special property
+    
+    * self.top, self.start
+     
+    * `self.top is moved when some value is enqueued / self.start is moved when some value is dequeued`
+     
+    * self.peek: return the value in self.start
+    
+    > ```python
+    > def isFull(self):
+    > 	if self.top +1 == self.start:
+    > 		return True
+    > 	elif self.start = 0 and self.top + 1 = self.maxSize:
+    > 		return True
+    > 	else:
+    > 		return False
+    > ```
+
+
+
+### [10-4] Queue using Linked List
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/161654786-6296978c-bbb9-4c94-babe-e54cecc8eaff.png">
 
@@ -436,7 +455,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 >
 > delete: `head = None`, `tail = None`
 
-### [10-4] Time and Space complexity Queue: List vs Linked List
+### [10-5] Time and Space complexity Queue: List vs Linked List
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/161657383-fdc7b834-e04b-4cef-84d4-5b9a14185618.png">
 > 
@@ -444,14 +463,33 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > If we have less elements to use, `List no capacity limit` could be the best option.
 
-### [10-5] Python Collections Module
+### [10-6] Python Collections Deque Module
 
 	Method
-	-deque()
 	-append()
 	-popleft()
 	-clear()
+	
+```python
+from collections import deque
+customQueue = deque(maxlen=3)
+```
 
+### [10-7] Python Collections Queue Module
+
+	Method
+	-qsize(): check the number of element inside of the queue
+	-empty(): check is queue empty or not 
+	-full(): check is queue full or not
+	-put(): enqueue
+	-get(): dequeue
+	-task_done()
+	-join()
+	
+```python
+from collections import deque
+customQueue = deque(maxlen=3)
+```
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
