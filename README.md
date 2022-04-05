@@ -270,7 +270,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > `When we delete entire list, we need to make nodes do not be referenced by anything.` That's why we need to loop inside and make ALL_NODE.prev = None (From the node which is not referenced by other nodes, linked list is started to be eliminated.)
 > 
-> When we delete entire One-way list, we can set `self.head = None, self.tail = None'. Otherwise, when we delete Two-way list, we need to loop inside and make sure there is node which is referenced by some node.
+> When we delete entire One-way list, we can set `self.head = None, self.tail = None`. Otherwise, when we delete Two-way list, we need to loop inside and make sure there is node which is referenced by some node.
 
 #### (1) Singly Linked List
 
