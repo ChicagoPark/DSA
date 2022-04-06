@@ -28,6 +28,8 @@ Data Structure &amp; Algorithm in Python
 ## [2] Recursion
 
 > Recursion: A way of solving a problem by having a function calling itself.
+>
+> All the recursion can be replaced by iteration(`One for loop`). 
 
 > Why Recursion?
 > * [1] It helps `break down big problems` into smaller ones and easier to use.
@@ -495,10 +497,12 @@ customQueue = deque(maxlen=3)
 1. Think about the flow (n, n-1)
 2. According to the `necessity of additional operaiton` in the final result, we need to `determine whether add '+' operation` at the return statement in else condition. 
 3. When we cover `list` extension task, we can put `return` at the last `outside of the conditional statement` because all the elements should be collected.
+4. `Recursion can do one thing such as loop the list or getting inside of the multi-layer list(e.g. [[[1]], 2, [3]]).`
 
 ## [##] Chicago Realization
 1. `local variable can be used` from the belonged function `whether we initialize` the value `from the conditional argument`.
 2. `Efficiently check the duplicates`: Put the visited values in the list and use `in`! (Without temporal variable such as list, we should use two loops to compare)
+3. When we assign a data to the node at the left side of the code, the node is updated.
 
 ## [Coding Method] Python Map Lambda
 ### [1] lambda: a way of creating a little function inline, without all the syntax of a def
