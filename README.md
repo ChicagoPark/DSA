@@ -497,7 +497,8 @@ customQueue = deque(maxlen=3)
 3. When we cover `list` extension task, we can put `return` at the last `outside of the conditional statement` because all the elements should be collected.
 
 ## [##] Chicago Realization
-1. local variable can be used from the belonged function whether we initialize the value from the conditional argument.
+1. `local variable can be used` from the belonged function `whether we initialize` the value `from the conditional argument`.
+2. `Efficiently check the duplicates`: Put the visited values in the list and use `in`! (Without temporal variable such as list, we should use two loops to compare)
 
 ## [Coding Method] Python Map Lambda
 ### [1] lambda: a way of creating a little function inline, without all the syntax of a def
