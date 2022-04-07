@@ -37,10 +37,10 @@ Data Structure &amp; Algorithm in Python
 > * [3] It is used in many algorithms (divide and conquer, greedy and dynamic programming).
 
 > When to choose recursion?
-> * [1] When we can easily breakdown a problem into similar subproblem.
-> * [2] When we are fine with extra overhead (both time and space) that comes with it.
-> * [3] When we need a quick working solution instead of efficient one.
-> * [4] When traverse a tree
+> * [1] When we `can easily breakdown a problem` into similar subproblem.
+> * [2] When we are `fine with extra overhead` (both time and space) that comes with it.
+> * [3] When we `need a quick` working solution instead of efficient one.
+> * [4] When `traverse a tree`
 
 
 > When to avoid recursion?
@@ -237,6 +237,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230470-76f05ede-ab30-4715-836a-7fd2943a67e3.png">
 
+<!--
 ### [8-3] Creation of Singly Linked List
 
 * [1] Create Head and Tail nodes, initalized with None
@@ -246,8 +247,9 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 * [3] Link Head and Tail with these Node
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230952-b37175f5-1afc-4f87-8de1-15edda567ddd.png">
+-->
 
-### [8-4] Delete the node in Singly Linked List
+### [8-3] Delete the node in Singly Linked List
 
 `focus on previous node's reference variable of the deleting node`
 
@@ -261,8 +263,8 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > `Delete entire Singly Linked list`: set the Head and Tail as a None
 
 
-### [8-5] `Important Intuition in Linked List`
-> `We need to perceive deeply what is the `instance variable(self.head etc) in a linked list class` which is strong criteria in all algorithms.`
+### [8-4] `Important Intuition in Linked List`
+> We need to perceive deeply what is the `instance variable(self.head etc)` in a linked list class `which is strong criteria in all algorithms.`
 > 
 > Insertion: Process the subsidiary trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
 > 
@@ -280,7 +282,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ##### 2. process the `inputing node first` and next one is the `existing list` then `the head and tail`.
 ##### 3. In the link list, `head is important criteria` to determine `whether link list is existing` or `where is the beginning` to loop inside.
 ##### 4. we need to have an `index variable` when we loop inside.
-##### 5. when we `insert or delete some node from the singly linked list, we need to check `whether self.head == self.tail` after checking self.head != None
+##### 5. when we `insert or delete` some node from the singly linked list, we need to check whether `self.head == self.tail` after checking self.head != None
 
 #### (2) Circular Singly Linked List
 
@@ -500,9 +502,9 @@ customQueue = deque(maxlen=3)
 4. `Recursion can do one thing such as loop the list or getting inside of the multi-layer list(e.g. [[[1]], 2, [3]]).`
 
 ## [##] Chicago Realization
-1. `local variable can be used` from the belonged function `whether we initialize` the value `from the conditional argument`.
+1. `local variable can be used` from the belonged function `whether we initialize` the value `from the conditional argument`. (Before the function is returned?)
 2. `Efficiently check the duplicates`: Put the visited values in the list and use `in`! (Without temporal variable such as list, we should use two loops to compare)
-3. When we assign a data to the node at the left side of the code, the node is updated.
+3. [`Linked list`]When we assign a data to the node at the left side of the code, the node is updated.
 
 ## [Coding Method] Python Map Lambda
 ### [1] lambda: a way of creating a little function inline, without all the syntax of a def
