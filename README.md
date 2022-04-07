@@ -540,9 +540,6 @@ customQueue = deque(maxlen=3)
 > `Height of tree`: height of root node (e.g. in this example: 3)
 
 
-
-
-
 ### [11-3] Binary Tree
 
 > Binary trees are the data structures in which each node has at most two children, often referred to as the left and right children.
@@ -551,7 +548,7 @@ customQueue = deque(maxlen=3)
 > 
 > Binary trees are a prerequisite for mode advanced trees like BST, AVL, Red Black Trees
 >   
-> Huffman coding problem, heap priority problem and expression parsing problems can be solved efficiently using binary trees,
+> Huffman coding problem, heap priority problem and expression parsing problems can be solved efficiently using binary trees.
 
 ### [11-3 - 1] Types of Binary Tree
 > (1) Full Binary Tree: each node has two children or ZERO children
@@ -561,6 +558,35 @@ customQueue = deque(maxlen=3)
 > (3) Complete Binary Tree: fill the node from the left side
 > 
 > (4) Balanced Binary Tree: all the leaf nodes are located in the same distance from the root node.
+
+### [11-4] Binary Tree Representation
+> * Represent through linked list
+> 
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162210899-f9d727e4-ab18-4478-bdbc-9a00171e108e.png">
+> 
+> Sorts of operation: (1) creation, (2) insertion, (3) deletion of the node, (4) search, (5) traverse, (6) deletion of the tree
+> 
+> * Represent through python list
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162213404-02b238fd-4647-4029-8637-266a16cbfa52.png">
+> 
+> (1) We don't use the zero index to do mathematic calculation easily. (e.g. `the index of root is 1`)
+
+### [11-5] Traversal Binary Tree
+
+> PreOrder: visit the root node at first / InOrder: visit the root node at second / PostOrder: visit the root node at the last
+
+#### [11-5-1] PreOrder Traversal of Binary Tree
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162221760-44bedf40-2bc5-4ea2-9bc6-f42542bf086e.png">
+
+#### [11-5-2] InOrder Traversal of Binary Tree
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162225149-b5509016-f7df-42e5-8414-6b8335ab6657.png">
+
+
+#### [11-5-3] PostOrder Traversal of Binary Tree
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162227155-a4fe1423-4174-4eee-ba78-db700fa10a3f.png">
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
