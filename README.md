@@ -438,7 +438,6 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
     > ```
 
 
-
 ### [10-4] Queue using Linked List
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/161654786-6296978c-bbb9-4c94-babe-e54cecc8eaff.png">
@@ -494,6 +493,74 @@ customQueue = deque(maxlen=3)
 from collections import deque
 customQueue = deque(maxlen=3)
 ```
+
+## [11] Tree / Binary Tree
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162096745-6ea3395f-3d69-42f3-b377-7311db02af24.png">
+>
+> A tree is a nonlinear data structure with hierarchical relationships between its elements without having any cycle, it is basically reversed from a real life tree.
+>
+> [Property1]: represent hierarchical data
+> 
+> [Property2]: each node has two components: data and a link to its sub category
+>   
+> [Property3]: base category and sub categories under it
+
+
+### [11-1] Why a Tree?
+
+> (1) `Quicker and easier access` to the data (reason: structure is non-linear)
+> 
+> (2) Store hierarchical data, like folder structure, organization structure
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162097303-4352c4ae-340d-4ed3-9a75-a4f9e7722053.png">
+> 
+> (3) There are many different types of data structures which performs better in various situations
+	> Binary Search Tree (faster in inserting or deleting `in sorted data`), AVL, Red Black Tree, Trie 
+
+
+### [11-2] Tree Terminology
+> <img width="250" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162098290-21f546c9-2a99-4c83-9f3e-3dd6dec4f047.png">
+> 
+> `Root`: top node without parent
+> 
+> `Edge`: a link between parent and child
+> 
+> `Leaf`: a node which does not have children
+> 
+> `Sibling`: children of same parent
+> 
+> `Ancestor`: parent, grandparent, great grandparent of a node (e.g. ancestors of N7 is that N4, N2, and N1)
+> 
+> `Depth of node`: a length of the path `from root` to node
+> 
+> `Height of node`: a length of the path `from deepest node` `to the node` (e.g. height of N3 = 1)
+> 
+> `Depth of tree`: depth of root node is ZERO
+> 
+> `Height of tree`: height of root node (e.g. in this example: 3)
+
+
+
+
+
+### [11-3] Binary Tree
+
+> Binary trees are the data structures in which each node has at most two children, often referred to as the left and right children.
+>
+> Binary tree is a familty of data structrue (BST, Heap tree, AVL, red black trees, Syntax tree)
+> 
+> Binary trees are a prerequisite for mode advanced trees like BST, AVL, Red Black Trees
+>   
+> Huffman coding problem, heap priority problem and expression parsing problems can be solved efficiently using binary trees,
+
+### [11-3 - 1] Types of Binary Tree
+> (1) Full Binary Tree: each node has two children or ZERO children
+>
+> (2) Perfect Binary Tree: all leaf nodes are located in the same level. Additionally, all nodes have two children.
+> 
+> (3) Complete Binary Tree: fill the node from the left side
+> 
+> (4) Balanced Binary Tree: all the leaf nodes are located in the same distance from the root node.
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
