@@ -576,6 +576,17 @@ customQueue = deque(maxlen=3)
 #### [11-5-1] PreOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162221760-44bedf40-2bc5-4ea2-9bc6-f42542bf086e.png">
+> 
+> ```python
+>def preorderTraversal(rootNode):
+>    if rootNode is None:
+>        return
+>    
+>    else:
+>        print(rootNode.data)
+>        preorderTraversal(rootNode.leftChild)
+>        preorderTraversal(rootNode.rightChild)
+> ```
 
 #### [11-5-2] InOrder Traversal of Binary Tree
 
@@ -585,6 +596,28 @@ customQueue = deque(maxlen=3)
 #### [11-5-3] PostOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162227155-a4fe1423-4174-4eee-ba78-db700fa10a3f.png">
+
+
+#### [11-5-4] LevelOrder Traversal of Binary Tree
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162345682-dcbedcc8-c1b6-44af-8c33-730da9e82dfa.png">
+
+> ```python
+>from Module.classCollection import Queue
+>def levelorderTraversal(rootNode):
+>    if not rootNode:
+>        return
+>    else:
+>        customQueue = Queue()
+>        customQueue.enqueue(rootNode)
+>        while not(customQueue.isEmpty()):
+>            root = customQueue.dequeue()
+>            print(root.value.data)
+>            if root.value.leftChild:
+>                customQueue.enqueue(root.value.leftChild)
+>            if root.value.rightChild:
+>                customQueue.enqueue(root.value.rightChild)
+> ```
 
 ## [##] Recursion Realization
 1. Think about the flow (n, n-1)
