@@ -266,6 +266,8 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ### [8-4] `Important Intuition in Linked List`
 > We need to perceive deeply what is the `instance variable(self.head etc)` in a linked list class `which is strong criteria in all algorithms.`
 > 
+> process the `inputing node first` and next one is the `existing list` then `the head and tail`.
+> 
 > Insertion: Process the subsidiary trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
 > 
 > Deletion: We need to control surrounding nodes of target node. We need to `remove all` the `incoming direction connection` to the target node.
@@ -275,14 +277,10 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > `When we delete entire list, we need to make nodes do not be referenced by anything.` That's why we need to loop inside and make ALL_NODE.prev = None (From the node which is not referenced by other nodes, linked list is started to be eliminated.)
 > 
 > When we delete entire One-way list, we can set `self.head = None, self.tail = None`. Otherwise, when we delete Two-way list, we need to loop inside and make sure there is node which is referenced by some node.
+> 
+> Check the existance of linked list through 2 steps. (1) self.head != None, (2) self.head == self.tail
 
-#### (1) Singly Linked List
 
-##### 1. self.head and self.tail get the `node` of first and last node
-##### 2. process the `inputing node first` and next one is the `existing list` then `the head and tail`.
-##### 3. In the link list, `head is important criteria` to determine `whether link list is existing` or `where is the beginning` to loop inside.
-##### 4. we need to have an `index variable` when we loop inside.
-##### 5. when we `insert or delete` some node from the singly linked list, we need to check whether `self.head == self.tail` after checking self.head != None
 
 #### (2) Circular Singly Linked List
 
@@ -338,7 +336,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ## [9] Stack
 > Stores items in a Last-in/First-Out manner
 > 
-> Application of Stack:Web-browsing order(back and next)
+> Application of Stack: Web-browsing order(back and next)
 > 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160870120-59517d30-9f4f-495a-aa71-2ef94a224319.png">
 
@@ -439,8 +437,6 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 
 ### [10-4] Queue using Linked List
-
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/161654786-6296978c-bbb9-4c94-babe-e54cecc8eaff.png">
 
 * Special property
 
@@ -558,6 +554,8 @@ customQueue = deque(maxlen=3)
 > (3) Complete Binary Tree: fill the node from the left side
 > 
 > (4) Balanced Binary Tree: all the leaf nodes are located in the same distance from the root node.
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162341885-f294059d-7892-4a35-9380-f113374da28b.png">
 
 ### [11-4] Binary Tree Representation
 > * Represent through linked list
