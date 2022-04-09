@@ -249,21 +249,9 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230952-b37175f5-1afc-4f87-8de1-15edda567ddd.png">
 -->
 
-### [8-3] Delete the node in Singly Linked List
-
-`focus on previous node's reference variable of the deleting node`
-
-##### [Three cases]
-> 1. delete the first node (there is two cases (1. there is just one node in the list(self.head == self.tail)|| (2. normal linked list))
-> 
-> 2. delete the last node
-> 
-> 3. delete the middle node
-
-> `Delete entire Singly Linked list`: set the Head and Tail as a None
 
 
-### [8-4] `Important Intuition in Linked List`
+### [8-3] `Important Intuition in Linked List`
 > We need to perceive deeply what is the `instance variable(self.head etc)` in a linked list class `which is strong criteria in all algorithms.`
 > 
 > process the `inputing node first` and next one is the `existing list` then `the head and tail`.
@@ -280,7 +268,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > Check the existance of linked list through 2 steps. (1) self.head != None, (2) self.head == self.tail
 
-
+<!--
 
 #### (2) Circular Singly Linked List
 
@@ -316,9 +304,9 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ########### 2. (Organize it again)connect the node through ADDED_NODE.next, NEXT_NODE.prev, PREV_NODE.next = ADDED_NODE, NEXT_NODE.prev = ADDED_NODE
 ##### 3. `When we delete entire list, we need to make nodes do not be referenced by anything.` That's why we need to loop inside and make ALL_NODE.prev = None (From the node which is not referenced by other nodes, linked list is started to be eliminated.)
 
+-->
 
-
-### [8-5] Time complexity: Array vs Linked List
+### [8-4] Time complexity: Array vs Linked List
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160237823-0190bbac-c47c-497c-9e4b-c64c12da889d.png">
 
