@@ -142,6 +142,7 @@ O(logN): When we look some value in sorted array, we can select one value and co
 
 > * When do we need an Array?
 >   * To store multiple variables of same data type
+>   * When we need `mathematic operations`
 
 > * When to avoid using an Array?
 >   * When we need to use different types of data.
@@ -430,7 +431,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
     * class Node, class LinkedList, class Queue
     
-    * self.head, self.tail
+    * `self.head, self.tail`
 
 > enqueue: add value in the linked list and change the `tail`
 > 
@@ -608,10 +609,13 @@ customQueue = deque(maxlen=3)
 > ```
 
 ## [##] Recursion Realization
-1. Think about the flow (n, n-1)
-2. According to the `necessity of additional operaiton` in the final result, we need to `determine whether add '+' operation` at the return statement in else condition. 
-3. When we cover `list` extension task, we can put `return` at the last `outside of the conditional statement` because all the elements should be collected.
-4. `Recursion can do one thing such as loop the list or getting inside of the multi-layer list(e.g. [[[1]], 2, [3]]).`
+1. Consider recursion is another method to express `for loop`
+2. `In recursion, extend is same as append for list processing`
+3. According to the `necessity of additional operaiton` in the final result, we need to `determine whether add '+' operation` at the return statement in else condition. 
+4. When we cover `list` extension task, we can put `return` at the last `outside of the conditional statement` because all the elements should be collected.
+5. `Recursion can do one thing such as loop the list or getting inside of the multi-layer list(e.g. [[[1]], 2, [3]]).`
+6. Think about the flow (n, n-1)
+
 
 ## [##] Chicago Realization
 1. `local variable can be used` from the belonged function `whether we initialize` the value `from the conditional argument`. (Before the function is returned?)
