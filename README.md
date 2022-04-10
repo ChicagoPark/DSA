@@ -558,11 +558,11 @@ customQueue = deque(maxlen=3)
 > 
 > (1) We don't use the zero index to do mathematic calculation easily. (e.g. `the index of root is 1`)
 
-### [11-5] Traversal Binary Tree
+### [11-4-1] Traversal Binary Tree
 
 > PreOrder: visit the root node at first / InOrder: visit the root node at second / PostOrder: visit the root node at the last
 
-#### [11-5-1] PreOrder Traversal of Binary Tree
+#### [11-4-1-1] PreOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162221760-44bedf40-2bc5-4ea2-9bc6-f42542bf086e.png">
 > 
@@ -577,17 +577,17 @@ customQueue = deque(maxlen=3)
 >        preorderTraversal(rootNode.rightChild)
 > ```
 
-#### [11-5-2] InOrder Traversal of Binary Tree
+#### [11-4-1-2] InOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162225149-b5509016-f7df-42e5-8414-6b8335ab6657.png">
 
 
-#### [11-5-3] PostOrder Traversal of Binary Tree
+#### [11-4-1-3] PostOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162227155-a4fe1423-4174-4eee-ba78-db700fa10a3f.png">
 
 
-#### [11-5-4] LevelOrder Traversal of Binary Tree
+#### [11-4-1-4] LevelOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162345682-dcbedcc8-c1b6-44af-8c33-730da9e82dfa.png">
 
@@ -607,6 +607,30 @@ customQueue = deque(maxlen=3)
 >            if root.value.rightChild:
 >                customQueue.enqueue(root.value.rightChild)
 > ```
+
+#### [11-4-2] Search for a node in Binary Tree
+
+
+#### [11-4-3] Insert a node in Binary Tree
+
+> * look for a first vacant place from `level order traversal`
+
+
+#### [11-4-4] Delete a node in Binary Tree
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162598450-be6e1f8d-7500-410f-ad91-2727c6695eb4.png">
+>
+>  * delete a node and replace that location with a node at the deepest location through `level order traversal`
+
+>  1. get the deepest node
+>  2. delete the deepest node
+>  3. delete the target node by replacing with deepest node
+
+
+
+
+
+
 
 ## [##] Recursion Realization
 1. Consider recursion is another method to express `for loop`
