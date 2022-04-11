@@ -610,6 +610,7 @@ customQueue = deque(maxlen=3)
 
 #### [11-4-1-5] (linked list) Search for a node in Binary Tree
 
+> * compare the value in `level order traversal`
 
 #### [11-4-1-6] (linked list) Insert a node in Binary Tree
 
