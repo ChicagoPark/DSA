@@ -662,6 +662,8 @@ customQueue = deque(maxlen=3)
 ### [11-4] Binary Search Tree
 > * `using Linked List`
 > 
+> `Important advice`: when check the tree is empty or not, do not check `rootNode.data is None` do check `rootNode is None`. Otherwise it generates the error.
+> 
 > `[What is a Binary Search Tree]`
 > * (1) In the left subtree the value of a node is less than or equal to its parent node's value.
 > * (2) In the right subtree the value of a node is greater than its parent node's value.
@@ -671,6 +673,12 @@ customQueue = deque(maxlen=3)
 > 
 > `[Why kinds of operation do Binary Search Tree has]`
 > * (1. creation), (2. insertation), (3. deletion), (4. search), (5. traverse), (6. deletion)
+> 
+> ### Operation 2. insertation
+> * compare the value with node and then insert the node once classified branch is empty
+> 
+> ### Operation 3. deletion
+> * compare the value with node and then insert the node once classified branch is empty
 
 
 
