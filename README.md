@@ -546,7 +546,7 @@ customQueue = deque(maxlen=3)
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162341885-f294059d-7892-4a35-9380-f113374da28b.png">
 
-### [11-4] Binary Tree Representation
+### [11-3 - 2] Binary Tree Representation
 > * Represent through linked list
 > 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162210899-f9d727e4-ab18-4478-bdbc-9a00171e108e.png">
@@ -558,11 +558,11 @@ customQueue = deque(maxlen=3)
 > 
 > (1) We don't use the zero index to do mathematic calculation easily. (e.g. `the index of root is 1`)
 
-#### [11-4-1-0] (linked list) Traversal Binary Tree 
+#### [11-3-3] (linked list) Traversal Binary Tree 
 
 > PreOrder: visit the root node at first / InOrder: visit the root node at second / PostOrder: visit the root node at the last
 
-#### [11-4-1-1] (linked list) PreOrder Traversal of Binary Tree
+#### [11-3-3-1] (linked list) PreOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162221760-44bedf40-2bc5-4ea2-9bc6-f42542bf086e.png">
 > 
@@ -577,17 +577,17 @@ customQueue = deque(maxlen=3)
 >        preorderTraversal(rootNode.rightChild)
 > ```
 
-#### [11-4-1-2] (linked list) InOrder Traversal of Binary Tree
+#### [11-3-3-2] (linked list) InOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162225149-b5509016-f7df-42e5-8414-6b8335ab6657.png">
 
 
-#### [11-4-1-3] (linked list) PostOrder Traversal of Binary Tree
+#### [11-3-3-3] (linked list) PostOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162227155-a4fe1423-4174-4eee-ba78-db700fa10a3f.png">
 
 
-#### [11-4-1-4] (linked list) LevelOrder Traversal of Binary Tree
+#### [11-3-3-4] (linked list) LevelOrder Traversal of Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162345682-dcbedcc8-c1b6-44af-8c33-730da9e82dfa.png">
 
@@ -608,16 +608,16 @@ customQueue = deque(maxlen=3)
 >                customQueue.enqueue(root.value.rightChild)
 > ```
 
-#### [11-4-1-5] (linked list) Search for a node in Binary Tree
+#### [11-3-3-5] (linked list) Search for a node in Binary Tree
 
 > * compare the value in `level order traversal`
 
-#### [11-4-1-6] (linked list) Insert a node in Binary Tree
+#### [11-3-3-6] (linked list) Insert a node in Binary Tree
 
 > * look for a first vacant place from `level order traversal`
 
 
-#### [11-4-1-7] (linked list) Delete a node in Binary Tree
+#### [11-3-3-7] (linked list) Delete a node in Binary Tree
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162598450-be6e1f8d-7500-410f-ad91-2727c6695eb4.png">
 >
@@ -628,7 +628,7 @@ customQueue = deque(maxlen=3)
 >  3. delete the target node by replacing with deepest node
 
 
-#### [11-4-1-8] (linked list) Delete entire Binary Tree
+#### [11-3-3-8] (linked list) Delete entire Binary Tree
 
 > ```python
 > rootNode = None
@@ -636,7 +636,7 @@ customQueue = deque(maxlen=3)
 > rootNode.rightChild = None
 > ```
 
-#### [11-4-2-1] (python list) Attributes of Binary Tree 
+#### [11-3-4-1] (python list) Attributes of Binary Tree 
 
 > ```python
 > class BinaryTree:
@@ -646,14 +646,38 @@ customQueue = deque(maxlen=3)
 > 		self.maxSize = size
 > ```
 
-#### [11-4-2-2] (python list) Insert a node in Binary Tree
+#### [11-3-4-2] (python list) Insert a node in Binary Tree
 
 > * 1. check the binary tree is full or not
 > * 2. put the value into a first vacant place
 
-#### [11-4-2-3] (python list) Search for a node in Binary Tree
+#### [11-3-4-3] (python list) Search for a node in Binary Tree
 
 > * 1. loop inside of the list and then compare the value with the input value.
+
+#### [11-3-5] Binary Tree using python list vs linked list
+
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162973622-0d1a2e8e-5ef2-4802-9e60-60ba1ebd4693.png">
+
+### [11-4] Binary Search Tree
+> * `using Linked List`
+> 
+> `[What is a Binary Search Tree]`
+> * (1) In the left subtree the value of a node is less than or equal to its parent node's value.
+> * (2) In the right subtree the value of a node is greater than its parent node's value.
+> 
+> `[Why do we need Binary Search Tree]`
+> * It performs faster than Binary Tree when `inserting and deleting` nodes.
+> 
+> `[Why kinds of operation do Binary Search Tree has]`
+> * (1. creation), (2. insertation), (3. deletion), (4. search), (5. traverse), (6. deletion)
+
+
+
+
+
+
+
 
 
 ## [##] Recursion Realization
