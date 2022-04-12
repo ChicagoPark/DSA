@@ -621,7 +621,7 @@ customQueue = deque(maxlen=3)
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162598450-be6e1f8d-7500-410f-ad91-2727c6695eb4.png">
 >
->  * delete a node and replace that location with a node at the deepest location through `level order traversal`
+>  * delete a node and `replace the node` with a node at `the deepest index` through `level order traversal`
 
 >  1. get the deepest node
 >  2. delete the deepest node
@@ -650,6 +650,10 @@ customQueue = deque(maxlen=3)
 
 > * 1. check the binary tree is full or not
 > * 2. put the value into a first vacant place
+
+#### [11-4-2-3] (python list) Search for a node in Binary Tree
+
+> * 1. loop inside of the list and then compare the value with the input value.
 
 
 ## [##] Recursion Realization
