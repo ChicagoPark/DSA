@@ -641,20 +641,21 @@ customQueue = deque(maxlen=3)
 >	> 		self.maxSize = size
 >	> ```
 >
->	#### (python list) Insert a node in Binary Tree
+>	#### (operation 1) (python list) Insert a node in Binary Tree
 >
->	> * 1. check the binary tree is full or not
->	> * 2. put the value into a first vacant place
+>	> * (1) check the binary tree is full or not
+>	> * (2) put the value into a first vacant place
 >
 >	#### (operation 2) (python list) Search for a node in Binary Tree
 >
->	> * 1. loop inside of the list and then compare the value with the input value.
+>	> * (1) loop inside of the list and then compare the value with the input value.
 
 
 #### Binary Tree using python list vs linked list
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162973622-0d1a2e8e-5ef2-4802-9e60-60ba1ebd4693.png">
 
-### [11-4] Binary Search Tree
+
+## [12] Binary Search Tree
 > * `using Linked List`
 > 
 > `Important advice`: when check the tree is empty or not, do not check `rootNode.data is None` do check `rootNode is None`. Otherwise it generates the error.
@@ -669,11 +670,11 @@ customQueue = deque(maxlen=3)
 > `[Why kinds of operation do Binary Search Tree has]`
 > * (1. creation), (2. insertation), (3. deletion), (4. search), (5. traverse), (6. deletion)
 > 
-> ### Operation 2. insertation
-> * compare the value with node and then insert the node once classified branch is empty
+> #### (operation 1) insertation
+>	> * compare the value with node and then insert the node once classified branch is empty
 > 
-> ### Operation 3. deletion
-> * compare the value with node and then insert the node once classified branch is empty
+> #### (operation 3) deletion
+>	> * compare the value with node and then insert the node once classified branch is empty
 
 
 
