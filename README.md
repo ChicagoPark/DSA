@@ -492,13 +492,13 @@ customQueue = deque(maxlen=3)
 > [Property3]: base category and sub categories under it
 > 
 > ### `Why a Tree?`
-> * (1) `Quicker and easier access` to the data (reason: structure is non-linear)
-> 
-> * (2) Store hierarchical data, like folder structure, organization structure
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162097303-4352c4ae-340d-4ed3-9a75-a4f9e7722053.png">
-> 
-> * (3) There are many different types of data structures which performs better in various situations
-	> Binary Search Tree (faster in inserting or deleting `in sorted data`), AVL, Red Black Tree, Trie 
+>	> * (1) `Quicker and easier access` to the data (reason: structure is non-linear)
+>	> 
+>	> * (2) Store hierarchical data, like folder structure, organization structure
+>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162097303-4352c4ae-340d-4ed3-9a75-a4f9e7722053.png">
+>	> 
+>	> * (3) There are many different types of data structures which performs better in various situations
+>		> Binary Search Tree (faster in inserting or deleting `in sorted data`), AVL, Red Black Tree, Trie 
 >
 > ### `Tree Terminology`
 >	> <img width="250" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162098290-21f546c9-2a99-4c83-9f3e-3dd6dec4f047.png">
@@ -520,140 +520,138 @@ customQueue = deque(maxlen=3)
 >	> `Depth of tree`: depth of root node is ZERO
 >	> 
 >	> `Height of tree`: height of root node (e.g. in this example: 3)
-
-
-### [11-3] Binary Tree
-
-> Binary trees are the data structures in which each node has at most two children, often referred to as the left and right children.
 >
-> Binary tree is a familty of data structrue (BST, Heap tree, AVL, red black trees, Syntax tree)
-> 
-> Binary trees are a prerequisite for mode advanced trees like BST, AVL, Red Black Trees
->   
-> Huffman coding problem, heap priority problem and expression parsing problems can be solved efficiently using binary trees.
-
-### [11-3 - 1] Types of Binary Tree
-> (1) Full Binary Tree: each node has two children or ZERO children
+> ### `Binary Tree`
+>	> Binary trees are the data structures in which each node has at most two children, often referred to as the left and right children.
+>	>
+>	> Binary tree is a familty of data structrue (BST, Heap tree, AVL, red black trees, Syntax tree)
+>	> 
+>	> Binary trees are a prerequisite for mode advanced trees like BST, AVL, Red Black Trees
+>	>   
+>	> Huffman coding problem, heap priority problem and expression parsing problems can be solved efficiently using binary trees.
 >
-> (2) Perfect Binary Tree: all leaf nodes are located in the same level. Additionally, all nodes have two children.
+> #### Types of Binary Tree
+>	> (1) Full Binary Tree: each node has two children or ZERO children
+>	>
+>	> (2) Perfect Binary Tree: all leaf nodes are located in the same level. Additionally, all nodes have two children.
+>	> 
+>	> (3) Complete Binary Tree: fill the node from the left side
+>	> 
+>	> (4) Balanced Binary Tree: all the leaf nodes are located in the same distance from the root node.
+>	>
+>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162341885-f294059d-7892-4a35-9380-f113374da28b.png">
+>
+> #### Binary Tree Representation
+>	> * Represent through linked list
+>	> 
+>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162210899-f9d727e4-ab18-4478-bdbc-9a00171e108e.png">
+>	> 
+>	> Sorts of operation: (1) creation, (2) insertion, (3) deletion of the node, (4) search, (5) traverse, (6) deletion of the tree
+>	> 
+>	> * Represent through python list
+>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162213404-02b238fd-4647-4029-8637-266a16cbfa52.png">
+>	> 
+>	> (1) We don't use the zero index to do mathematic calculation easily. (e.g. `the index of root is 1`)
+>
+> ### `(linked list) Traversal Binary Tree`
 > 
-> (3) Complete Binary Tree: fill the node from the left side
-> 
-> (4) Balanced Binary Tree: all the leaf nodes are located in the same distance from the root node.
-
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162341885-f294059d-7892-4a35-9380-f113374da28b.png">
-
-### [11-3 - 2] Binary Tree Representation
-> * Represent through linked list
-> 
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162210899-f9d727e4-ab18-4478-bdbc-9a00171e108e.png">
-> 
-> Sorts of operation: (1) creation, (2) insertion, (3) deletion of the node, (4) search, (5) traverse, (6) deletion of the tree
-> 
-> * Represent through python list
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162213404-02b238fd-4647-4029-8637-266a16cbfa52.png">
-> 
-> (1) We don't use the zero index to do mathematic calculation easily. (e.g. `the index of root is 1`)
-
-#### [11-3-3] (linked list) Traversal Binary Tree 
-
 > PreOrder: visit the root node at first / InOrder: visit the root node at second / PostOrder: visit the root node at the last
-
-#### [11-3-3-1] (linked list) PreOrder Traversal of Binary Tree
-
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162221760-44bedf40-2bc5-4ea2-9bc6-f42542bf086e.png">
 > 
-> ```python
->def preorderTraversal(rootNode):
->    if rootNode is None:
->        return
->    
->    else:
->        print(rootNode.data)
->        preorderTraversal(rootNode.leftChild)
->        preorderTraversal(rootNode.rightChild)
-> ```
-
-#### [11-3-3-2] (linked list) InOrder Traversal of Binary Tree
-
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162225149-b5509016-f7df-42e5-8414-6b8335ab6657.png">
-
-
-#### [11-3-3-3] (linked list) PostOrder Traversal of Binary Tree
-
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162227155-a4fe1423-4174-4eee-ba78-db700fa10a3f.png">
-
-
-#### [11-3-3-4] (linked list) LevelOrder Traversal of Binary Tree
-
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162345682-dcbedcc8-c1b6-44af-8c33-730da9e82dfa.png">
-
-> ```python
->from Module.classCollection import Queue
->def levelorderTraversal(rootNode):
->    if not rootNode:
->        return
->    else:
->        customQueue = Queue()
->        customQueue.enqueue(rootNode)
->        while not(customQueue.isEmpty()):
->            root = customQueue.dequeue()
->            print(root.value.data)
->            if root.value.leftChild:
->                customQueue.enqueue(root.value.leftChild)
->            if root.value.rightChild:
->                customQueue.enqueue(root.value.rightChild)
-> ```
-
-#### [11-3-3-5] (linked list) Search for a node in Binary Tree
-
-> * compare the value in `level order traversal`
-
-#### [11-3-3-6] (linked list) Insert a node in Binary Tree
-
-> * look for a first vacant place from `level order traversal`
-
-
-#### [11-3-3-7] (linked list) Delete a node in Binary Tree
-
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162598450-be6e1f8d-7500-410f-ad91-2727c6695eb4.png">
 >
->  * delete a node and `replace the node` with a node at `the deepest index` through `level order traversal`
+> #### (Traversal-1) (linked list) PreOrder Traversal of Binary Tree
+>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162221760-44bedf40-2bc5-4ea2-9bc6-f42542bf086e.png">
+>	> 
+>	> ```python
+>	>def preorderTraversal(rootNode):
+>	>    if rootNode is None:
+>	>        return
+>	>    
+>	>    else:
+>	>        print(rootNode.data)
+>	>        preorderTraversal(rootNode.leftChild)
+>	>        preorderTraversal(rootNode.rightChild)
+>	> ```
 >
->  1. get the deepest node
->  2. delete the deepest node
->  3. delete the target node by replacing with deepest node
+>	#### (Traversal-2) (linked list) InOrder Traversal of Binary Tree
+>
+>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162225149-b5509016-f7df-42e5-8414-6b8335ab6657.png">
+>
+>
+>	#### (Traversal-3) (linked list) PostOrder Traversal of Binary Tree
+>
+>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162227155-a4fe1423-4174-4eee-ba78-db700fa10a3f.png">
+>
+>
+>	#### (Traversal-4) (linked list) LevelOrder Traversal of Binary Tree
+>
+>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162345682-dcbedcc8-c1b6-44af-8c33-730da9e82dfa.png">
+>
+>	> ```python
+>	>from Module.classCollection import Queue
+>	>def levelorderTraversal(rootNode):
+>	>    if not rootNode:
+>	>        return
+>	>    else:
+>	>        customQueue = Queue()
+>	>        customQueue.enqueue(rootNode)
+>	>        while not(customQueue.isEmpty()):
+>	>            root = customQueue.dequeue()
+>	>            print(root.value.data)
+>	>            if root.value.leftChild:
+>	>                customQueue.enqueue(root.value.leftChild)
+>	>            if root.value.rightChild:
+>	>                customQueue.enqueue(root.value.rightChild)
+>	> ```
+>
+> #### (operation 1) `(linked list) Search for a node in Binary Tree`
+>
+>	> * compare the value in `level order traversal`
+>
+>#### (operation 2) `(linked list) Insert a node in Binary Tree`
+>
+>	> * look for a first vacant place from `level order traversal`
+>
+>
+>#### (operation 3) `(linked list) Delete a node in Binary Tree`
+>
+>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162598450-be6e1f8d-7500-410f-ad91-2727c6695eb4.png">
+>	>
+>	>  * delete a node and `replace the node` with a node at `the deepest index` through `level order traversal`
+>	>
+>	>  1. get the deepest node
+>	>  2. delete the deepest node
+>	>  3. delete the target node by replacing with deepest node
+>
+>
+>#### (operation 4) `(linked list) Delete entire Binary Tree`
+>
+>	> ```python
+>	> rootNode.leftChild = None
+>	> rootNode.rightChild = None
+>	> rootNode = None
+>	> ```
+
+### `(python list)` Attributes of Binary Tree 
+>
+>	> ```python
+>	> class BinaryTree:
+>	> 	def __init__(self, size):
+>	> 		self.customList = size*[None]
+>	> 		self.lastUsedIndex = 0
+>	> 		self.maxSize = size
+>	> ```
+>
+>	#### (python list) Insert a node in Binary Tree
+>
+>	> * 1. check the binary tree is full or not
+>	> * 2. put the value into a first vacant place
+>
+>	#### (operation 2) (python list) Search for a node in Binary Tree
+>
+>	> * 1. loop inside of the list and then compare the value with the input value.
 
 
-#### [11-3-3-8] (linked list) Delete entire Binary Tree
-
-> ```python
-> rootNode.leftChild = None
-> rootNode.rightChild = None
-> rootNode = None
-> ```
-
-#### [11-3-4-1] (python list) Attributes of Binary Tree 
-
-> ```python
-> class BinaryTree:
-> 	def __init__(self, size):
-> 		self.customList = size*[None]
-> 		self.lastUsedIndex = 0
-> 		self.maxSize = size
-> ```
-
-#### [11-3-4-2] (python list) Insert a node in Binary Tree
-
-> * 1. check the binary tree is full or not
-> * 2. put the value into a first vacant place
-
-#### [11-3-4-3] (python list) Search for a node in Binary Tree
-
-> * 1. loop inside of the list and then compare the value with the input value.
-
-#### [11-3-5] Binary Tree using python list vs linked list
-
+#### Binary Tree using python list vs linked list
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162973622-0d1a2e8e-5ef2-4802-9e60-60ba1ebd4693.png">
 
 ### [11-4] Binary Search Tree
