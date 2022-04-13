@@ -504,25 +504,25 @@ customQueue = deque(maxlen=3)
 
 
 ### [11-2] Tree Terminology
-> <img width="250" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162098290-21f546c9-2a99-4c83-9f3e-3dd6dec4f047.png">
-> 
-> `Root`: top node without parent
-> 
-> `Edge`: a link between parent and child
-> 
-> `Leaf`: a node which does not have children
-> 
-> `Sibling`: children of same parent
-> 
-> `Ancestor`: parent, grandparent, great grandparent of a node (e.g. ancestors of N7 is that N4, N2, and N1)
-> 
-> `Depth of node`: a length of the path `from root` to node
-> 
-> `Height of node`: a length of the path `from deepest node` `to the node` (e.g. height of N3 = 1)
-> 
-> `Depth of tree`: depth of root node is ZERO
-> 
-> `Height of tree`: height of root node (e.g. in this example: 3)
+	> <img width="250" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162098290-21f546c9-2a99-4c83-9f3e-3dd6dec4f047.png">
+	> 
+	> `Root`: top node without parent
+	> 
+	> `Edge`: a link between parent and child
+	> 
+	> `Leaf`: a node which does not have children
+	> 
+	> `Sibling`: children of same parent
+	> 
+	> `Ancestor`: parent, grandparent, great grandparent of a node (e.g. ancestors of N7 is that N4, N2, and N1)
+	> 
+	> `Depth of node`: a length of the path `from root` to node
+	> 
+	> `Height of node`: a length of the path `from deepest node` `to the node` (e.g. height of N3 = 1)
+	> 
+	> `Depth of tree`: depth of root node is ZERO
+	> 
+	> `Height of tree`: height of root node (e.g. in this example: 3)
 
 
 ### [11-3] Binary Tree
@@ -622,7 +622,7 @@ customQueue = deque(maxlen=3)
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162598450-be6e1f8d-7500-410f-ad91-2727c6695eb4.png">
 >
 >  * delete a node and `replace the node` with a node at `the deepest index` through `level order traversal`
-
+>
 >  1. get the deepest node
 >  2. delete the deepest node
 >  3. delete the target node by replacing with deepest node
@@ -631,9 +631,9 @@ customQueue = deque(maxlen=3)
 #### [11-3-3-8] (linked list) Delete entire Binary Tree
 
 > ```python
-> rootNode = None
 > rootNode.leftChild = None
 > rootNode.rightChild = None
+> rootNode = None
 > ```
 
 #### [11-3-4-1] (python list) Attributes of Binary Tree 
