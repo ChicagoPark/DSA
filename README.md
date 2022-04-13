@@ -490,39 +490,36 @@ customQueue = deque(maxlen=3)
 > [Property2]: each node has two components: data and a link to its sub category
 >   
 > [Property3]: base category and sub categories under it
-
-
-### [11-1] Why a Tree?
-
-> (1) `Quicker and easier access` to the data (reason: structure is non-linear)
 > 
-> (2) Store hierarchical data, like folder structure, organization structure
+> ### `Why a Tree?`
+> * (1) `Quicker and easier access` to the data (reason: structure is non-linear)
+> 
+> * (2) Store hierarchical data, like folder structure, organization structure
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162097303-4352c4ae-340d-4ed3-9a75-a4f9e7722053.png">
 > 
-> (3) There are many different types of data structures which performs better in various situations
+> * (3) There are many different types of data structures which performs better in various situations
 	> Binary Search Tree (faster in inserting or deleting `in sorted data`), AVL, Red Black Tree, Trie 
-
-
-### [11-2] Tree Terminology
-	> <img width="250" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162098290-21f546c9-2a99-4c83-9f3e-3dd6dec4f047.png">
-	> 
-	> `Root`: top node without parent
-	> 
-	> `Edge`: a link between parent and child
-	> 
-	> `Leaf`: a node which does not have children
-	> 
-	> `Sibling`: children of same parent
-	> 
-	> `Ancestor`: parent, grandparent, great grandparent of a node (e.g. ancestors of N7 is that N4, N2, and N1)
-	> 
-	> `Depth of node`: a length of the path `from root` to node
-	> 
-	> `Height of node`: a length of the path `from deepest node` `to the node` (e.g. height of N3 = 1)
-	> 
-	> `Depth of tree`: depth of root node is ZERO
-	> 
-	> `Height of tree`: height of root node (e.g. in this example: 3)
+>
+> ### `Tree Terminology`
+>	> <img width="250" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162098290-21f546c9-2a99-4c83-9f3e-3dd6dec4f047.png">
+>	> 
+>	> `Root`: top node without parent
+>	> 
+>	> `Edge`: a link between parent and child
+>	> 
+>	> `Leaf`: a node which does not have children
+>	> 
+>	> `Sibling`: children of same parent
+>	> 
+>	> `Ancestor`: parent, grandparent, great grandparent of a node (e.g. ancestors of N7 is that N4, N2, and N1)
+>	> 
+>	> `Depth of node`: a length of the path `from root` to node
+>	> 
+>	> `Height of node`: a length of the path `from deepest node` `to the node` (e.g. height of N3 = 1)
+>	> 
+>	> `Depth of tree`: depth of root node is ZERO
+>	> 
+>	> `Height of tree`: height of root node (e.g. in this example: 3)
 
 
 ### [11-3] Binary Tree
