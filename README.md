@@ -672,13 +672,17 @@ customQueue = deque(maxlen=3)
 > 
 > #### (operation 1) insertation
 >	> * compare the value with node and then insert the node once classified branch is empty
-> 
+>
+> #### (operation 2) search
+>	> * compare the value with node and then go down the tree resursively. Once the value is found, return the message
+>	
 > #### (operation 3) deletion
->	> * compare the value with node and then insert the node once classified branch is empty
-
-
-
-
+>	> * (Case 1) The node to be deleted is a leaf node: `delete straight away`
+>	
+>	> * (Case 2) The node to be deleted has a one child node: assign one child node as a deleted root node
+>	
+>	> * (Case 3) The node to be deleted has two children: assign successor from the right subtree and then use it to replace root node
+>		> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163088164-7ca55dc6-0c89-462a-8504-d2799bff757e.png">
 
 
 
