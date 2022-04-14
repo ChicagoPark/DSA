@@ -43,7 +43,7 @@ Data Structure &amp; Algorithm in Python
 > * [4] When `traverse a tree`
 
 
-> When to avoid recursion?
+> `When to avoid recursion?`
 > * If time and space complexity matter for us.
 > Recursion uses more memory. If we use embedded memory.
 > Recursion can delay the process.
@@ -498,7 +498,7 @@ customQueue = deque(maxlen=3)
 >	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162097303-4352c4ae-340d-4ed3-9a75-a4f9e7722053.png">
 >	> 
 >	> * (3) There are many different types of data structures which performs better in various situations
->		> Binary Search Tree (faster in inserting or deleting `in sorted data`), AVL, Red Black Tree, Trie 
+>	>	> Binary Search Tree (faster in inserting or deleting `in sorted data`), AVL, Red Black Tree, Trie 
 >
 > ### `Tree Terminology`
 >	> <img width="250" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162098290-21f546c9-2a99-4c83-9f3e-3dd6dec4f047.png">
@@ -524,9 +524,9 @@ customQueue = deque(maxlen=3)
 > ### `Binary Tree`
 >	> Binary trees are the data structures in which each node has at most two children, often referred to as the left and right children.
 >	>
->	> Binary tree is a familty of data structrue (BST, Heap tree, AVL, red black trees, Syntax tree)
+>	> Binary tree is a familiy of data structrue (BST, Heap tree, AVL, red black trees, Syntax tree)
 >	> 
->	> Binary trees are a prerequisite for mode advanced trees like BST, AVL, Red Black Trees
+>	> Binary trees are a prerequisite for more advanced trees like BST, AVL, Red Black Trees
 >	>   
 >	> Huffman coding problem, heap priority problem and expression parsing problems can be solved efficiently using binary trees.
 >
