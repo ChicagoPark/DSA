@@ -715,6 +715,7 @@ customQueue = deque(maxlen=3)
 >	>   return rootNode
 >	>```
 > `[Time and Space complexity of Binary Search Tree]`
+> 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163185757-22f2f68d-946a-49b5-88e6-d60514f84020.png">
 
 
