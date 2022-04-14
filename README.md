@@ -719,6 +719,52 @@ customQueue = deque(maxlen=3)
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163185757-22f2f68d-946a-49b5-88e6-d60514f84020.png">
 
 
+## [13] AVL Tree
+> `[What is AVL Trees?]`: self-balancing Binary Search Tree (BST) where the `difference between heights` of left and right subtrees `cannot be more than one` for all nodes.
+> 
+> `[Why AVL Trees?]`: According to the inserting value to the BST, we can have O(n) time complexity in searching. To `reduce the searching time to O(logN)`, we can implement AVL Tree.
+> 
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163353005-9b8a8082-bc56-41ea-9373-4c13e07aa59e.png"><img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163353030-45fd6834-ba18-48ff-a104-1b63c9712171.png">
+> 
+> `[How to balance the tree]`: `rotation` is done using the height variable and compare between left root's height and right root's height
+> 
+> 
+> `[Common Operations on AVL]`: (1) creation of AVL tree, (2) search for a node, (3) traverse, (4) insert a node, (5) delete a node, (6) delete the entire tree
+> 
+> (1) creation of AVL tree, (2) search for a node, (3) traverse are the `same as BST`
+
+
+### `[13-1] Insert a node in AVL Tree`
+
+> We can divide the cases: CASE i) rotation is not required: `same as BST`, CASE ii) `rotation` is required.
+> 
+> `CASE ii`)
+> `Basic Mechanism`: find the disbalanced node `nearest to the leaf`. Then find the higher grandchild node than rotate it
+
+> * LL - left left condition: `left left side node of the unbalanced root node is the cause of unbalancing`
+
+		Right rotation is required for LL
+>
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163359326-17f7009b-3215-402b-ba8b-9db319c397a8.png"><img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163359334-0f7f3c55-7d1d-4c69-aae8-4a9f868739d7.png">
+>
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163360996-b4c1cbc2-866a-4519-a2ca-a228473239e8.png"><img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163361004-61706aae-2b17-4f0a-9d6d-2643e79a0837.png">
+>
+>```python
+>def rotateRight(disbalanceNode):
+>	newRoot = disbalancedNode.leftChild
+>	disbalancedNode.leftChild = disbalancedNode.leftChild.rightChild # focus on opposite grandchild side of the child side node.
+>	newRoot.rightChild = disbalancedNode
+>	update height of disbalancedNode and newRoot
+>	return newRoot
+>```
+ 	 	
+ 	 
+ 	> * LR - left right condition: 
+ 	> * RR - right right condition
+ 	> * RL - right left condition
+
+
+
 ## [##] Recursion Realization
 1. Consider recursion is another method to express `for loop`
 2. `In recursion, extend is same as append for list processing`
