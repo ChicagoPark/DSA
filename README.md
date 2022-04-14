@@ -667,7 +667,7 @@ customQueue = deque(maxlen=3)
 > `[Why do we need Binary Search Tree]`
 > * It performs faster than Binary Tree when `inserting and deleting` nodes.
 > 
-> `[Why kinds of operation do Binary Search Tree has]`
+> `[What kinds of operation do Binary Search Tree has]`
 > * (1. creation), (2. insertation), (3. deletion), (4. search), (5. traverse), (6. deletion)
 > 
 > #### (operation 1) insertation
@@ -679,39 +679,39 @@ customQueue = deque(maxlen=3)
 > #### (operation 3) deletion
 >	> * (Case 1) The node to be deleted is a leaf node: `delete straight away`
 >	
->	> * (Case 2) The node to be deleted has a one child node: assign one child node as a deleted root node
+>	> * (Case 2) The node to be deleted has a one child node: assign one child node as a deleted root node's location
 >	
 >	> * (Case 3) The node to be deleted has two children: assign successor from the right subtree and then use it to replace root node
->		> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163088164-7ca55dc6-0c89-462a-8504-d2799bff757e.png">
->		>
->		> We need to find the `minimum function` to `find the successor from right branch`
+>	>	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163088164-7ca55dc6-0c89-462a-8504-d2799bff757e.png">
+>	>	
+>	>	> We need to code the `minimum function` to `find the successor from right branch`
 >	>```python
 >	>def minValuenode(bstNode):
 >	>    current = bstNode
 >	>    while (current.leftChild is not None):
->	>	current = current.leftChild
+>	>		current = current.leftChild
 >	>    return current
 >	>
 >	>def deleteNode(rootNode, nodeValue):
 >	>    if rootNode is None:
->	>	return rootNode
+>	>		return rootNode
 >	>    if nodeValue < rootNode.data:
->	>	rootNode.leftChild = deleteNode(rootNode.leftChild, nodeValue)
+>	>		rootNode.leftChild = deleteNode(rootNode.leftChild, nodeValue)
 >	>    elif nodeValue > rootNode.data:
->	>	rootNode.rightChild = deleteNode(rootNode.rightChild, nodeValue)
+>	>		rootNode.rightChild = deleteNode(rootNode.rightChild, nodeValue)
 >	>    else: # in case we find the node
->	>	if rootNode.leftChild is None:
->	>	    temp = rootNode.rightChild
->	>	    rootNode = None
->	>	    return temp
->	>	if rootNode.rightChild is None:
->	>	    temp = rootNode.leftChild
->	>	    rootNode = None
->	>	    return temp
+>	>		if rootNode.leftChild is None:
+>	>	    		temp = rootNode.rightChild
+>	>	    		rootNode = None
+>	>	    		return temp
+>	>		if rootNode.rightChild is None:
+>	>	    		temp = rootNode.leftChild
+>	>	    		rootNode = None
+>	>	    		return temp
 >	>
->	>	temp = minValuenode(rootNode.rightChild)
->	>	rootNode.data = temp.data
->	>	rootNode.rightChild = deleteNode(rootNode.rightChild, temp.data)
+>	>		temp = minValuenode(rootNode.rightChild)
+>	>		rootNode.data = temp.data
+>	>		rootNode.rightChild = deleteNode(rootNode.rightChild, temp.data)
 >	>   return rootNode
 >	>```
 > `[Time and Space complexity of Binary Search Tree]`
