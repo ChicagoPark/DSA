@@ -763,7 +763,12 @@ customQueue = deque(maxlen=3)
  	> * RR - right right condition
  	> * RL - right left condition
 
-
+rotation to the right (moving object: left child of disbalanced node / unchanged node: right child of disbalanced node / handled grandchild: unbalanced.left.right)
+(1. define new root, 2. process the branch of new root, 2. connect the processed branch to new root)
+1. new root node is left child of disbalanced node
+2. get the nearest grandchild node of disbalanced node, which is subjected to the right side, `to the rotation direction` as leftchild of disbalanced node 
+3. set new root node's right child with disbalanced node
+4. update height of disbalanced node and new root node
 
 ## [##] Recursion Realization
 1. Consider recursion is another method to express `for loop`
