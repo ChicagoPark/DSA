@@ -522,22 +522,22 @@ customQueue = deque(maxlen=3)
 >	> `Height of tree`: height of root node (e.g. in this example: 3)
 >
 > ### `Binary Tree`
->	> Binary trees are the data structures in which each node has at most two children, often referred to as the left and right children.
+>	> Binary trees are the data structures in which each node has `at most two children`, often referred to as the left and right children.
 >	>
->	> Binary tree is a familiy of data structrue (BST, Heap tree, AVL, red black trees, Syntax tree)
+>	> Binary tree is a familiy of data structrue `(BST, Heap tree, AVL, red black trees, Syntax tree)`
 >	> 
 >	> Binary trees are a prerequisite for more advanced trees like BST, AVL, Red Black Trees
 >	>   
 >	> Huffman coding problem, heap priority problem and expression parsing problems can be solved efficiently using binary trees.
 >
 > #### Types of Binary Tree
->	> (1) Full Binary Tree: each node has two children or ZERO children
+>	> (1) `Full Binary Tree`: each node has two children or ZERO children
 >	>
->	> (2) Perfect Binary Tree: all leaf nodes are located in the same level. Additionally, all nodes have two children.
+>	> (2) `Perfect Binary Tree`: all leaf nodes are located in the same level. Additionally, all nodes have two children.
 >	> 
->	> (3) Complete Binary Tree: fill the node from the left side
+>	> (3) `Complete Binary Tree`: fill the node from the left side
 >	> 
->	> (4) Balanced Binary Tree: all the leaf nodes are located in the same distance from the root node.
+>	> (4) `Balanced Binary Tree`: all the leaf nodes are located in the same distance from the root node.
 >	>
 >	> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/162341885-f294059d-7892-4a35-9380-f113374da28b.png">
 >
