@@ -633,6 +633,8 @@ customQueue = deque(maxlen=3)
 
 ### `(python list)` Attributes of Binary Tree 
 >
+> [`Why we need self.lastUsedIndex?`]: when we remove the node at the middle of the list, we will change that value with lastnode and replace lastnode with None 
+>
 >	> ```python
 >	> class BinaryTree:
 >	> 	def __init__(self, size):
