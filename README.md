@@ -705,11 +705,11 @@ customQueue = deque(maxlen=3)
 >	>		if rootNode.leftChild is None:
 >	>	    		temp = rootNode.rightChild
 >	>	    		rootNode = None
->	>	    		return temp
+>	>	    		return temp				# connect with the above recursive statement
 >	>		if rootNode.rightChild is None:
 >	>	    		temp = rootNode.leftChild
 >	>	    		rootNode = None
->	>	    		return temp
+>	>	    		return temp 				# connect with the above recursive statement
 >	>
 >	>		temp = minValuenode(rootNode.rightChild)
 >	>		rootNode.data = temp.data
