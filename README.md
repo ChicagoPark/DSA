@@ -722,7 +722,7 @@ customQueue = deque(maxlen=3)
 
 
 ## [13] AVL Tree
-> `[What is AVL Trees?]`: self-balancing Binary Search Tree (BST) where the `difference between heights` of left and right subtrees `cannot be more than one` for all nodes.
+> `[What is AVL Trees?]`: self-balancing `Binary Search Tree (BST)` where the `difference between heights` of left and right subtrees `cannot be more than one` for all nodes.
 > 
 > `[Why AVL Trees?]`: According to the inserting value to the BST, we can have O(n) time complexity in searching. To `reduce the searching time to O(logN)`, we can implement AVL Tree.
 > 
@@ -743,6 +743,11 @@ customQueue = deque(maxlen=3)
 > `CASE ii`)
 > `Basic Mechanism`: find the disbalanced node `nearest to the leaf`. Then find the higher grandchild node than rotate it
 
+
+
+
+
+>
 > * LL - left left condition: `left left side node of the unbalanced root node is the cause of unbalancing`
 
 		Right rotation is required for LL
@@ -750,20 +755,46 @@ customQueue = deque(maxlen=3)
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163359326-17f7009b-3215-402b-ba8b-9db319c397a8.png"><img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163359334-0f7f3c55-7d1d-4c69-aae8-4a9f868739d7.png">
 >
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163360996-b4c1cbc2-866a-4519-a2ca-a228473239e8.png"><img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163361004-61706aae-2b17-4f0a-9d6d-2643e79a0837.png">
->
+
+> ### `Rotation Condition`
+> 		LL: Right rotation
+>		LR: i) Left rotation, ii) Right rotation
+>		RR: Left rotation
+>		RL: i) Right rotation, ii) Left rotation
+> 
+
 >```python
->def rotateRight(disbalanceNode):
->	newRoot = disbalancedNode.leftChild
->	disbalancedNode.leftChild = disbalancedNode.leftChild.rightChild # focus on opposite grandchild side of the child side node.
->	newRoot.rightChild = disbalancedNode
->	update height of disbalancedNode and newRoot
->	return newRoot
+def rightRotate(disbalanceNode):
+    newRoot = disbalanceNode.leftChild
+    disbalanceNode.leftChild = disbalanceNode.leftChild.rightChild
+    newRoot.leftChild = disbalanceNode
+    disbalanceNode.height = 1 + max(getHeight(disbalanceNode.leftChild), getHeight(disbalanceNode.rightChild))
+    newRoot.height = 1 + max(getHeight(newRoot.leftChild), getHeight(newRoot.rightChild))
+    return newRoot
 >```
  	 	
- 	 
- 	> * LR - left right condition: 
- 	> * RR - right right condition
- 	> * RL - right left condition
+Insertation function in AVL: (1) getHeight Helper function, (2) getBalance Helper function
+
+
+[Process going up]
+(1) identify unbalanced node
+
+(2) select the grandchild node which has higher node (at this time we can know whether LL, LR, RR, RL)
+
+(3) `Rotation process`
+
+
+
+(3) 
+get the new root node
+define the unbalance node's branch relation (crossing node between branch)
+define new root's child
+update height
+
+
+
+
+
 
 rotation to the right (moving object: left child of disbalanced node / unchanged node: right child of disbalanced node / handled grandchild: unbalanced.left.right)
 (1. define new root, 2. process the branch of new root, 2. connect the processed branch to new root)
@@ -771,6 +802,8 @@ rotation to the right (moving object: left child of disbalanced node / unchanged
 2. get the nearest grandchild node of disbalanced node, which is subjected to the right side, `to the rotation direction` as leftchild of disbalanced node 
 3. set new root node's right child with disbalanced node
 4. update height of disbalanced node and new root node
+
+
 
 ## [##] Recursion Realization
 1. Consider recursion is another method to express `for loop`
