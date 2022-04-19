@@ -772,7 +772,7 @@ customQueue = deque(maxlen=3)
 > We can divide the cases: CASE i) rotation is not required: `same as BST`, CASE ii) `rotation` is required.
 >
 >
->	### `Rotation Process Understanding`: We can think that the process is going up from newRoot
+>	#### `Rotation Process Understanding`: We can think that the process is going up from newRoot
 >	> (1) identify unbalanced node
 >	> 
 >	> (2) select the grandchild node which has higher node (at this time we can know whether LL, LR, RR, RL)
