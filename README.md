@@ -735,73 +735,81 @@ customQueue = deque(maxlen=3)
 > 
 > (1) creation of AVL tree, (2) search for a node, (3) traverse are the `same as BST`
 
+### `[13-0] Rotation`
 
-### `[13-1] Insert a node in AVL Tree`
-
-> We can divide the cases: CASE i) rotation is not required: `same as BST`, CASE ii) `rotation` is required.
-> 
-> `CASE ii`)
-> `Basic Mechanism`: find the disbalanced node `nearest to the leaf`. Then find the higher grandchild node than rotate it
-
-
-
-
-
->
-> * LL - left left condition: `left left side node of the unbalanced root node is the cause of unbalancing`
-
-		Right rotation is required for LL
->
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163359326-17f7009b-3215-402b-ba8b-9db319c397a8.png"><img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163359334-0f7f3c55-7d1d-4c69-aae8-4a9f868739d7.png">
 >
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163360996-b4c1cbc2-866a-4519-a2ca-a228473239e8.png"><img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/163361004-61706aae-2b17-4f0a-9d6d-2643e79a0837.png">
+>
+> Understand 'LL' mean: `left left side node of the unbalanced root node is the cause of unbalancing`
+>
+>	### `Rotation Condition`
+>	> 		LL: Right rotation
+>	>		LR: i) Left rotation, ii) Right rotation
+>	>		RR: Left rotation
+>	>		RL: i) Right rotation, ii) Left rotation
+>	
+>	### `Rotation Code`
+>	```python
+>	def rightRotate(disbalanceNode):
+>    	    newRoot = disbalanceNode.leftChild
+>    	    disbalanceNode.leftChild = disbalanceNode.leftChild.rightChild
+>    	    newRoot.leftChild = disbalanceNode
+>    	    disbalanceNode.height = 1 + max(getHeight(disbalanceNode.leftChild), getHeight(disbalanceNode.rightChild))
+>    	    newRoot.height = 1 + max(getHeight(newRoot.leftChild), getHeight(newRoot.rightChild))
+>    	return newRoot
+>	```
+> 	### `Rotation Intuition`
+>	> 	LR Process: Do the leftRotation() from the perspective of UnB node's leftChild. Then, do rightRotation() from the perspective of rootNode.
+>	>
+>	>	RL Process: Do the rightRotation() from the perspective of UnB node's rightChild. Then, do leftRotation() from the perspective of rootNode.
 
-> ### `Rotation Condition`
-> 		LL: Right rotation
->		LR: i) Left rotation, ii) Right rotation
->		RR: Left rotation
->		RL: i) Right rotation, ii) Left rotation
+
+
+### `[13-1] Insert a node in AVL Tree`
+> `Necessary Helper Function`: (1) getHeight Helper function, (2) getBalance Helper function
 > 
-
->```python
-def rightRotate(disbalanceNode):
-    newRoot = disbalanceNode.leftChild
-    disbalanceNode.leftChild = disbalanceNode.leftChild.rightChild
-    newRoot.leftChild = disbalanceNode
-    disbalanceNode.height = 1 + max(getHeight(disbalanceNode.leftChild), getHeight(disbalanceNode.rightChild))
-    newRoot.height = 1 + max(getHeight(newRoot.leftChild), getHeight(newRoot.rightChild))
-    return newRoot
+> We can divide the cases: CASE i) rotation is not required: `same as BST`, CASE ii) `rotation` is required.
+>
+>
+>	### `Rotation Process Understanding`: We can think that the process is going up from newRoot
+>	> (1) identify unbalanced node
+>	> 
+>	> (2) select the grandchild node which has higher node (at this time we can know whether LL, LR, RR, RL)
+>	>
+>	> (3) `Rotation process`
+>	>
+>	> #### `Important Note: (1) and (2) are done with one conditional statement`
+>	> e.g. if balance > 1 and nodeValue < rootNode.leftChild.data:
+>
+> ### `CASE ii`) `rotation` is required.
+> ```python
+>    # LL
+>    if balance > 1 and nodeValue < rootNode.leftChild.data:
+>        return rightRotate(rootNode)
+>    # LR
+>    if balance > 1 and nodeValue > rootNode.leftChild.data:
+>        rootNode.leftChild = leftRotate(rootNode.leftChild)
+>        return rightRotate(rootNode)
+>    # RR
+>    if balance < -1 and nodeValue > rootNode.rightChild.data:
+>        return leftRotate(rootNode)
+>    # RL
+>    if balance < -1 and nodeValue < rootNode.rightChild.data:
+>        rootNode.rightChild = rightRotate(rootNode.rightChild)
+>        return leftRotate(rootNode)
 >```
- 	 	
-Insertation function in AVL: (1) getHeight Helper function, (2) getBalance Helper function
-
-
-[Process going up]
-(1) identify unbalanced node
-
-(2) select the grandchild node which has higher node (at this time we can know whether LL, LR, RR, RL)
-
-(3) `Rotation process`
-
-
-
-(3) 
-get the new root node
-define the unbalance node's branch relation (crossing node between branch)
-define new root's child
-update height
 
 
 
 
+### `[13-2] Delete a node in AVL Tree`
+> (Case 1) - The tree does not exist
+> (Case 2) - Rotation is not required
+> (Case 3) - Rotation is required (LL, LR, RR, RL)
+> 
+> `Check the balance when deleted node has two child nodes`
 
-
-rotation to the right (moving object: left child of disbalanced node / unchanged node: right child of disbalanced node / handled grandchild: unbalanced.left.right)
-(1. define new root, 2. process the branch of new root, 2. connect the processed branch to new root)
-1. new root node is left child of disbalanced node
-2. get the nearest grandchild node of disbalanced node, which is subjected to the right side, `to the rotation direction` as leftchild of disbalanced node 
-3. set new root node's right child with disbalanced node
-4. update height of disbalanced node and new root node
 
 
 
