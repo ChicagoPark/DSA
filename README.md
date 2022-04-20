@@ -820,7 +820,7 @@ customQueue = deque(maxlen=3)
 4. When we cover `list` extension task, we can put `return` at the last `outside of the conditional statement` because all the elements should be collected.
 5. `Recursion can do one thing such as loop the list or getting inside of the multi-layer list(e.g. [[[1]], 2, [3]]).`
 6. Think about the flow (n, n-1)
-
+7. If we design the conditional statement which has escapable condition from that bunch, we can use it similar to the loop.
 
 ## [##] Chicago Realization
 1. `local variable can be used` from the belonged function `whether we initialize` the value `from the conditional argument`. (Before the function is returned?)
