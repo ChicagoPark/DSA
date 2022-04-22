@@ -942,6 +942,13 @@ customList = None
 > 
 > * `Collision`: A collision occurs when `two different keys` to a hash function produce the `same output`.
 
+### [Hashing - Hash Functions]
+> #### Properties of good Hash function
+> 
+> * (1) It distributes hash values `uniformly` across hash tables
+> 
+> * (2) It has to use all the input data
+
 
 ## [##] Recursion Realization
 1. Consider recursion is another method to express `for loop`
