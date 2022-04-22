@@ -923,6 +923,25 @@ customList = None
 > Go to tip of the Trie and delete the node step by step
 
 
+## [16] Hashing
+> * Hashing is a `method of sorting and indexing data`. The idea behind hashing is to allow large amounts of data to be indexed using keys commonly created by formulas.
+>
+> #### `[Why Hashing?]`
+> * It is time efficient in case of `SEARCH Operation`
+> 
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164712543-60fbd5d5-90fd-459a-a01f-b20f0bd085b8.png">
+
+### [Hashing - Hashing Terminology]
+> * Hash function: It is a function that can be used to map of arbitrary size to data of fixed size.
+> 
+> * Key: `input data` by a user
+> 
+> * `Hash value`: A value that is `returned by Hash Function`
+> 
+> * `Hash Table`: It is a data structure which implements an `associative array` abstract data type, a structure that can `map keys to values`.
+> 
+> * `Collision`: A collision occurs when `two different keys` to a hash function produce the `same output`.
+
 
 ## [##] Recursion Realization
 1. Consider recursion is another method to express `for loop`
