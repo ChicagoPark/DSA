@@ -801,8 +801,6 @@ customQueue = deque(maxlen=3)
 >```
 
 
-
-
 ### `[13-2] Delete a node in AVL Tree`
 > (Case 1) - The tree does not exist
 > (Case 2) - Rotation is not required
@@ -810,6 +808,39 @@ customQueue = deque(maxlen=3)
 > 
 > `Check the balance when deleted node has two child nodes`
 
+
+## [14] Binary Heap
+> A Binary Heap is a Binary Tree with following properties.
+> 
+> * A Binary Heap is either `Min Heap` or `Max Heap`. In a Min Binary Heap, `the key at root must be minimum among all keys present in Binary Heap`. The same property must be recursively true for all nodes in Binary Tree.
+> 
+> * It's a complete tree (All levels are completely filled except possibly the last level and the last level has `all keys as left as possible`). This property of Binary Heap makes them suitable to be stored in an array.
+
+### [Binary Heap- Why a Binary Heap?]
+> Find the minimum or maximum number among a set of numbers in logN time. And also we want to make sure that inserting additional numbers does not take more than O(logN) time
+>
+> `[Practical Use]`
+> * Prim's Algorithm
+> 
+> * Heap Sort
+> 
+> * Priority Queue
+> 
+> 
+> #### `[Types of Binary Heap]`
+> 
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164250567-bb80a76a-8299-4a0b-b103-e67a24cb9731.png">
+
+### [Binary Heap- Common operations on Binary Heap]
+> (1) Creation
+> (2) Peak top
+> (3) Extract Min / Extract Max
+> (4) Traversal
+> (5) size
+> (6) Insertion
+> (7) Deletion
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164250567-bb80a76a-8299-4a0b-b103-e67a24cb9731.png">
 
 
 
@@ -821,6 +852,7 @@ customQueue = deque(maxlen=3)
 5. `Recursion can do one thing such as loop the list or getting inside of the multi-layer list(e.g. [[[1]], 2, [3]]).`
 6. Think about the flow (n, n-1)
 7. If we design the conditional statement which has escapable condition from that bunch, we can use it similar to the loop.
+8. We can consider the conditional statement except for containing end condition is ONE FOR LOOP
 
 ## [##] Chicago Realization
 1. `local variable can be used` from the belonged function `whether we initialize` the value `from the conditional argument`. (Before the function is returned?)
