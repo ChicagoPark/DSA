@@ -889,6 +889,41 @@ customList = None
 
 
 
+
+## [15] Trie
+
+> A Trie is a tree-based data structure that organizes information in a hierarchy.
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164627529-5b634748-7b62-42d3-b627-903c6fdc6383.png">
+>
+> Meaning: This Trie contains AIR, AIT, BAR, BIL, BM
+>
+> #### [Trie - Why we need Trie?] 
+> * To solve many standard problems in efficient way (e.g. Spelling checker, `Auto completion`)
+
+### [Trie- Common operations on Trie]
+> (1) Creation, (2) Insertion, (3) Search for a string, (4) Deletion
+>
+> #### [Trie- Insertion]
+> 
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164629756-0dc4f42e-90b2-4c57-a77b-3dc1aad94828.png">
+> 
+> {'character': 'next node'}
+> 
+> 
+> #### [Trie- Deletion]
+>
+> > (Case 1): Some other prefix of string is same as the one that we want to delete. (`API, APPLE`)
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164672071-3f0b8a62-ef70-4c8c-ae6a-a4fc053ea28b.png">
+> 
+> > (Case 2): The string is a prefix of another string. (`API, APIS`)
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164673612-8d8f57d7-ed66-490e-97bf-fccb2fd2d341.png">
+> 
+> > (Case 3):
+> Go to tip of the Trie and delete the node step by step
+
+
+
 ## [##] Recursion Realization
 1. Consider recursion is another method to express `for loop`
 2. `In recursion, extend is same as append for list processing`
