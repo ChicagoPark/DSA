@@ -829,7 +829,7 @@ customQueue = deque(maxlen=3)
 > 
 > #### `[Types of Binary Heap]`
 > 
-> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164250567-bb80a76a-8299-4a0b-b103-e67a24cb9731.png">
+> <img width="650" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164250567-bb80a76a-8299-4a0b-b103-e67a24cb9731.png">
 
 ### [Binary Heap- Common operations on Binary Heap]
 > (1) Creation
@@ -885,7 +885,7 @@ customList = None
 
 ### [Binary Heap - Time and Space complexity of Binary Heap]
 
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164625682-c3738794-691a-48e6-b6eb-c74290882104.png">
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164625682-c3738794-691a-48e6-b6eb-c74290882104.png">
 
 
 
