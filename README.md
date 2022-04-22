@@ -885,7 +885,7 @@ customList = None
 
 ### [Binary Heap - Time and Space complexity of Binary Heap]
 
-> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164625682-c3738794-691a-48e6-b6eb-c74290882104.png">
+> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164625682-c3738794-691a-48e6-b6eb-c74290882104.png">
 
 
 
