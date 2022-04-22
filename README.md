@@ -879,7 +879,9 @@ customQueue = deque(maxlen=3)
 >
 >
 > #### [Binary Heap - `Deletion`]
-> * `customList = None`
+```python
+customList = None
+```
 
 ### [Binary Heap - Time and Space complexity of Binary Heap]
 
