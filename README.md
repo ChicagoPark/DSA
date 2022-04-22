@@ -810,7 +810,7 @@ customQueue = deque(maxlen=3)
 
 
 ## [14] Binary Heap
-> A Binary Heap is a Binary Tree with following properties.
+> Implement through Python List
 > 
 > * A Binary Heap is either `Min Heap` or `Max Heap`. In a Min Binary Heap, `the key at root must be minimum among all keys present in Binary Heap`. The same property must be recursively true for all nodes in Binary Tree.
 > 
