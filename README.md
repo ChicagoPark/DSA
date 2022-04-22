@@ -845,7 +845,7 @@ customQueue = deque(maxlen=3)
 > 	>
 > 	> * (2) `compare with the parents node` until it finds proper position.
 > 	
-> 	> ##### `(1) insertNode() method`
+> ##### [Insertion] `(1) insertNode() method`: insert at the `last index` of the list
 > ```python
 > def insertNode(rootNode, nodeValue, heapType):
 > 	if rootNode.heapSize + 1 == rootNode.maxSize:
@@ -856,7 +856,7 @@ customQueue = deque(maxlen=3)
 > 	return "The node has been successfully inserted"
 > ```
 >
->	> ##### `(2) heapify_tree_insert() method`
+> ##### [Insertion] `(2) heapify_tree_insert() method`: `compare with the parents node` until it finds proper position.
 >```python
 >def heapify_tree_insert(rootNode, index, heapType):
 >	parentIndex = int(index/2)
@@ -871,8 +871,20 @@ customQueue = deque(maxlen=3)
 >			rootNode.customList[index], rootNode.customList[parentIndex] = rootNode.customList[parentIndex], rootNode.customList[index]
 >		heapify_tree_insert(rootNode, parentIndex, heapType)
 >```
+>
+> #### [Binary Heap - `Extraction`]
+> * Goal: We `extract the root node`
+> 
+> * Process: (1) Put `last node` at `root node` position, (2) find the proper location of replaced root node
+>
+>
+> #### [Binary Heap - `Deletion`]
+> * `customList = None`
 
-> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164250567-bb80a76a-8299-4a0b-b103-e67a24cb9731.png">
+### [Binary Heap - Time and Space complexity of Binary Heap]
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164625682-c3738794-691a-48e6-b6eb-c74290882104.png">
+
 
 
 ## [##] Recursion Realization
