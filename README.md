@@ -834,10 +834,10 @@ customQueue = deque(maxlen=3)
 ### [Binary Heap- Common operations on Binary Heap]
 > (1) Creation
 > (2) Peak top
-> (3) Extract Min / Extract Max
+> (3) Extract Min / Extract Max: `Going Down`
 > (4) Traversal
 > (5) size
-> (6) Insertion
+> (6) Insertion: `Going up`
 > (7) Deletion
 >
 > #### [Binary Heap - `Insertion`]
