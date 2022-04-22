@@ -839,9 +839,40 @@ customQueue = deque(maxlen=3)
 > (5) size
 > (6) Insertion
 > (7) Deletion
+>
+> #### [Binary Heap - `Insertion`]
+> 	> * (1) insert at the `last index` of the list
+> 	>
+> 	> * (2) `compare with the parents node` until it finds proper position.
+> 	
+> 	> ##### `(1) insertNode() method`
+> ```python
+> def insertNode(rootNode, nodeValue, heapType):
+> 	if rootNode.heapSize + 1 == rootNode.maxSize:
+>     		return "The Binary Heap is Full"
+> 	rootNode.customList[rootNode.heapSize + 1] = nodeValue
+> 	rootNode.heapSize += 1
+> 	heapify_tree_insert(rootNode, rootNode.heapSize, heapType)
+> 	return "The node has been successfully inserted"
+> ```
+>
+>	> ##### `(2) heapify_tree_insert() method`
+>```python
+>def heapify_tree_insert(rootNode, index, heapType):
+>	parentIndex = int(index/2)
+>	if index <= 1:
+>		return
+>	if heapType == "Min":
+>		if rootNode.customList[index] < rootNode.customList[parentIndex]:
+>			rootNode.customList[index], rootNode.customList[parentIndex] = rootNode.customList[parentIndex], rootNode.customList[index]
+>		heapify_tree_insert(rootNode, parentIndex, heapType)
+>	else:
+>		if rootNode.customList[index] > rootNode.customList[parentIndex]:
+>			rootNode.customList[index], rootNode.customList[parentIndex] = rootNode.customList[parentIndex], rootNode.customList[index]
+>		heapify_tree_insert(rootNode, parentIndex, heapType)
+>```
 
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164250567-bb80a76a-8299-4a0b-b103-e67a24cb9731.png">
-
 
 
 ## [##] Recursion Realization
