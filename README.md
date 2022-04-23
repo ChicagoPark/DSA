@@ -950,6 +950,7 @@ customList = None
 > * (2) It has to use all the input data
 
 
+
 ## [##] Recursion Realization
 1. Consider recursion is another method to express `for loop`
 2. `In recursion, extend is same as append for list processing`
@@ -958,12 +959,16 @@ customList = None
 5. `Recursion can do one thing such as loop the list or getting inside of the multi-layer list(e.g. [[[1]], 2, [3]]).`
 6. Think about the flow (n, n-1)
 7. If we design the conditional statement which has escapable condition from that bunch, we can use it similar to the loop.
-8. We can consider the conditional statement except for containing end condition is ONE FOR LOOP
+8. We can consider the conditional statement except for containing end condition is ONE FOR LOOP. Importantly, each statement has `i++-liked statement` and next calling
+
+
 
 ## [##] Chicago Realization
 1. `local variable can be used` from the belonged function `whether we initialize` the value `from the conditional argument`. (Before the function is returned?)
 2. `Efficiently check the duplicates`: Put the visited values in the list and use `in`! (Without temporal variable such as list, we should use two loops to compare)
 3. [`Linked list`]When we assign a data to the node at the left side of the code, the node is updated.
+
+
 
 ## [Coding Method] Python Map Lambda
 ### [1] lambda: a way of creating a little function inline, without all the syntax of a def
