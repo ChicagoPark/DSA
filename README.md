@@ -754,7 +754,7 @@ customQueue = deque(maxlen=3)
 >	def rightRotate(disbalanceNode):
 >    	    newRoot = disbalanceNode.leftChild
 >    	    disbalanceNode.leftChild = disbalanceNode.leftChild.rightChild
->    	    newRoot.leftChild = disbalanceNode
+>    	    newRoot.rightChild = disbalanceNode
 >    	    disbalanceNode.height = 1 + max(getHeight(disbalanceNode.leftChild), getHeight(disbalanceNode.rightChild))
 >    	    newRoot.height = 1 + max(getHeight(newRoot.leftChild), getHeight(newRoot.rightChild))
 >    	return newRoot
