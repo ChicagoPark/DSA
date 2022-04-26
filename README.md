@@ -955,6 +955,55 @@ customList = None
 
 
 
+
+## [00] A Recipe for Problem Solving
+
+* Algorithm: is a set of steps to accomplish a certain task
+
+> ### `5 Steps for problem solving`
+> 
+> * (1) `Understand the problem`
+> 	> 1. Can we restate the problem in our own words? (with adjective and noun)
+> 	> 2. What are the inputs that go into the problem? (Integer? Float?)
+> 	> 3. What are the outputs that come from the problem? (Integer? Float?)
+> 	> 4. Can the outputs be determined from the inputs? In other words, do we have enough information to solve this problem? (Yes)
+> 	> 5. What should I label the important piece of data that are the part of a problem? (add, sum)
+> 
+> * (2) `Explore examples`
+> 
+> 	> 1. Start with `simple examples` (Write an expected output result about simple code line.)
+> 	> 2. Progress to `more complex examples` (Write an expected output result about complex code line.)
+> 	> 3. Explore examples with `empty input`
+> 	> 4. Identify the examples with `invalid inputs`
+> 	
+> * (3) `Break it down`
+> 
+> 	> 1. Write out the steps that you need to take (e.g. do SOMETHING, return SOMETHING => fill in the SOMETHING)
+> 
+>	```python
+>	def charCount(str):
+>		# declare an object(e.g. dictionary) to return at the end
+>		# loop over the string
+>			# if the char is letter and it is in out object add one to the value
+>			# if the char is letter and it is not in our object add that char to our object with the value of one
+>		# return an object
+>	```
+> 	
+> * (4) `Solve / Simplify`
+> 
+> 	> 1. Solve the Problem
+> 	`if you cannot`
+> 	> 2. Simplify the Problem
+> 	> 	> Find the core difficulty
+> 	> 	> Temporarily ignore that difficulty
+> 	> 	> Write a simplified solution
+> 	> 	> Then incorporate that difficulty
+
+> 	
+> * (5) `Look back refactor`
+
+
+
 ## [##] Recursion Realization
 1. Consider recursion is another method to express `for loop`
 2. `In recursion, extend is same as append for list processing`
