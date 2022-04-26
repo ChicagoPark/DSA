@@ -925,7 +925,11 @@ customList = None
 
 ## [16] Hashing
 > * Hashing is a `method of sorting and indexing data`. The idea behind hashing is to allow large amounts of data to be indexed using keys commonly created by formulas.
->
+> 
+> * [Pros of Hashing] On an average insertion/Deletion/Search operations take O(1) time.
+> 
+> * [Cons of Hashing] When Hash funciton is not good enough Insertion/Deletion/Search operations take O(n) time
+> 
 > #### `[Why Hashing?]`
 > * It is time efficient in case of `SEARCH Operation`
 > 
@@ -949,9 +953,55 @@ customList = None
 > 
 > * (2) It has to use all the input data
 
+### [Hashing - Collision Resolution Techniques]
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/165201477-fbea8243-7d82-49d0-9243-c95aa314f2be.png"> 
+
+> * (1) `Direct Chaining`: Implements the buckets as linked list. Colliding elements are stored in this lists.
+> 
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/165202121-fb72f421-2118-467a-8c6d-c83773bfa0fc.png"> 
+
+> * (2) `Open Addressing`: Colliding elements are stored in other vacant buckets. During storage and lookup these are found through so called probing.
+> 	> `Linear probing`: It places new key into closest following empty cell.
+> 	> 	> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/165204194-54bf43b7-dec5-4686-a690-fc87d4a1a4ba.png"> 
+> 	> `Quadratic probing`: Adding arbitrary quadratic polynomial to the index until an empty cell is found.
+> 	>	> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/165204197-8090c541-3254-40a8-86c0-864fcdb85202.png"> 
+> 	> `Double Hashing`: Interval between probes is computed by another hash function.
+> 	>	> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/165204199-3d8fc43a-0555-4283-87ce-f14bba11cf41.png"> 
+
+
+### [Hashing - Hash Table is Full]
+
+> * (1) `Direct Chaining`: Since we have linked list, this situation will never arise.
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/165204898-96e1e640-4db2-44f7-a2ab-5fe21ea0a8b3.png"> 
+
+
+> * (2) `Open Addressing`: Create 2X size of current Hash Table and recall hasing for current keys.
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/165204895-b6143a87-09cf-4c0d-8709-006793649ee6.png"> 
+
+### [Hashing - Pros and Cons of Collision resolution techniques]
+
+> * (1) `Direct Chaining`
+> 	> [Pros]: Hash table never gets full
+> 	> [Cons]: Huge linked list causes performance leaks (Time complexity for search operation becomes O(n).)
+
+
+> * (2) `Open Addressing`: Create 2X size of current Hash Table and recall hasing for current keys.
+> 	> [Pros]: Easy Implementation
+> 	> [Cons]: When Hash Table is full, creation of new Hash table affects performance (Time complexity for search operation becomes O(n))
+>
+> [Selection 1]: If the input size is known, we always use "Open addressing"
+> 
+> [Selection 2]: If we perform deletion operation frequently we use "Direct Chaining" (Open addressing will stop searching when it encounter empty cell)
+
+### [Hashing - Practical Use of Hashing]
+> 1. Password verification: Change user information to hash value and keep it
+> 
+> 2. File system: File path is mapped to physical location on disk through Hashing
+
+
 
 ## [17] Sort Algorithms
-
 
 
 
@@ -960,7 +1010,7 @@ customList = None
 
 * Algorithm: is a set of steps to accomplish a certain task
 
-> ### `5 Steps for problem solving`
+> ### `3 Steps for problem solving`
 > 
 > * (1) `Understand the problem`
 > 	> 1. Can we restate the problem in our own words? (with adjective and noun)
@@ -988,19 +1038,8 @@ customList = None
 >			# if the char is letter and it is not in our object add that char to our object with the value of one
 >		# return an object
 >	```
-> 	
-> * (4) `Solve / Simplify`
-> 
-> 	> 1. Solve the Problem
-> 	`if you cannot`
-> 	> 2. Simplify the Problem
-> 	> 	> Find the core difficulty
-> 	> 	> Temporarily ignore that difficulty
-> 	> 	> Write a simplified solution
-> 	> 	> Then incorporate that difficulty
+>	> 2. Think about the exceptional occasion
 
-> 	
-> * (5) `Look back refactor`
 
 
 
