@@ -660,7 +660,7 @@ customQueue = deque(maxlen=3)
 ## [12] Binary Search Tree
 > * `using Linked List`
 > 
-> `Important advice`: when check the tree is empty or not, do not check `rootNode.data is None` do check `rootNode is None`. Except for the `insertion` Otherwise it generates the error.
+> `Important advice`: when check the tree is empty or not, do not check `rootNode.data is None` do check `rootNode is None`. Except for the `insertion`. Otherwise it generates the error.
 > 
 > `[What is a Binary Search Tree]`
 > * (1) In the left subtree the value of a node is less than or equal to its parent node's value.
@@ -1013,16 +1013,16 @@ customList = None
 > ### `3 Steps for problem solving`
 > 
 > * (1) `Understand the problem`
-> 	> 1. Can we restate the problem in our own words? (with adjective and noun)
-> 	> 2. What are the inputs that go into the problem? (Integer? Float?)
-> 	> 3. What are the outputs that come from the problem? (Integer? Float?)
+> 	> 1. Can we `restate` the problem in our own words? (with adjective and noun)
+> 	> 2. What are the `inputs` that go into the problem? (Integer? Float?)
+> 	> 3. What are the `outputs` that come from the problem? (Integer? Float?)
 > 	> 4. Can the outputs be determined from the inputs? In other words, do we have enough information to solve this problem? (Yes)
 > 	> 5. What should I label the important piece of data that are the part of a problem? (add, sum)
 > 
 > * (2) `Explore examples`
 > 
-> 	> 1. Start with `simple examples` (Write an expected output result about simple code line.)
-> 	> 2. Progress to `more complex examples` (Write an expected output result about complex code line.)
+> 	> 1. Start with `simple examples` (Write an `expected output` result about `simple` code line.)
+> 	> 2. Progress to `more complex examples` (Write an `expected output` result about `complex code` line.)
 > 	> 3. Explore examples with `empty input`
 > 	> 4. Identify the examples with `invalid inputs`
 > 	
