@@ -526,7 +526,7 @@ customQueue = deque(maxlen=3)
 >	>
 >	> Binary tree is a familiy of data structrue `(BST, Heap tree, AVL, red black trees, Syntax tree)`
 >	> 
->	> Binary trees are a prerequisite for more advanced trees like BST, AVL, Red Black Trees
+>	> Binary trees are a `prerequisite for more advanced trees` like BST, AVL, Red Black Trees
 >	>   
 >	> Huffman coding problem, heap priority problem and expression parsing problems can be solved efficiently using binary trees.
 >
@@ -752,11 +752,11 @@ customQueue = deque(maxlen=3)
 >	### `Rotation Code`
 >	```python
 >	def rightRotate(disbalanceNode):
->    	    newRoot = disbalanceNode.leftChild
->    	    disbalanceNode.leftChild = disbalanceNode.leftChild.rightChild
->    	    newRoot.rightChild = disbalanceNode
->    	    disbalanceNode.height = 1 + max(getHeight(disbalanceNode.leftChild), getHeight(disbalanceNode.rightChild))
->    	    newRoot.height = 1 + max(getHeight(newRoot.leftChild), getHeight(newRoot.rightChild))
+>    	  newRoot = disbalanceNode.leftChild
+>    	  disbalanceNode.leftChild = disbalanceNode.leftChild.rightChild
+>    	  newRoot.rightChild = disbalanceNode
+>    	  disbalanceNode.height = 1 + max(getHeight(disbalanceNode.leftChild), getHeight(disbalanceNode.rightChild))
+>    	  newRoot.height = 1 + max(getHeight(newRoot.leftChild), getHeight(newRoot.rightChild))
 >    	return newRoot
 >	```
 > 	### `Rotation Intuition`
