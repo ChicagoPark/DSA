@@ -673,7 +673,9 @@ customQueue = deque(maxlen=3)
 > * (1. creation), (2. insertation), (3. deletion), (4. search), (5. traverse), (6. deletion)
 > 
 > #### (operation 1) insertation
->	> * compare the value with node and then insert the node once classified branch is empty
+> 	> * `don't put` nodeVariable `at the left side of the insertation function` call.
+> 	
+> 	> * compare the value with node and then insert the node once classified branch is empty
 >
 > #### (operation 2) search
 >	> * compare the value with node and then go down the tree resursively. Once the value is found, return the message
