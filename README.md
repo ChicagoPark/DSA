@@ -757,7 +757,7 @@ customQueue = deque(maxlen=3)
 >    	  newRoot.rightChild = disbalanceNode
 >    	  disbalanceNode.height = 1 + max(getHeight(disbalanceNode.leftChild), getHeight(disbalanceNode.rightChild))
 >    	  newRoot.height = 1 + max(getHeight(newRoot.leftChild), getHeight(newRoot.rightChild))
->    	return newRoot
+>    	  return newRoot
 >	```
 > 	### `Rotation Intuition`
 >	> 	LR Process: Do the leftRotation() from the perspective of UnB node's leftChild. Then, do rightRotation() from the perspective of rootNode.
