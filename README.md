@@ -1063,10 +1063,21 @@ customList = None
 > 
 > > Average time complexity is poor
 
-### [Sort - Selection Sort]
+### [Sort - Selection Sort] (fill from index 0)
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166398706-b3f6a429-4b27-4038-b0cc-146b9f0ecd65.png">
 > 
 > We repeatedly find the minimum element and move it to the sorted part of array to make unsorted part empty.
+>
+> #### When to `use` Selection Sort?
+> 
+> > When we have `insufficient memory`
+> > 
+> > Easy to `implement`
+> 
+> #### When to `avoid` Selection Sort?
+> 
+> > When time is matter
+
 
 ## [00] A Recipe for Problem Solving
 
