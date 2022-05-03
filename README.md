@@ -1004,7 +1004,17 @@ customList = None
 
 
 ## [17] Sort Algorithms
-
+> #### (i) What is Sorting?
+> 
+>   > arranging data in a particular format: either ascending or descending
+>  
+> #### (ii)Types of Sort Algorithms
+> 
+>   > Bubble Sort, Selection Sort, Insertion Sort, Bucket Sort, Merge Sort, Quick Sort, Heap Sort
+> 
+> #### (iii) Practical Use of Sorting
+> 
+>   > MS Excel(Built in functionality to sort data), Online Stores(sorting by price, review, ratings)
 
 
 
