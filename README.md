@@ -1010,13 +1010,63 @@ customList = None
 >  
 > #### (ii)Types of Sort Algorithms
 > 
+>   * Choose according to the stability needs or space efficiency needs or time efficiency needs
+>   
 >   > Bubble Sort, Selection Sort, Insertion Sort, Bucket Sort, Merge Sort, Quick Sort, Heap Sort
 > 
 > #### (iii) Practical Use of Sorting
 > 
 >   > MS Excel(Built in functionality to sort data), Online Stores(sorting by price, review, ratings)
 
+### [Sort - Type]
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166394521-e774b31e-eedd-4d1a-a24e-e810ba025142.png"> 
+> 
+> #### [Space used]
+> `In place sorting`: Sorting algorithms which does not require any extra space for sorting
+> 
+> 	> Example: Bubble Sort
+> 
+> `Out place sorting`: Sorting algorithms which requires an extra space for sorting
+> 
+> 	> Example: Merge Sort
 
+> #### [Stability]
+> 
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166395203-6d01cb1a-d9e8-454c-b4b6-7ee81e1c51b2.png"> 
+> 
+> `Stable sorting`: If a sorting algorithm after sorting the contents does not change the sequence of similar content in which they appear, then this sorting is called stable sorting.
+> 
+> 	> Example: Insertion Sort
+> 
+> `Unstable sorting`: If sequence of similar content is changed.
+> 
+> 	> Example: Merge Sort
+
+### [Sort - Terminology]
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166395422-908c83ec-481b-4689-869b-55a494034268.png"> 
+
+
+### [Sort - Bubble Sort]
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166395889-5c3cba74-d1da-4dd2-8ced-277473c6d0ae.png">
+>
+> We repeatedly compare each pair of adjacent items and swap them if they are in the wrong order. (Put the biggest item at the right side accumulatively)
+>
+> #### When to use Bubble Sort?
+> 
+> > When the input is already sorted
+> > 
+> > Space is a concern
+> > 
+> > Easy to implement
+> 
+> #### When to avoid Bubble Sort?
+> 
+> > Average time complexity is poor
+
+### [Sort - Selection Sort]
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166398706-b3f6a429-4b27-4038-b0cc-146b9f0ecd65.png">
+> 
+> We repeatedly find the minimum element and move it to the sorted part of array to make unsorted part empty.
 
 ## [00] A Recipe for Problem Solving
 
