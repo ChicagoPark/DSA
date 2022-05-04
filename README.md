@@ -1112,21 +1112,17 @@ customList = None
 > 
 > 
 > 
-> 
-> 
 > #### When to `use` Bucket Sort?
 > 
-> > When we have `insufficient memory`
+> > When input uniformly distributed over range.
 > > 
-> > Easy to `implement`
+> > Good (1,2,4,5,3,8,7,9) / Bad (1,2,4,91,93,95)
 > > 
-> > When we have continuous inflow of numbers and we want to keep them sorted
-> 
 > #### When to `avoid` Bucket Sort?
 > 
-> > When time is matter
+> > When space is matter
 
-[Sort - Insertion Sort] Key method: compare and put the large value at the j+1 sequentially
+[Sort - Bucket Sort] Key method:
 
 
 
