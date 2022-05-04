@@ -1078,6 +1078,26 @@ customList = None
 > 
 > > When time is matter
 
+### [Sort - Insertion Sort] (fill from index 0)
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166623144-88d52738-7c9e-4960-b07d-e3556b7d2cd1.png">
+> 
+> * Divide the given array into two part
+> 
+> * `[Repetition]` Take first element from unsorted array and find its correct position in sorted array (Repeat until unsorted array is empty)
+>
+> #### When to `use` Insertion Sort?
+> 
+> > When we have `insufficient memory`
+> > 
+> > Easy to `implement`
+> > 
+> > When we have continuous inflow of numbers and we want to keep them sorted
+> 
+> #### When to `avoid` Selection Sort?
+> 
+> > When time is matter
+
+[Sort - Insertion Sort] Key method: compare and put the large value at the j+1 sequentially
 
 ## [00] A Recipe for Problem Solving
 
