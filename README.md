@@ -1125,6 +1125,20 @@ customList = None
 [Sort - Bucket Sort] Key method:
 
 
+### [Sort - Merge Sort]
+> Merge sort is a `divide and conquer` algorithm
+> 
+> Divide the input array in two halves and we keep halving recursively until they become too small that cannot be broken further
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166701115-e5a62df2-12e1-491a-b42a-fe9d675f553c.png">
+> 
+> Merge halves by sorting them.
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166701122-9ece4b27-5e47-4e8d-ba22-6ccbe7467782.png">
+
+
+
+
 
 
 ## [00] A Recipe for Problem Solving
