@@ -1078,7 +1078,7 @@ customList = None
 > 
 > > When time is matter
 
-### [Sort - Insertion Sort] (fill from index 0)
+### [Sort - Insertion Sort]
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166623144-88d52738-7c9e-4960-b07d-e3556b7d2cd1.png">
 > 
 > * Divide the given array into two part
@@ -1093,11 +1093,43 @@ customList = None
 > > 
 > > When we have continuous inflow of numbers and we want to keep them sorted
 > 
-> #### When to `avoid` Selection Sort?
+> #### When to `avoid` Insertion Sort?
 > 
 > > When time is matter
 
 [Sort - Insertion Sort] Key method: compare and put the large value at the j+1 sequentially
+
+
+### [Sort - Bucket Sort]
+> * (1) Create buckets and distribute elements of array into buckets.
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166625054-7db26d7f-5d03-40fc-969b-a166328020a8.png">
+>
+> * (2) Sort buckets individually
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166625117-3c5a0d35-0198-4b31-b89a-4f4491312f1c.png">
+>
+> * (3) Merge buckets after sorting
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166625189-1c929f6d-699b-463a-b866-600297af07cb.png">
+> 
+> 
+> 
+> 
+> 
+> #### When to `use` Bucket Sort?
+> 
+> > When we have `insufficient memory`
+> > 
+> > Easy to `implement`
+> > 
+> > When we have continuous inflow of numbers and we want to keep them sorted
+> 
+> #### When to `avoid` Bucket Sort?
+> 
+> > When time is matter
+
+[Sort - Insertion Sort] Key method: compare and put the large value at the j+1 sequentially
+
+
+
 
 ## [00] A Recipe for Problem Solving
 
