@@ -767,8 +767,9 @@ customQueue = deque(maxlen=3)
 >	>	RL Process: Do the rightRotation() from the perspective of UnB node's rightChild. Then, do leftRotation() from the perspective of rootNode.
 
 
-
 ### `[13-1] Insert a node in AVL Tree`
+> (1) Put the value when we find out "rootNode == None", (2) balancing: `if balance > 1 and nodeValue < rootNode.leftChild.data:`
+>
 > `Necessary Helper Function`: (1) getHeight Helper function, (2) getBalance Helper function
 > 
 > We can divide the cases: CASE i) rotation is not required: `same as BST`, CASE ii) `rotation` is required.
@@ -804,6 +805,7 @@ customQueue = deque(maxlen=3)
 
 
 ### `[13-2] Delete a node in AVL Tree`
+> (1) balancing: `if balance > 1 and getBalance(rootNode.leftChild) > 0:`
 > (Case 1) - The tree does not exist
 > (Case 2) - Rotation is not required
 > (Case 3) - Rotation is required (LL, LR, RR, RL)
