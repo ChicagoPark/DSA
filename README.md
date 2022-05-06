@@ -986,12 +986,14 @@ customList = None
 ### [Hashing - Pros and Cons of Collision resolution techniques]
 
 > * (1) `Direct Chaining`
-> 	> [Pros]: Hash table never gets full
-> 	> [Cons]: Huge linked list causes performance leaks (Time complexity for search operation becomes O(n).)
+> 	> [Pros]: Hash table `never gets full`
+> 	
+> 	> [Cons]: `Huge` linked list causes `performance` leaks (Time complexity for search operation becomes O(n).)
 
 
 > * (2) `Open Addressing`: Create 2X size of current Hash Table and recall hasing for current keys.
 > 	> [Pros]: Easy Implementation
+> 	
 > 	> [Cons]: When Hash Table is full, creation of new Hash table affects performance (Time complexity for search operation becomes O(n))
 >
 > [Selection 1]: If the input size is known, we always use "Open addressing"
@@ -1048,6 +1050,8 @@ customList = None
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166395422-908c83ec-481b-4689-869b-55a494034268.png"> 
 
 
+----
+
 ### [Sort - Bubble Sort]
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166395889-5c3cba74-d1da-4dd2-8ced-277473c6d0ae.png">
 >
@@ -1055,7 +1059,7 @@ customList = None
 >
 > #### When to use Bubble Sort?
 > 
-> > When the input is already sorted
+> > When the input is `already sorted`
 > > 
 > > Space is a concern
 > > 
@@ -1064,6 +1068,8 @@ customList = None
 > #### When to avoid Bubble Sort?
 > 
 > > Average time complexity is poor
+
+----
 
 ### [Sort - Selection Sort] (fill from index 0)
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166398706-b3f6a429-4b27-4038-b0cc-146b9f0ecd65.png">
@@ -1079,6 +1085,8 @@ customList = None
 > #### When to `avoid` Selection Sort?
 > 
 > > When time is matter
+
+----
 
 ### [Sort - Insertion Sort]
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166623144-88d52738-7c9e-4960-b07d-e3556b7d2cd1.png">
@@ -1101,6 +1109,7 @@ customList = None
 
 [Sort - Insertion Sort] Key method: compare and put the large value at the j+1 sequentially
 
+----
 
 ### [Sort - Bucket Sort]
 > * (1) Create buckets and distribute elements of array into buckets.
@@ -1137,8 +1146,6 @@ customList = None
 > Merge halves by sorting them.
 > 
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166701122-9ece4b27-5e47-4e8d-ba22-6ccbe7467782.png">
-
-
 
 
 
