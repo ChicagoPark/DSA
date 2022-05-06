@@ -45,8 +45,8 @@ Data Structure &amp; Algorithm in Python
 
 > `When to avoid recursion?`
 > * If time and space complexity matter for us.
-> Recursion uses more memory. If we use embedded memory.
-> Recursion can delay the process.
+> 
+> Recursion uses more memory. If we use embedded memory, recursion can delay the process.
 
 ### [2-1] Property of Recursion
 
