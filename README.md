@@ -1191,6 +1191,22 @@ Necessary elements: `P`, `L`, `R`
 
 When L and R on the same index, switch that element with Pivot element
 
+
+### [Sort - Heap Sort]
+> ##### Step 1: Insert data to Binary Heap Tree
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167278507-a49bd38c-f03d-481d-8ae9-cab49e3ee2e1.png">
+>
+> ##### Step 2: Extract `Root Node` data from Binary Heap
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167278534-077af1de-eb31-42ab-9420-0115e76c7a4f.png">
+
+----
+
+### [Sort Algorithms Comparison]
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167278739-68daee0b-0c07-47ac-8243-fe674cc95893.png">
+
+
 --------
 
 ## [00] A Recipe for Problem Solving
