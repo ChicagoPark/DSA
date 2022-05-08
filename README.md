@@ -1050,7 +1050,6 @@ customList = None
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166395422-908c83ec-481b-4689-869b-55a494034268.png"> 
 
 
-
 ----
 
 ### [Sort - Bubble Sort]
