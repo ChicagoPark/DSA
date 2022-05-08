@@ -1005,7 +1005,7 @@ customList = None
 > 
 > 2. File system: File path is mapped to physical location on disk through Hashing
 
-
+----
 
 ## [17] Sort Algorithms
 > #### (i) What is Sorting?
@@ -1048,6 +1048,7 @@ customList = None
 
 ### [Sort - Terminology]
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166395422-908c83ec-481b-4689-869b-55a494034268.png"> 
+
 
 
 ----
@@ -1135,20 +1136,62 @@ customList = None
 
 [Sort - Bucket Sort] Key method:
 
+----
 
 ### [Sort - Merge Sort]
 > Merge sort is a `divide and conquer` algorithm
 > 
-> Divide the input array in two halves and we keep halving recursively until they become too small that cannot be broken further
+> Divide the input array in two halves and we keep halving recursively `until they become too small` that cannot be broken further
 > 
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166701115-e5a62df2-12e1-491a-b42a-fe9d675f553c.png">
 > 
 > Merge halves by sorting them.
 > 
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166701122-9ece4b27-5e47-4e8d-ba22-6ccbe7467782.png">
+> 
+> 
+> 
+> #### When to `use` Merge Sort?
+> 
+> > When we need stable sort.
+> > 
+> > When average expected time is O(NlogN)
+> > 
+> 
+> #### When to `avoid` Merge Sort?
+> 
+> > When space is matter
 
+----
 
+### [Sort - Quick Sort]
+> Quick sort is a `divide and conquer` algorithm
+> 
+> Find `pivot number` and make sure smaller numbers located at the `left` of pivot and bigger numbers are located at the `right` of the pivot.
+> 
+> * `Pivot number is normally chosen at random.`
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167277671-71f24119-edfd-492f-bb47-bace5cfc2f41.png">
+> 
+> Unlike merge sort, extra space is not required.
+> 
+> 
+> #### When to `use` Quick Sort?
+> 
+> > When average expected time is O(NlogN)
+>  
+> #### When to `avoid` Quick Sort?
+> 
+> > When space is matter
+> > 
+> > When you need stable sort
 
+##### `Process in detail`
+Necessary elements: `P`, `L`, `R`
+
+When L and R on the same index, switch that element with Pivot element
+
+--------
 
 ## [00] A Recipe for Problem Solving
 
