@@ -1205,8 +1205,52 @@ When L and R on the same index, switch that element with Pivot element
 ### [Sort Algorithms Comparison]
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167278739-68daee0b-0c07-47ac-8243-fe674cc95893.png">
 
+----
+
+## [18] Searching Algorithms
+
+### [Searching- Types of searcing algorithms]
+
+> ##### Linear Search
+> 
+> searching and comparing one by one.
+> 
+> [Pro: Good in unsorted array] / [Con: In sorted array, it would be better to use other searching algorithms.]
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167327544-b10c612e-a033-41de-a864-6c01cd2efca3.png">
+> 
+
+> ##### Binary Search
+> (0) Binary Search `only works for sorted arrays`.
+> 
+> (1) Binary Search is faster than Linear Search
+> 
+> (2) Half of the remaining elements can be eliminated at a time, instead of eliminating them one by one.
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167328332-b16467bd-7c40-4078-8532-1b73d2dac9fa.png">
+
+* Binary Search Pseudocode
+> Create function with two parameters which are a sorted array and a value
+> 
+> Create two pointers: a left pointer at the start of the array and a right pointer at the end of the array.
+> 
+> Based on left and right pointers calculate middle pointer
+> 
+> While middle is not equal to the value and start<=end loop:
+> 
+> 	> if the middle is greater than the value move the right pointer down
+> 	
+> 	> if the middle is less than the value move the left pointer up
+> 	
+> If the value is never found return -1
+> 
+> * Binary Search Time Complexity
+> 
+> Wost and Average Case: O(log n)
+
 
 --------
+
 
 ## [00] A Recipe for Problem Solving
 
