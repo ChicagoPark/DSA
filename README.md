@@ -318,7 +318,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 ### [8-6] Difference between Linked Lists vs Arrays
 * Elements of linked list are `independent objects`.
 * Variable size - the size of a linked list is `not predefined`.
-* `Insertation and removals` in linked list are `very efficient`.
+* `Insertion and removals` in linked list are `very efficient`.
 * Random access - accessing an element is very efficient in arrays. `However, linked list cannot directly access to specific value.` Should start from the head sequentially.
 
 
@@ -670,10 +670,10 @@ customQueue = deque(maxlen=3)
 > * It performs faster than Binary Tree when `inserting and deleting` nodes.
 > 
 > `[What kinds of operation do Binary Search Tree has]`
-> * (1. creation), (2. insertation), (3. deletion), (4. search), (5. traverse), (6. deletion)
+> * (1. creation), (2. insertion), (3. deletion), (4. search), (5. traverse), (6. deletion)
 > 
-> #### (operation 1) insertation
-> 	> * `don't put` nodeVariable `at the left side of the insertation function` call unless we find `None` location.
+> #### (operation 1) insertion
+> 	> * `don't put` nodeVariable `at the left side of the insertion function` call unless we find `None` location.
 > 	
 > 	> * compare the value with node and then insert the node once classified branch is empty
 >
