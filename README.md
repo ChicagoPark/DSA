@@ -1248,6 +1248,50 @@ When L and R on the same index, switch that element with Pivot element
 > 
 > Wost and Average Case: O(log n)
 
+----
+
+## [19] Graph
+> Graph consists of a finite set of Vertices(or nodes) and a set of Edges which connect a pair of nodes.
+
+### [Graph- Terminology]
+> Vertices(vertex): the nodes of the graph
+> 
+> Edge: The edge is the line that connects pairs of vertices
+> 
+> Unweighted graph: A graph which does not have a weight associated with any edge
+> 
+> Weighted graph: A graph which has a weight associated with any edge
+> 
+> Undirected graph: In case the edges of the graph do not have a direction associated with them
+>
+> Directed graph: If the edges in a graph have a direction associated with them
+> 
+> Cyclic graph: A graph which has at least one loop
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167546919-50823970-41b1-4442-964f-b0b40f8ea12c.png">
+> 
+> Acyclic graph: A graph with no loop
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167546921-934acd35-f4c9-450e-bd02-4fa6039bf2fa.png">
+> 
+> Tree: It is a special case of directed acyclic graphs
+
+### [Graph- Types]
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167552196-340abe10-2330-4c49-81ae-b6fe206b507b.png">
+> 
+> Negative graph: Unless there is an negative edge, we call it as a negetive graph
+
+
+
+### [Graph- Representation]
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167557649-8004f1fa-ae5b-499b-af07-6ff5e0471473.png">
+
+> ##### `(1) Adjacency Matrix`
+> 
+> > an adjacency matrix is a square matrix or you can say it is a 2D array. And the elements of the matrix indicate whether pairs of vertices are adjacent or not in the graph.
+
+> ##### `(2) Adjacency List`
+>
+> > an adjacency list is a collection of unordered list used to represent a graph. Each list describes the set of neighbors of a vertex in the graph.
+
 
 --------
 
