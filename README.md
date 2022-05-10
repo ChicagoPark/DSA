@@ -1291,7 +1291,32 @@ When L and R on the same index, switch that element with Pivot element
 > ##### `(2) Adjacency List`
 >
 > > an adjacency list is a collection of unordered list used to represent a graph. Each list describes the set of neighbors of a vertex in the graph.
+> 
+> > Implementation: Python Dictionary
+> > 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167558420-ccebf391-e078-40ed-8b31-fed889dd4b32.png">
 
+### [Graph-basic code]
+```python
+class Graph:
+    def __init__(self, gdict=None):
+        if gdict is None:
+            gdict = {}
+        self.gdict = gdict
+    
+    def addEdge(self, vertex, edge):
+        self.gdict[vertex].append(edge)
+customDict = {"a": ['b','c'],
+             "b": ['a','d','e'],
+             "c": ['a','e'],
+             "d": ['b','e','f'],
+             "e": ['d','f'],
+             "f": ['d','e']}
+graph = Graph(customDict)
+graph.addEdge('c', 'z')
+print(graph.gdict)
+# {'a': ['b', 'c'], 'b': ['a', 'd', 'e'], 'c': ['a', 'e', 'z'], 'd': ['b', 'e', 'f'], 'e': ['d', 'f'], 'f': ['d', 'e']}
+```
 
 --------
 
