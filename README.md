@@ -1338,15 +1338,17 @@ print(graph.gdict)
 > 		unvisited vertices of p
 > ```
 
+
 > ##### (2) Depth First Search(DFS)
 > It starts selecting some arbitrary node and explores as far as possible along each edge before backtracking.
 >
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167779587-1095681d-df92-4db5-90bf-1631aa580b95.png">
-> 
+
+> ##### (3) BFS vs DFS
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167782070-f4fe17cb-ff09-4e50-9f4a-903945d06861.png">
 
 
-
-
+32 33 34 35 36 37 38 39 41 42 43 46 47
 
 
 --------
