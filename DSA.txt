@@ -1,0 +1,1 @@
+recusion statment 아래로는 신분정리가 된 친구만 내려갈 수 있다.
