@@ -1318,6 +1318,37 @@ print(graph.gdict)
 # {'a': ['b', 'c'], 'b': ['a', 'd', 'e'], 'c': ['a', 'e', 'z'], 'd': ['b', 'e', 'f'], 'e': ['d', 'f'], 'f': ['d', 'e']}
 ```
 
+
+### [Graph - Traversal]
+> (1) Breadth First Search (`pop`), (2) Depth First Search (`dequeue`)
+> 
+> ##### (1) Breadth First Search(BFS)
+> It starts at some arbitrary node(set by user) of a graph and explores the neighbor nodes (which are at current level) first, before moving to the next level neighbors.
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167775498-31956c5d-d9a2-452f-944a-048507be93f2.png">
+> 
+> [Psudo Code]
+> ```python
+> enqueue any starting vertex
+> while queue is not empty:
+> 	p = dequeue()
+> 	if p is unvisitied:
+> 		mark it visitied
+> 		enqueue all adjacent
+> 		unvisited vertices of p
+> ```
+
+> ##### (2) Depth First Search(DFS)
+> It starts selecting some arbitrary node and explores as far as possible along each edge before backtracking.
+>
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167779587-1095681d-df92-4db5-90bf-1631aa580b95.png">
+> 
+
+
+
+
+
+
 --------
 
 
