@@ -1092,6 +1092,9 @@ customList = None
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166623144-88d52738-7c9e-4960-b07d-e3556b7d2cd1.png">
 > 
 > * Divide the given array into two part
+> [First part]: `loop from i=1 to len(arr)`
+> 
+> [Second part]: set j as a start point of organized part. Then, compare (j+1)=i with j, then going down gradually to find a proper index
 > 
 > * `[Repetition]` Take first element from unsorted array and find its correct position in sorted array (Repeat until unsorted array is empty)
 >
@@ -1120,8 +1123,6 @@ customList = None
 >
 > * (3) Merge buckets after sorting
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166625189-1c929f6d-699b-463a-b866-600297af07cb.png">
-> 
-> 
 > 
 > #### When to `use` Bucket Sort?
 > 
