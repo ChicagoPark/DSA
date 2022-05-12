@@ -1351,8 +1351,28 @@ print(graph.gdict)
 32 33 34 35 36 37 38 39 41 42 43 46 47
 
 
---------
+### [Graph - Topological Sort]
+> <img width="150" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167992819-2598cc52-f39d-44f5-949d-82b5605b2970.png">
+>
+> Sorts given actions in such a way that if there is a dependency of one action on another, then the dependent action always comes layer than its parent action.
+> 
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167993896-6efacddb-d4e8-403f-b739-295cafe1d3b4.png">
 
+`Psudo Code`
+```python
+if there is a vertex depends on currentVertex:
+	Go to that vertex and then come back to currentVertex
+else:
+	Push currentVertex to Stack.
+```
+
+Used function1: topologicalSortUtil: Loop inside of visited node (push to visited list and stack)
+Used function2: topologicalSort: Loop all the graph dictionary
+
+
+
+
+--------
 
 ## [00] A Recipe for Problem Solving
 
