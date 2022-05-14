@@ -1074,6 +1074,8 @@ customList = None
 ### [Sort - Selection Sort] (fill from index 0)
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166398706-b3f6a429-4b27-4038-b0cc-146b9f0ecd65.png">
 > 
+> Chicago's realization: `Select the minimum index from right side of the criteria`, then `put it in front` of the list.
+> 
 > We repeatedly find the minimum element and move it to the sorted part of array to make unsorted part empty.
 >
 > #### When to `use` Selection Sort?
@@ -1090,6 +1092,8 @@ customList = None
 
 ### [Sort - Insertion Sort]
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166623144-88d52738-7c9e-4960-b07d-e3556b7d2cd1.png">
+> 
+> Chicago's realization: `Move criteria index gradually`, then put that criteria in to the organized left side of the criteria.
 > 
 > * Divide the given array into two part
 > [First part]: `loop from i=1 to len(arr)`
