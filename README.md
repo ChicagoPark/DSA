@@ -1428,9 +1428,8 @@ Used function2: topologicalSort: Loop all the graph dictionary
 
 
 ## [##] Chicago Realization
-1. `local variable can be used` from the belonged function `whether we initialize` the value `from the conditional argument`. (Before the function is returned?)
-2. `Efficiently check the duplicates`: Put the visited values in the list and use `in`! (Without temporal variable such as list, we should use two loops to compare)
-3. [`Linked list`]When we assign a data to the node at the left side of the code, the node is updated.
+1. `Efficiently check the duplicates`: Put the visited values in the list and use `in`! (Without temporal variable such as list, we should use two loops to compare)
+2. [`Linked list`]When we assign a data to the node at the left side of the code, the node is updated.
 
 
 
