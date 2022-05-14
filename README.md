@@ -1370,11 +1370,62 @@ else:
 	Push currentVertex to Stack.
 ```
 
+```python
+from collections import defaultdict
+
+class Graph:
+    def __init__(self, numberofVertices):
+        self.graph = defaultdict(list)
+        self.numberofVertices = numberofVertices
+    
+    def addEdge(self, vertex, edge):
+        self.graph[vertex].append(edge)
+    
+    def topologicalSortUtil(self, v, visited, stack):
+        visited.append(v)
+        
+        # loop the dependent node of v node
+        for i in self.graph[v]:
+            if i not in visited:
+                self.topologicalSortUtil(i, visited, stack)
+
+        stack.insert(0,v)
+    
+    def topologicalSort(self):
+        visited = []
+        stack = []
+        
+        # loop all the graph node
+        for k in list(self.graph):
+            if k not in visited:
+                self.topologicalSortUtil(k, visited, stack)
+        
+        print(stack)
+```
+
 Used function1: topologicalSortUtil: Loop inside of visited node (push to visited list and stack)
 Used function2: topologicalSort: Loop all the graph dictionary
 
 
 
+### [Graph - Single Source Shortest Path Problem]
+> A single source problem is about `finding a path` between a given vertex (called source) to all other vertices in a graph such that the `total distance between them (source and destination) is minimum`.
+> 
+> `The example of problem:`
+> > (1) Five offices in different cities
+> > 
+> > (2) Travel costs between these cities are known
+> > 
+> > (3) Find the cheapest way from head office to branches in different cities
+
+
+> `Algorithm`
+> > BFS
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168408653-5c436561-9478-44f4-8064-f0f6f00263a7.png">
+> >
+> > Dijkstra's Algorithm
+> > 
+> > Bellman Ford
 
 --------
 
