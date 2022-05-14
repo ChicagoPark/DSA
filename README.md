@@ -821,7 +821,7 @@ customQueue = deque(maxlen=3)
 > * It's a complete tree (All levels are completely filled except possibly the last level and the last level has `all keys as left as possible`). This property of Binary Heap makes them suitable to be stored in an array.
 
 ### [Binary Heap- Why a Binary Heap?]
-> Find the minimum or maximum number among a set of numbers in logN time. And also we want to make sure that inserting additional numbers does not take more than O(logN) time
+> `Find the minimum or maximum number` among a set of numbers in logN time. And also we want to make sure that inserting additional numbers does not take more than O(logN) time
 >
 > `[Practical Use]`
 > * Prim's Algorithm
