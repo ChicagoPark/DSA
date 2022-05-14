@@ -1053,6 +1053,8 @@ customList = None
 ----
 
 ### [Sort - Bubble Sort]
+`Frequency of switching`: over and over again to compare
+
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166395889-5c3cba74-d1da-4dd2-8ced-277473c6d0ae.png">
 >
 > We repeatedly compare each pair of adjacent items and swap them if they are in the wrong order. (Put the biggest item at the right side accumulatively)
@@ -1072,6 +1074,8 @@ customList = None
 ----
 
 ### [Sort - Selection Sort] (fill from index 0)
+`Frequency of switching`: over and over again to min_index
+
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166398706-b3f6a429-4b27-4038-b0cc-146b9f0ecd65.png">
 > 
 > Chicago's realization: `Select the minimum index from right side of the criteria`, then `put it in front` of the list.
@@ -1356,8 +1360,6 @@ print(graph.gdict)
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167782070-f4fe17cb-ff09-4e50-9f4a-903945d06861.png">
 
 
-32 33 34 35 36 37 38 39 41 42 43 46 47
-
 
 ### [Graph - Topological Sort]
 > <img width="150" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167992819-2598cc52-f39d-44f5-949d-82b5605b2970.png">
@@ -1422,14 +1424,27 @@ Used function2: topologicalSort: Loop all the graph dictionary
 > > 
 > > (3) Find the cheapest way from head office to branches in different cities
 
+##### [Graph - Single Source Shortest Path Problem - BFS]
+> When we enqueue adjacent unvisited vertices, we can update the parent of added adjacent vertices to curVertex. We can find the shortest path by following the parent node from destination node
+>  
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168417464-95715eb9-edbb-4d63-a956-846f10beec58.png">
 
-> `Algorithm`
-> > BFS
-> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168408653-5c436561-9478-44f4-8064-f0f6f00263a7.png">
-> >
-> > Dijkstra's Algorithm
-> > 
-> > Bellman Ford
+> ##### Usage of BFS for SSSP
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168419281-91c3de4a-d377-46c3-a056-43309aab3de2.png">
+
+> Why does DFS not work with SSSP?
+> > DFS has the tendency to go "as far as possible" from source, hence it can never find "Shortest Path"
+
+
+### [Graph - Dijkstra's Algorithm for SSSP]
+> `Dijkstra's Algorithm`
+> Each node has (1) `accumulative distance from starting point`, (2) `previous node`
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168419569-98c91413-1a1f-4c47-925e-eb70b253a969.png">
+
+
+
+
 
 --------
 
