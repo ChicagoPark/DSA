@@ -1443,6 +1443,85 @@ Used function2: topologicalSort: Loop all the graph dictionary
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168419569-98c91413-1a1f-4c47-925e-eb70b253a969.png">
 
 
+----
+
+## [20] Greedy Algorithm
+> It is an algorithmic paradigm that `builds the solution piece by piece` by `selecting best local solution`.
+> 
+> In each step it chooses the piece that offers `most obvious and immediate benefit`.
+> 
+> It fits perfectly for those solutions in which local optimal solutions lead to global solution.
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168452143-c2de6924-fc48-49a0-87d1-fb6d4dd9a559.png">
+>
+> ##### `Possible Application`
+> Insertion Sort, Selection Sort, Topological Sort, Prim's Algorithm, Kruskal Algorithm
+> 
+> Activity Selection Problem, Coin Change Problem, Fractional Knapsack Problem.
+>
+> ##### `Understanding`
+> Insertion Algorithm: Find the best location of inserted node, and then overall solution reaches to global solution.
+
+### [Greedy Algorithm - Activity Selection Problem]
+> Given N numbers of activities with their start and end times. We need to `select the maximum number of activities`(this is why we sort using end time) that can be `performed by a single person`, assuming that `a person can only work` on a single activity `at a time`.
+> 
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168452545-5eb5a90e-d3e0-4839-a5a8-66c9ce41e317.png">
+> 
+> `Algorithm`
+> ```python
+>def printMaxActivities(activities):
+>    # sort the array using end time
+>    activities.sort(key=lambda x:x[2])
+>    i = 0
+>    firstA = activities[i][0]
+>    print(firstA)
+>    for j in range(len(activities)):
+>        # find the upcoming activity
+>        if activities[j][1] > activities[i][2]:
+>            print(activities[j][0])
+>            i = j
+>            
+>activities = [["A1", 0, 6],
+>              ["A2", 3, 4],
+>              ["A3", 1, 2],
+>              ["A4", 5, 8],
+>              ["A5", 5, 7],
+>              ["A6", 8, 9]]            
+>
+>printMaxActivities(activities)
+> ```
+
+
+### [Greedy Algorithm - Coin Change Problem]
+> You are given coins of different denominations and total amount of money. Find the `minimum number of coins` that you need to make up the given amount.
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168453001-7cb3d04b-b0fd-4f78-99c0-286fdc4bc565.png">
+>  
+> `Algorithm`
+> ```python
+> def coinChange(totalPrice, coins):
+>    # [1] data processing
+>    N = totalPrice
+>    coins.sort()
+>    
+>    # [2] get the most expensive coins
+>    index = len(coins)-1
+>    while True:
+>        coinValue = coins[index]
+>        if N >= coinValue:
+>            print(coinValue)
+>            N = N - coinValue
+>        if N < coinValue:
+>            index -= 1
+>            
+>        if N == 0:
+>            break
+>            
+>coins = [1, 2, 5, 20, 50, 100]
+>coinChange(201, coins)
+> ```
+
+
+
 
 
 
