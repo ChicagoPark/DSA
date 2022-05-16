@@ -1563,8 +1563,50 @@ cList = [item1, item2, item3]
 knapsackMethod(cList, 50)
 ```
 
+## [21] Divide and Conquer Algorithm
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168503725-98c534a6-8a77-4d2f-a305-f0d7db88b01e.png">
+
+> works by recursively breaking down a problem into `subprblems of simliar` type,until these become simple enough
+> to be solved directly. The solutions to the `subproblems are then combined` to give a solution to the original problem.
+
+> ##### `Optimal Subtructure`
+> > If any problem's overall optimal solution can be constructed from the optimal solutions of its subproblem then this problem has optimal substructure. (e.g. fibonacci)
+
+### [Divide and Conquer Algorithm - Fibonacci Series]
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168504620-758a0ad5-6bc6-44fa-8f3a-4c0c98a37947.png">
+
+> A series of numbers in which each number is the sum of the two preceding numbers. First two numbers by definition are 0 and 1.
+> 
+> Example: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+
+### [Divide and Conquer Algorithm - Number Factor]
+> ##### `Problem Statement`: 
+> Given N, find the number of ways to express N as a sum of `1, 3 and 4`.
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168505438-a94b2c2e-dd28-4067-99a1-087107eae8a1.png">
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168506095-ce9cd15e-5dfb-409f-badf-6f1344ed7a38.png">
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168506204-c076f92f-05da-4581-848d-ac4a00919b37.png">
+
+```python
+def numberFactor(n):
+    if n in (0,1,2):
+        return 1
+    elif n == 3:
+        return 2
+    else:
+        subP1 = numberFactor(n-1)
+        subP2 = numberFactor(n-3)
+        subP3 = numberFactor(n-4)
+        return subP1+subP2+subP3
+
+print(numberFactor(5))
+```
 
 --------
+
+
 
 ## [00] A Recipe for Problem Solving
 
