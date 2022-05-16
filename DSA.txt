@@ -9,3 +9,8 @@ peek 부분은 위에서 주는친구가 없으니, stop option 'if문' 이 존�
 [Default]
 (사고) 본 Stack 의 목적은 -를 위해 -를 반환하는 것이다.
 2. 모든빠져나가는 구멍이 막혀있어야한다.
+
+[조건문 분류]
+최종 끝부분에 맺어지는 section
+연산을 하는 section
+다음 step 을 호출하는 section
