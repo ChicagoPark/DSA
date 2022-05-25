@@ -1681,7 +1681,7 @@ num = [1,2,3,4,5]
 list(map(lambda n: 2*n, nums))
 # [2, 4, 6, 8, 10]
 
-list(map(lambda n:2**n, numbs))
+list(map(lambda n:2**n, nums))
 # [2, 4, 8, 16, 32]
 
 strs = ['Summer', 'is', 'coming']
