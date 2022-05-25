@@ -15,3 +15,7 @@ peek 부분은 위에서 주는친구가 없으니, stop option 'if문' 이 존�
 최종 끝부분에 맺어지는 section
 연산을 하는 section
 다음 step 을 호출하는 section
+
+[Recursion 의 종류]
+1. 엮이는 True 리턴 형
+2. 최종 return 문에 재귀 연산 삽입형
