@@ -1023,6 +1023,8 @@ customList = None
 >   > MS Excel(Built in functionality to sort data), Online Stores(sorting by price, review, ratings)
 
 ### [Sort - Type]
+><img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/172279714-10b93772-4251-4a30-b593-37915767a101.png"> 
+
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166394521-e774b31e-eedd-4d1a-a24e-e810ba025142.png"> 
 > 
 > #### [Space used]
@@ -1074,7 +1076,7 @@ customList = None
 ----
 
 ### [Sort - Selection Sort] (fill from index 0)
-`Frequency of switching`: over and over again to min_index
+* HOW?: Select the `minimum element` and place in `just the right-side` of sorted section
 
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/166398706-b3f6a429-4b27-4038-b0cc-146b9f0ecd65.png">
 > 
