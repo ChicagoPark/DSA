@@ -104,7 +104,7 @@ def factorial(n):
 
 ### [3-1] Algorithm run time complexities
 
-<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159118671-933b8eb1-3fd7-47d2-8059-ccec38eb4452.png">
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/172275182-9ca8e079-7be3-4702-989a-e1542081115c.png">
 
 O(logN): When we look some value in sorted array, we can select one value and compare with target number, and we can reduce the considering area by two.
 
