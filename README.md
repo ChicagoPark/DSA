@@ -1122,6 +1122,38 @@ customList = None
 
 [Sort - Insertion Sort] Key method: compare and put the large value at the j+1 sequentially
 
+
+----
+
+### [Sort - Shell Sort]
+> Move and compare the value with the gap index unit. Start from the gap as `n/2` and prepare it with previous index and switch.
+
+initial gap: n/2
+gap in next iteration: (initial gap)/2
+Once gap is zero, the sorting prcess is done.
+
+```java
+public static void shellSort(int a[]) {
+	int n = a.length;
+
+	// Until: gap > 0
+	// way: compare next element at the next gap.
+	// After swapping compare with previous element in the left gap
+
+	for (int gap = n / 2; gap > 0; gap /= 2) {
+		for (int i = gap; i < n; i++) {
+			int temp = a[i];
+			int previous = i - gap;
+			while (previous >= 0 && a[previous] > temp) {
+				a[previous+gap] = a[previous];
+				previous = previous - gap;
+			}
+			a[previous+gap] = temp;
+		}
+	}
+	}
+```
+
 ----
 
 ### [Sort - Bucket Sort]
@@ -1172,7 +1204,27 @@ customList = None
 > 
 > > When space is matter
 
+Divide part
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/172510104-c0987240-c047-411e-9c81-83580b7182ed.png">
+
+Conquer part(Merging Process)
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/172510212-d32574d8-b071-4d2e-b0d2-e379e99bc45e.png">
+
+
+
+[Divide part Algorithm]
+
+<img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/172511426-ca7b1479-928b-4c7d-ab6c-828b68202ffd.png">
+<img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/172511408-31a80e3c-ad5f-41de-a51a-1532fc2c9b13.png">
+
+
+[Conquer part Algorithm]
+
+<img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/172512940-fc218aa6-7412-4b12-a43a-926cc36bba33.png">
+
+
 ----
+
 
 ### [Sort - Quick Sort]
 > Quick sort is a `divide and conquer` algorithm
