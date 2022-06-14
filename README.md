@@ -1243,15 +1243,9 @@ public static void shellSort(int a[]) {
 > Unlike merge sort, extra space is not required.
 > 
 
-Necessary variables: Pivot, i, and j
-Pivot: index 0. Does not move. Used for the criteria in comparison process
-i: move from the beginning part, then stop when the value at index i is bigger than Pivot
-j: move from the ending part, then stop when the value at index j is smaller than Pivot
-if i and j is stopped, `switch A[i] and A[j]`. Because both values are located in not suitable locations.
-if i > j then, we switch A[pivot] and A[j]
+* Psudocode
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173557552-8443395e-5a25-454d-90ca-5fb97494bba8.png">
 
-
-> <img width="650" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173488302-4a2ceac4-b157-438b-a65b-9c07a07159db.png">
 
 
 After switching, we have to consider at the left side of the pivot and the at the right side of the pivot recursively.
