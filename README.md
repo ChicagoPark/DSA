@@ -930,7 +930,7 @@ customList = None
 > 
 > (E) Kinds: Max Heap and Min Heap
 
-![20220614_230544](https://user-images.githubusercontent.com/73331241/173597080-bc3b9519-75a2-4564-a72a-c29c46fd97f9.png)
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173597080-bc3b9519-75a2-4564-a72a-c29c46fd97f9.png">
 
 
 #### [Heaps Operations - Insertion]
@@ -939,6 +939,11 @@ customList = None
 	* Implement it through array which is `starting from index 1`.
 
 * (2) `Relational Property`: Perform up-heap bubbling
+
+`Psudocode`
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173869717-bec6fa25-8439-4469-bf39-cca857ad2862.png">
+
+
 
 ----
 
