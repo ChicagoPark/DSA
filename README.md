@@ -892,7 +892,55 @@ customList = None
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164625682-c3738794-691a-48e6-b6eb-c74290882104.png">
 
 
+----
 
+
+## [] Priority Queues
+
+#### [Priority Queues - Background Story]
+> (a) Tickets Booking
+> 
+> > Once the seats are getting full, the waiting list would be activated. However, airline could have a senior-first policy to consider waiting list. In this case, priority can be assigned to waiting list.
+
+
+#### [Priority Queues - Properties]
+> (A) Collection of prioritized Objects
+>
+> (B) Insertion Method: the same as an ordinary queue
+> 
+> (C) Removal: Based on the priority of the objects
+> 
+> (D) Key is associated when element is inserted in the priority queue
+> 
+> (E) Element with minimum key will be next element to be removed.
+
+
+----
+
+## [] Heaps
+
+#### [Heaps - Properties]
+> (A) More efficient utilization of Priority Queue (Can insert and delete in more efficient way)
+> 
+> (B) Also called as `Binary Heap`. It is a collection of objects or elements stored as a binary tree.
+> 
+> (C) Relational Property: Key in each node of the binary tree is greater than or equal to those in its children
+> 
+> (D) Structural Property: Binary tree should be a `complete binary tree`
+> 
+> (E) Kinds: Max Heap and Min Heap
+
+![20220614_230544](https://user-images.githubusercontent.com/73331241/173597080-bc3b9519-75a2-4564-a72a-c29c46fd97f9.png)
+
+
+#### [Heaps Operations - Insertion]
+* (1) `Structural Property`: New node is inserted `after the last node`
+
+	* Implement it through array which is `starting from index 1`.
+
+* (2) `Relational Property`: Perform up-heap bubbling
+
+----
 
 ## [15] Trie
 
@@ -1514,42 +1562,6 @@ Used function2: topologicalSort: Loop all the graph dictionary
 
 ----
 
-## [] Priority Queues
-
-#### [Priority Queues - Background Story]
-> (a) Tickets Booking
-> 
-> > Once the seats are getting full, the waiting list would be activated. However, airline could have a senior-first policy to consider waiting list. In this case, priority can be assigned to waiting list.
-
-
-#### [Priority Queues - Properties]
-> (A) Collection of prioritized Objects
->
-> (B) Insertion Method: the same as an ordinary queue
-> 
-> (C) Removal: Based on the priority of the objects
-> 
-> (D) Key is associated when element is inserted in the priority queue
-> 
-> (E) Element with minimum key will be next element to be removed.
-
-
-----
-
-## [] Heaps
-
-#### [Heaps - Properties]
-> (A) More efficient utilization of Priority Queue (Can insert and delete in more efficient way)
-> 
-> (B) Also called as `Binary Heap`. It is a collection of objects or elements stored as a binary tree.
-> 
-> (C) Relational Property: Key in each node of the binary tree is greater than or equal to those in its children
-> 
-> (D) Structural Property: Binary tree should be a `complete binary tree`
-> 
-> (E) Kinds: Max Heap and Min Heap
-
-![20220614_230544](https://user-images.githubusercontent.com/73331241/173597080-bc3b9519-75a2-4564-a72a-c29c46fd97f9.png)
 
 ----
 
