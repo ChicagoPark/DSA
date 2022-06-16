@@ -943,7 +943,13 @@ customList = None
 `Psudocode`
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173869717-bec6fa25-8439-4469-bf39-cca857ad2862.png">
 
+#### [Heaps Operations - Deletion]
+* (1) `Structural Property`: `Root is replaced by` the `last node`
 
+* (2) `Relational Property`: Perform down-heap bubbling
+
+`Psudocode`
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173973114-12083c23-2fd9-4581-b602-8f38385467ee.png">
 
 ----
 
