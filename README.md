@@ -835,6 +835,8 @@ customQueue = deque(maxlen=3)
 > 
 > <img width="650" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164250567-bb80a76a-8299-4a0b-b103-e67a24cb9731.png">
 
+<!--
+
 ### [Binary Heap- Common operations on Binary Heap]
 > (1) Creation
 > (2) Peak top
@@ -891,6 +893,7 @@ customList = None
 
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164625682-c3738794-691a-48e6-b6eb-c74290882104.png">
 
+-->
 
 ----
 
@@ -950,6 +953,12 @@ customList = None
 
 `Psudocode`
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173973114-12083c23-2fd9-4581-b602-8f38385467ee.png">
+
+
+#### [Heaps Application - Heap Sort]
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/174748702-9c41e37f-6f51-473b-8336-b7f73a36aeda.png">
+
 
 ----
 
