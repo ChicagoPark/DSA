@@ -37,16 +37,6 @@ Data Structure &amp; Algorithm in Python
 * Be careful: 
 ----
 
-#### `[Understand] Pros and Cons`
-
-Pros  	      |      Cons
-:--------------------------------------------------: | :-------------:
-helps `break down big problems` into smaller ones  | Slowness due to `CPU overhead`
-`Reduce the needs` for `complex loops` and auxiliary data structures  | can encounter `memory errors` / `Stack overflow` exceptions
-Works well with recursive structures such as `trees and graphs`  | 
-
-* Recursive vs Iterative?
-<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159007306-8b25f583-609b-449b-8e1f-c53d109c774e.png">
 
 #### `[Understand] Base case and Recursive call`
 
@@ -65,6 +55,22 @@ When is the `appropriate moment` to stop algorithm?  | What is the `smallest uni
 > (1) the `whole code line` of the recursive call is located in the stack.
 > 
 > (2) Above return value popped into the below layer.
+
+#### `[Understand] Pros and Cons`
+
+Pros  	      |      Cons
+:--------------------------------------------------: | :-------------:
+helps `break down big problems` into smaller ones  | Slowness due to `CPU overhead`
+`Reduce the needs` for `complex loops` and auxiliary data structures  | can encounter `memory errors` / `Stack overflow` exceptions
+Works well with recursive structures such as `trees and graphs`  | 
+
+* Recursive vs Iterative?
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159007306-8b25f583-609b-449b-8e1f-c53d109c774e.png">
+
+
+Stack up: Stacked in the point of recursive call.
+Return down: if there is more necessary operation under the recursive call, we need to calculate until the return statement.
+
 
 
 <!--
