@@ -218,6 +218,20 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 ----
 
+### `[Linked List] Linked List Terminology`
+
+> Node: An object containing data and pointer(s)
+> 
+> Head: The first node in a linked list
+> 
+> Tail: The last node in a linked list
+>
+> Pointer: Reference to another node
+
+
+
+
+[Caption Text]
 
 ### `[Linked List] Types of Linked List`
 
@@ -1018,6 +1032,47 @@ customList = None
 > 
 > > (Case 3):
 > Go to tip of the Trie and delete the node step by step
+
+----
+
+
+## Hashing
+
+### `[Hashing] Basic Understand`
+
+----
+* Key in usage: Hashing is a technique used for `searching, inserting, deleting elements` from a collection.
+
+* Be careful: Inefficient Hashing algorithm can take lots of memory.
+----
+
+#### `[HS Understand] Necessary Terminologies`
+
+> Keys: `input data` by a user
+
+> Hash Function: Map keys to corresponding indices(Hash Value) in Hash Table
+> 
+> Hash Table: It is a data structure which implements an `associative array` abstract data type, a structure that can `map keys to values`.
+>
+> Collision: Occur when more than one key maps to the same index in hash table
+
+
+### `[Hashing] Collision Handling`
+
+----
+* Key: Two types of collision handling schemes: Chaining, Open Addressing(Linear Probing, Quadratic Probing, annd Double Hashing)
+
+* Be careful: 
+----
+
+#### `[HS Collision] Chaining`
+
+> (1) Chaining uses auxiliary lists inside of the Hash Table
+
+> (2) It's the simplest and efficient way of handing collisions
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175193601-78056266-af59-4b0f-ae5b-f5c6a2067cba.png">
+
 
 
 ## [16] Hashing
