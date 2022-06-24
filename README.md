@@ -1073,11 +1073,46 @@ customList = None
 
 #### `[HS Collision] Chaining`
 
-> (1) Chaining uses auxiliary lists inside of the Hash Table
+> (1) Chaining uses `Linked lists` inside of the Hash Table
 
 > (2) It's the simplest and efficient way of handing collisions
 
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175193601-78056266-af59-4b0f-ae5b-f5c6a2067cba.png">
+
+
+#### `[HS Collision] Linear Probing & Quadratic Probing`
+
+----
+* Key: Linear Probing & Quadratic Probing are the same except for collision function.
+
+* Be careful: The number of elements cannot be more than hashtable size.
+
+`Hashtable size should have doubled size than the number of elements` (Maintain `L.F` < 0.5)
+
+----
+
+> (1) We need hash function and collision function
+
+> (2) In search function, we just implement the same operation with collision function without calling collision function.
+
+<!--
+
+#### `[HS Collision] Double Hashing`
+
+----
+* Key: Linear Probing & Quadratic Probing are the same except for collision function.
+
+* Be careful: The number of elements cannot be more than hashtable size.
+
+`Hashtable size should have doubled size than the number of elements` (Maintain `L.F` < 0.5)
+
+-->
+
+----
+
+> (1) We need hash function and collision function
+
+> (2) In search function, we just implement the same operation with collision function without calling collision function.
 
 
 
