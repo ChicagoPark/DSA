@@ -1,7 +1,6 @@
 # DSA
 Data Structure &amp; Algorithm in Python
 
-# Content
 
 ## [1] Different Types
 
@@ -24,49 +23,57 @@ Data Structure &amp; Algorithm in Python
 > 
 > Randomized Algorithms
 
+----
 
 ## [2] Recursion
 
-> Recursion: A way of solving a problem by having a function calling itself.
->
-> All the recursion can be replaced by iteration(`One for loop`). 
+### `[Recur-1] Basic Understanding`
 
-> Why Recursion?
-> * [1] It helps `break down big problems` into smaller ones and easier to use.
-> * [2] The prominent usage of recursion in data structures like `trees and graphs`.
-> * [3] It is used in many algorithms (divide and conquer, greedy and dynamic programming).
+----
+* Idea Key: `Functionalized Stack`. An upstairs component in a stack can give its work to the downstairs component. Imagine upstairs component popped out to the downstairs.
 
-> When to choose recursion?
-> * [1] When we `can easily breakdown a problem` into similar subproblem.
-> * [2] When we are `fine with extra overhead` (both time and space) that comes with it.
-> * [3] When we `need a quick` working solution instead of efficient one.
-> * [4] When `traverse a tree`
+* Structural Key: Composed with `Base case` and `Recursive Call`
+
+* Be careful: 
+----
 
 
-> `When to avoid recursion?`
-> * If time and space complexity matter for us.
+#### `[Understand] Base case and Recursive call`
+
+Base case  	     				     |      Recursive call
+:--------------------------------------------------: | :-------------:
+When is the `appropriate moment` to stop algorithm?  | What is the `smallest unit of work` I can do to contribute to the goal?
+						     | How to `interact (contribute) with` the next connection.
+
+#`Recursion in Programming: 23:00/1:51:35`
+
+
+#### `[Understand] Recursive Operation`
+
+<img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/174976316-fa6a6908-0208-409a-9cb7-7973bd41b91e.png">
+
+> (1) the `whole code line` of the recursive call is located in the stack.
 > 
-> Recursion uses more memory. If we use embedded memory, recursion can delay the process.
+> (2) Above return value popped into the below layer.
 
-### [2-1] Property of Recursion
+#### `[Understand] Pros and Cons`
 
-> 1. Performing the same operation multiple times with different inputs
-> 2. In every step we try smaller inputs to make the problem smaller.
-> 3. `Base condition` is needed to stop the recursion, otherwise infinite loop will occur.
-> 4. All the recursive algorithms can be implemented through `iterative solutions`
+Pros  	      |      Cons
+:--------------------------------------------------: | :-------------:
+helps `break down big problems` into smaller ones  | Slowness due to `CPU overhead`
+`Reduce the needs` for `complex loops` and auxiliary data structures  | can encounter `memory errors` / `Stack overflow` exceptions
+Works well with recursive structures such as `trees and graphs`  | 
 
-### [2-2] How Recursion works?
-
-<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159006058-43a3a05e-3c2b-4b54-9f59-90d5b24bf2dc.png">
-
-> 1. A method calls itself
-> 2. Exit from infinite loop
-
-### [2-3] Recursive vs Iterative?
-
+* Recursive vs Iterative?
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159007306-8b25f583-609b-449b-8e1f-c53d109c774e.png">
 
-`We usually implement in the cases we know that a problem can be divided into similar sub problems.`
+
+Stack up: Stacked in the point of recursive call.
+Return down: if there is more necessary operation under the recursive call, we need to calculate until the return statement.
+
+
+
+<!--
 
 ### [2-4] `How to write recursion in 3 steps?`
 
@@ -96,19 +103,20 @@ def factorial(n):
     else:
         return n* factorial(n-1)
 ```
+-->
 
 ## [3] Big O
 > Big O is the language and metric we use to describe the efficiency of algorithms.
 
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159118600-aae6d54c-c041-47b1-b74d-7ac5e41371a6.png">
 
-### [3-1] Algorithm run time complexities
+### [BigO-1] Algorithm run time complexities
 
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/172275182-9ca8e079-7be3-4702-989a-e1542081115c.png">
 
 O(logN): When we look some value in sorted array, we can select one value and compare with target number, and we can reduce the considering area by two.
 
-### [3-2] Space Complexity
+### [BigO-2] Space Complexity
 > Space Complexity is necessary `extra` area.
 
 * Space complexity: O(n)
@@ -120,7 +128,7 @@ O(logN): When we look some value in sorted array, we can select one value and co
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159119581-61aed1ae-2916-4fed-ae6c-3dd10d4bd945.png">
 
 
-### [3-3] Measure the Big O
+### [BigO-3] Measure the Big O
 
 * Basic Measurement
 
@@ -130,48 +138,44 @@ O(logN): When we look some value in sorted array, we can select one value and co
 
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159121730-b131e64e-1680-45e5-add0-08598e7516a8.png">
 
-
 * Measure the multiple resursive code
 
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159121731-ea47551b-e819-4d80-9b21-176736b51ab8.png">
 
-## [4] Arrays
+
+## Array / Tuple / List / Dictionary
+
+### [DSA - Array] Question about Array
+
+---
+* Key: (1) Array is the `collection of elements which have same type`, (2) Array is used for `mathematic operations`
+
+* Be careful: (1) Avoid when using `different types of data` is necessary, (2) Avoid when `memory area` is matter, (3) When we need `bigger array`, we should copy to the bigger one.
+----
+
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159123723-5dc342e8-1c0d-4e4e-ab09-ec7d2c627f8d.png">
 
-> * In computer science, an array is a data structure consisting of a `collection of elements which have same type`, each identified by at least one array index or key. An array is stored such that the position of each element can be computed from its index by a mathematical formula.
 
-> * When do we need an Array?
->   * To store multiple variables of same data type
->   * When we need `mathematic operations`
-
-> * When to avoid using an Array?
->   * When we need to use different types of data.
->   * When the memory area is matter.
-
-
-### [4-1] Array in Python
+<!--
+### [Arr-1] Array in Python
 
 <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/159124283-c99bacf5-84c0-49b2-b386-e227f4fbbe64.png">
 
-### [4-#] Question about Array
-* When we need bigger array, what we need to do?
-    * Make a bigger array and then copy from the smaller array to the bigger one.
+-->
 
-## [5] Tuple
-> A tuple is an `immutable sequence` of Python objects
-> 
-> Tuples are also comparable and hashable
+### [DSA - Tuple]
 
-## [6] Lists
-> A mutable, or changeable, ordered sequence of element
+---
+* Key: (1) A tuple is an `immutable sequence` of Python objects, (2) Tuples are also `comparable and hashable`
+----
 
-`Array VS List`
-> * Array
-> 
->       Stronger in the arithmetic operations (e.g. Numpy)
-> * List
-> 
->       List is flexible in 'data types'
+### [DSA - List]
+
+---
+* Key: A `mutable and ordered` sequence of element which is also `flexible in data types`
+----
+
+#### `[List] Python Operation (+, *)`
 
 ```python
 # * operation
@@ -181,35 +185,78 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 # + operation: possible to be operated between list to concatenate
 ```
 
-## [7] Dictionary
-> A dictionary is a collection which is unordered, changeable, and indexed.
+### [DSA - Dictionary]
 
-### [7-1] Useful methods in dictionary
-* pop(key, default_value) and popitem()
+---
+* Key: A dictionary is a collection which is `unordered, changeable, and indexed`.
+
+* Be careful: (1) Avoid when using `different types of data` is necessary, (2) Avoid when `memory area` is matter, (3) When we need `bigger array`, we should copy to the bigger one.
+----
+
+#### `[Dict] Python Operation (pop / keys / values / update)`
+
+> pop(key, default_value) and popitem()
    * pop the 'Key', but if there is no key in the dictionary, it would return 'Default_value'
    * popitem(): pop the last element
 
-* keys() and values()
+> keys() and values()
    * return the list of keys and values
 
-* .update(Another_Dictionary)
+> .update(Another_Dictionary)
    * concatenate two dictionaries
    
 > When we use the 'pop' function in dictionary, we can decide among 'popitem()' and 'pop' according to our purpose.
 
 
+----
 
-## [8] Linked List
-> A form of a sequential collection and it does not have to be in order. A linked list is make up of independent nodes that may contain any type of data
-> and each node has a reference to the next node in the link
+## Linked List
 
-<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160218756-76a460aa-2402-4c1c-86b4-fd94615cb3d8.png">
+### `[Linked List] Basic Understanding`
+
+----
+* Key: A form of a `sequential collection` and it does not have to be in order. A linked list is `make up of independent nodes` that may contain `any type` of data and `each node has a reference to the next node` in the link
+
+* Be careful: (1) `instance variable(self.head etc)` in a linked list is `the strong criteria` in algorithms., (2) process the `inputing node first`, then process `existing list` and `the head and tail`.
+
+
+<img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160218756-76a460aa-2402-4c1c-86b4-fd94615cb3d8.png"><img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230470-76f05ede-ab30-4715-836a-7fd2943a67e3.png">
+
+----
+
+### `[Linked List] Linked List Terminology`
+
+> Node: An object containing data and pointer(s)
+> 
+> Head: The first node in a linked list
+> 
+> Tail: The last node in a linked list
+>
+> Pointer: Reference to another node
+
+
+
+
+[Caption Text]
+
+### `[Linked List] Types of Linked List`
 
 * Singly: the last node with NULL reference is important to figure out the end of the linked list
  
 * Circular: the last node with HEAD reference is important to figure out the end of the linked list
 
-### [8-1] Types of Linked Lists
+Singly Linked List  	      |      Circular Singly Linked List
+:---------------: | :-------------:
+Connect through the next reference  | the reference of last node is not the NULL, but it has the address of starting node.
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230009-97e44c4b-ccf6-4ae7-98d6-71037f910f31.png">  | <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230009-97e44c4b-ccf6-4ae7-98d6-71037f910f31.png">
+
+Doubly Linked List  	      |      Circular Doubly Linked List
+:---------------: | :-------------:
+Each node has two references  | the reference of tip node is not the NULL, but it has the address of another-side node.
+<img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230104-aad374b4-f943-44e0-8613-3d7411e95c0c.png">  | <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230167-2f8db1b3-29a4-4e76-83c7-30d44d51a7fb.png">
+
+<!--
+### `[Linked List] Types of Linked List`
 
 > `Singly Linked List`: Connect through the next reference
 > 
@@ -234,9 +281,8 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 > 
 > Application: Inside of the Finder on Mac
 
-### [8-2] Linked List in Memory
+-->
 
-> <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160230470-76f05ede-ab30-4715-836a-7fd2943a67e3.png">
 
 <!--
 ### [8-3] Creation of Singly Linked List
@@ -252,22 +298,7 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 
 
-### [8-3] `Important Intuition in Linked List`
-> We need to perceive deeply what is the `instance variable(self.head etc)` in a linked list class `which is strong criteria in all algorithms.`
-> 
-> process the `inputing node first` and next one is the `existing list` then `the head and tail`.
-> 
-> Insertion: Process the subsidiary trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
-> 
-> Deletion: We need to control surrounding nodes of target node. We need to `remove all` the `incoming direction connection` to the target node.
-> 
-> The `tip parts of Circular Linked List` are `not NULL`.
-> 
-> `When we delete entire list, we need to make nodes do not be referenced by anything.` That's why we need to loop inside and make ALL_NODE.prev = None (From the node which is not referenced by other nodes, linked list is started to be eliminated.)
-> 
-> When we delete entire One-way list, we can set `self.head = None, self.tail = None`. Otherwise, when we delete Two-way list, we need to loop inside and make sure there is node which is referenced by some node.
-> 
-> Check the existance of linked list through 2 steps. (1) self.head != None, (2) self.head == self.tail
+
 
 <!--
 
@@ -307,7 +338,20 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 -->
 
-### [8-4] Time complexity: Array vs Linked List
+### `[Linked List] Operation`
+ 
+> Insertion: Process the subsidiary trait of main instance variable(self.head, self.tail) first such as `self.head.next` or `self.tail.next`.
+> 
+> Deletion: We need to control surrounding nodes of target node. We need to `remove all` the `incoming direction connection` to the target node.
+> 
+> Deletion All: `When we delete entire list, we need to make nodes do not be referenced by anything.` That's why we need to loop inside and make ALL_NODE.prev = None (From the node which is not referenced by other nodes, linked list is started to be eliminated.)
+> 
+> `Delete entire One-way list`: we can set `self.head = None, self.tail = None`. Otherwise, when we delete Two-way list, we need to loop inside and make sure there is node which is referenced by some node.
+> 
+> Check the existance of linked list through 2 steps. (1) self.head != None, (2) self.head == self.tail
+
+
+### `[Linked List] Time complexity: Array vs Linked List`
 
 > <img width="550" alt="IMG" src="https://user-images.githubusercontent.com/73331241/160237823-0190bbac-c47c-497c-9e4b-c64c12da889d.png">
 
@@ -315,7 +359,8 @@ print(list*4) # [1,2,3,1,2,3,1,2,3,1,2,3]
 
 > Delete of array/linked list: O(n): Doubly linked list / O(1): Singly linked list
 
-### [8-6] Difference between Linked Lists vs Arrays
+### `[Linked List] Difference between Linked Lists vs Arrays`
+
 * Elements of linked list are `independent objects`.
 * Variable size - the size of a linked list is `not predefined`.
 * `Insertion and removals` in linked list are `very efficient`.
@@ -835,6 +880,8 @@ customQueue = deque(maxlen=3)
 > 
 > <img width="650" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164250567-bb80a76a-8299-4a0b-b103-e67a24cb9731.png">
 
+<!--
+
 ### [Binary Heap- Common operations on Binary Heap]
 > (1) Creation
 > (2) Peak top
@@ -891,8 +938,74 @@ customList = None
 
 > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/164625682-c3738794-691a-48e6-b6eb-c74290882104.png">
 
+-->
+
+----
 
 
+## [] Priority Queues
+
+#### [Priority Queues - Background Story]
+> (a) Tickets Booking
+> 
+> > Once the seats are getting full, the waiting list would be activated. However, airline could have a senior-first policy to consider waiting list. In this case, priority can be assigned to waiting list.
+
+
+#### [Priority Queues - Properties]
+> (A) Collection of prioritized Objects
+>
+> (B) Insertion Method: the same as an ordinary queue
+> 
+> (C) Removal: Based on the priority of the objects
+> 
+> (D) Key is associated when element is inserted in the priority queue
+> 
+> (E) Element with minimum key will be next element to be removed.
+
+
+----
+
+## [] Heaps
+
+#### [Heaps - Properties]
+> (A) More efficient utilization of Priority Queue (Can insert and delete in more efficient way)
+> 
+> (B) Also called as `Binary Heap`. It is a collection of objects or elements stored as a binary tree.
+> 
+> (C) Relational Property: Key in each node of the binary tree is greater than or equal to those in its children
+> 
+> (D) Structural Property: Binary tree should be a `complete binary tree`
+> 
+> (E) Kinds: Max Heap and Min Heap
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173597080-bc3b9519-75a2-4564-a72a-c29c46fd97f9.png">
+
+
+#### [Heaps Operations - Insertion]
+* (1) `Structural Property`: New node is inserted `after the last node`
+
+	* Implement it through array which is `starting from index 1`.
+
+* (2) `Relational Property`: Perform up-heap bubbling
+
+`Psudocode`
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173869717-bec6fa25-8439-4469-bf39-cca857ad2862.png">
+
+#### [Heaps Operations - Deletion]
+* (1) `Structural Property`: `Root is replaced by` the `last node`
+
+* (2) `Relational Property`: Perform down-heap bubbling
+
+`Psudocode`
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173973114-12083c23-2fd9-4581-b602-8f38385467ee.png">
+
+
+#### [Heaps Application - Heap Sort]
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/174748702-9c41e37f-6f51-473b-8336-b7f73a36aeda.png">
+
+
+----
 
 ## [15] Trie
 
@@ -925,6 +1038,82 @@ customList = None
 > 
 > > (Case 3):
 > Go to tip of the Trie and delete the node step by step
+
+----
+
+
+## Hashing
+
+### `[Hashing] Basic Understand`
+
+----
+* Key in usage: Hashing is a technique used for `searching, inserting, deleting elements` from a collection.
+
+* Be careful: Inefficient Hashing algorithm can take lots of memory.
+----
+
+#### `[HS Understand] Necessary Terminologies`
+
+> Keys: `input data` by a user
+
+> Hash Function: Map keys to corresponding indices(Hash Value) in Hash Table
+> 
+> Hash Table: It is a data structure which implements an `associative array` abstract data type, a structure that can `map keys to values`.
+>
+> Collision: Occur when more than one key maps to the same index in hash table
+
+
+### `[Hashing] Collision Handling`
+
+----
+* Key: Two types of collision handling schemes: Chaining, Open Addressing(Linear Probing, Quadratic Probing, annd Double Hashing)
+
+* Be careful: 
+----
+
+#### `[HS Collision] Chaining`
+
+> (1) Chaining uses `Linked lists` inside of the Hash Table
+
+> (2) It's the simplest and efficient way of handing collisions
+
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175193601-78056266-af59-4b0f-ae5b-f5c6a2067cba.png">
+
+
+#### `[HS Collision] Linear Probing & Quadratic Probing`
+
+----
+* Key: Linear Probing & Quadratic Probing are the same except for collision function.
+
+* Be careful: The number of elements cannot be more than hashtable size.
+
+`Hashtable size should have doubled size than the number of elements` (Maintain `L.F` < 0.5)
+
+----
+
+> (1) We need hash function and collision function
+
+> (2) In search function, we just implement the same operation with collision function without calling collision function.
+
+<!--
+
+#### `[HS Collision] Double Hashing`
+
+----
+* Key: Linear Probing & Quadratic Probing are the same except for collision function.
+
+* Be careful: The number of elements cannot be more than hashtable size.
+
+`Hashtable size should have doubled size than the number of elements` (Maintain `L.F` < 0.5)
+
+-->
+
+----
+
+> (1) We need hash function and collision function
+
+> (2) In search function, we just implement the same operation with collision function without calling collision function.
+
 
 
 ## [16] Hashing
@@ -1243,15 +1432,9 @@ public static void shellSort(int a[]) {
 > Unlike merge sort, extra space is not required.
 > 
 
-Necessary variables: Pivot, i, and j
-Pivot: index 0. Does not move. Used for the criteria in comparison process
-i: move from the beginning part, then stop when the value at index i is bigger than Pivot
-j: move from the ending part, then stop when the value at index j is smaller than Pivot
-if i and j is stopped, `switch A[i] and A[j]`. Because both values are located in not suitable locations.
-if i > j then, we switch A[pivot] and A[j]
+* Psudocode
+> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173557552-8443395e-5a25-454d-90ca-5fb97494bba8.png">
 
-
-> <img width="650" alt="IMG" src="https://user-images.githubusercontent.com/73331241/173488302-4a2ceac4-b157-438b-a65b-9c07a07159db.png">
 
 
 After switching, we have to consider at the left side of the pivot and the at the right side of the pivot recursively.
@@ -1516,6 +1699,9 @@ Used function2: topologicalSort: Loop all the graph dictionary
 > Each node has (1) `accumulative distance from starting point`, (2) `previous node`
 > 
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/168419569-98c91413-1a1f-4c47-925e-eb70b253a969.png">
+
+
+----
 
 
 ----
