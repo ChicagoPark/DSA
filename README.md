@@ -1520,10 +1520,49 @@ When L and R on the same index, switch that element with Pivot element
 ## [19] Graph
 > Graph consists of a finite set of `Vertices(or nodes)` and a set of `Edges` which connect a pair of nodes.
 
+
+### `[Graph] Abstract Data Type in Java`
+
+> (1) create(n): creates graph with n vertices and no edges
+> 
+> (2) insert_edge(u, v, w = 1): creates edge from u to v, storing weight w (by default 1)
+>
+> (3) remove_edge(u, v): deletes edge from u to v
+>
+> (4) exist_edge(u, v): returns true if edge exists between u and v, else false 
+> 
+> (5) vertex_count(): returns number of vertices in the graph
+> 
+> (6) edge_count(): returns number of edges in the graph
+> 
+> (7) vertices(): returns all the vertices of the graph
+> 
+> (8) edges(): returns all the edges of the graph
+> 
+> (9) degree(u): returns the degree of the vertex u
+> 
+> (10) indegree(u): returns the indegree of the vertex u
+> 
+> (11) outdegree(u): returns the outdegree of the vertex u
+
+----
+* Key: 
+
+* Be careful: 
+----
+
+
+
 ### [Graph- Terminology]
 > Vertices(vertex): the nodes of the graph
 > 
 > Edge: The edge is the line that connects pairs of vertices
+> 
+> Degree of Vertex - deg(v): number of edges
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175761849-bcde2bcd-d420-4a85-8798-d79c23d10f5e.png">
+> > 
+> > In-degree - indeg(v): number of incoming edges [<-> Out-degree - outdeg(v)]
 > 
 > Unweighted graph: A graph which does not have a weight associated with any edge
 > 
@@ -1532,6 +1571,8 @@ When L and R on the same index, switch that element with Pivot element
 > Undirected graph: In case the edges of the graph do not have a direction associated with them
 >
 > Directed graph: If the edges in a graph have a direction associated with them
+> 
+> Cycle: Path that starts and ends at the same vertex
 > 
 > Cyclic graph: A graph which has at least one loop
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167546919-50823970-41b1-4442-964f-b0b40f8ea12c.png">
@@ -1542,9 +1583,11 @@ When L and R on the same index, switch that element with Pivot element
 > Tree: It is a special case of directed acyclic graphs
 
 ### [Graph- Types]
-> <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167552196-340abe10-2330-4c49-81ae-b6fe206b507b.png">
-> 
+
+
 > Negative graph: Unless there is an negative edge, we call it as a negetive graph
+> 
+> > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167552196-340abe10-2330-4c49-81ae-b6fe206b507b.png">
 
 
 
