@@ -15,8 +15,9 @@ public class HashChainDemo {
 	}
 
 	public void insert(int value) {
-		int i = this.hashCode(value);
-		this.hashTable[i].insertSorted(value);
+		int code = hashCode(value);
+		this.hashTable[code].insertSorted(value);
+
 	}
 
 	public boolean search(int value) {
@@ -49,7 +50,7 @@ public class HashChainDemo {
 		
 		hash.display();
 		
-		System.out.println("Element Found: " + hash.search(921));
+		System.out.println("Element Found: " + hash.search(89));
 	}
 }
 

@@ -1,4 +1,4 @@
-public class LinkedList {
+public class LinkedList_Answer {
 	public class Node {
 		private int value;
 		private Node next;
@@ -8,11 +8,12 @@ public class LinkedList {
 			this.next = n;
 		}
 	}
+
 	private Node head;
 	private Node tail;
 	private int size;
 
-	public LinkedList() {
+	public LinkedList_Answer() {
 		head = null;
 		tail = null;
 		size = 0;
@@ -51,34 +52,35 @@ public class LinkedList {
 	}
 
 	public void insert(int value, int location) {
+		// addFirst
 		Node newNode = new Node(value, null);
-		if (this.head == null) {
+		if (this.isEmpty()) {
 			this.head = newNode;
 			this.tail = newNode;
-		}
-		
-		if (location == 0) {
-			newNode.next = this.head;
-			this.head = newNode;
-		}
-
-		else if (location == -1) {
-			this.tail.next = newNode;
-			this.tail = newNode;
-		}
-
-		else {
-			int index = 0;
-			Node temp = this.head;
-			while (index < location - 1) {
-				index += 1;
-				temp = temp.next;
+		} else {
+			if (location == 0) {
+				newNode.next = this.head;
+				this.head = newNode;
 			}
-			newNode.next = temp.next.next;
-			temp.next = newNode;
+			// addLast
+			else if (location == -1) {
+				this.tail.next = newNode;
+				this.tail = newNode;
+			}
+			// addAny
+			else {
+				int index = 0;
+				Node temp = this.head;
+				while (index < location - 1) {
+					index += 1;
+					temp = temp.next;
+				}
+				newNode.next = temp.next;
+				temp.next = newNode;
+			}
 		}
-
 		this.size += 1;
+
 	}
 
 	public int deleteNode(int location) {
@@ -114,7 +116,7 @@ public class LinkedList {
 
 	public void display() {
 		Node temp = this.head;
-		if (temp != null) {
+		if (temp!=null) { 
 			while (temp != null && temp.next != null) {
 				System.out.print(temp.value + "-->");
 				temp = temp.next;
@@ -162,7 +164,7 @@ public class LinkedList {
 	}
 
 	public static void main(String[] args) {
-		LinkedList l = new LinkedList();
+		LinkedList_Answer l = new LinkedList_Answer();
 		l.insert(7, 0);
 		l.insert(2, 0);
 		l.insert(3, -1);

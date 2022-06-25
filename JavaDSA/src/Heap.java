@@ -22,23 +22,26 @@ public class Heap {
 		return this.cSize == 0;
 	}
 
-	public void insert(int newNode) {
-		// check the size
-		if (this.maxSize < this.cSize) {
+	public void insert(int newNode) {		
+		// check the size of the heap
+		if (this.cSize >= this.maxSize-1) {
+			System.out.println("Heap is already filled");
 			return;
 		}
-
-		// put the node at the tip
-		this.cSize += 1;
-		this.data[this.cSize] = newNode;
-
-		int currentIndex = this.cSize;
-		while (currentIndex > 1 && this.data[currentIndex] > this.data[(int) currentIndex / 2]) {
-			int temp = this.data[currentIndex];
-			this.data[currentIndex] = this.data[currentIndex / 2];
-			this.data[currentIndex / 2] = temp;
-			currentIndex /= 2;
+		// reflect the size
+		this.cSize +=1 ;
+		// put the value at the last
+		this.data[this.cSize] = newNode;	
+		// get index
+		int i = this.cSize;
+		// compare and going up
+		while (i > 1 && this.data[i] > this.data[i/2]) {
+			int temp = this.data[i];
+			this.data[i] = this.data[i/2];
+			this.data[i/2] = temp;
+			i/=2;
 		}
+		// *No return*
 	}
 
 	public int max() {
@@ -99,6 +102,7 @@ public class Heap {
 			a[k] = temp;
 			k -= 1;
 		}
+		
 	}
 
 	public static void main(String[] args) {
