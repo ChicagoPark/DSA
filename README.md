@@ -1545,12 +1545,6 @@ When L and R on the same index, switch that element with Pivot element
 > 
 > (11) outdegree(u): returns the outdegree of the vertex u
 
-----
-* Key: 
-
-* Be careful: 
-----
-
 
 
 ### [Graph- Terminology]
@@ -1656,6 +1650,20 @@ print(graph.gdict)
 > It starts selecting some arbitrary node and explores as far as possible along each edge before backtracking.
 >
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167779587-1095681d-df92-4db5-90bf-1631aa580b95.png">
+
+```java
+public void DFS(int starter) {
+	// Base case
+	if (this.visited[starter] == 0) {
+		System.out.print(starter + " ");
+		this.visited[starter] = 1;
+		for (int i = 0; i < this.vertexCount(); i++) {
+			if (this.adjMat[starter][i] == 1 && this.visited[i] == 0)
+				this.DFS(i);
+		}
+	}
+}
+```
 
 > ##### (3) BFS vs DFS
 > > <img width="350" alt="IMG" src="https://user-images.githubusercontent.com/73331241/167782070-f4fe17cb-ff09-4e50-9f4a-903945d06861.png">
