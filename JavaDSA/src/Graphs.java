@@ -1,10 +1,14 @@
+import java.util.Queue;
+
 public class Graphs {
 	private int vertices;
 	private int adjMat[][];
-
+	int visited[];
+	
 	public Graphs(int n) {
 		vertices = n;
 		adjMat = new int[n][n];
+		visited = new int[this.vertexCount()];
 	}
 
 	public void insertEdge(int u, int v, int x) {
@@ -67,36 +71,71 @@ public class Graphs {
 			System.out.println();
 		}
 	}
-	
+
+	public void DFS(int starter) {
+		// Base case
+		if (this.visited[starter] == 0) {
+			System.out.print(starter + " ");
+			this.visited[starter] = 1;
+			for (int i = 0; i < this.vertexCount(); i++) {
+				if (this.adjMat[starter][i] == 1 && this.visited[i] == 0)
+					this.DFS(i);
+			}
+		}
+	}
+
 	public static void main(String[] args) {
 		Graphs graph = new Graphs(4);
 		System.out.println("Graphs Adjacency Matrix");
 		graph.display();
-		System.out.println("Vertices: "+graph.vertexCount());
+		System.out.println("Vertices: " + graph.vertexCount());
 		System.out.println("Edges Count: " + graph.edgeCount());
-		
+
 		graph.insertEdge(0, 1, 26);
 		graph.insertEdge(0, 2, 16);
 		graph.insertEdge(1, 2, 26);
 		graph.insertEdge(2, 3, 8);
-		
+
 		graph.insertEdge(1, 0, 16);
 		graph.insertEdge(2, 0, 12);
 		graph.insertEdge(2, 1, 26);
 		graph.insertEdge(3, 2, 8);
-		
+
 		graph.display();
-		System.out.println("Vertices: "+graph.vertexCount());
+		System.out.println("Vertices: " + graph.vertexCount());
 		System.out.println("Edges Count: " + graph.edgeCount());
+
+		System.out.println("Edge between 1--3: " + graph.existEdge(1, 3));
+		System.out.println("Edge between 1--2: " + graph.existEdge(1, 2));
+		System.out.println("Degree of Vertex-2: " + graph.inDegree(2));
+		System.out.println("Graphs Adjacency Matrix");
+		graph.display();
+		graph.removeEdge(1, 2);
+		System.out.println("Graphs Adjacency Matrix");
+		graph.display();
+		System.out.println("Edge between 1--2: " + graph.existEdge(1, 2));
+
 		
-		System.out.println("Edge between 1--3: "+graph.existEdge(1,3));
-        System.out.println("Edge between 1--2: "+graph.existEdge(1,2));
-        System.out.println("Degree of Vertex-2: "+graph.inDegree(2));
-        System.out.println("Graphs Adjacency Matrix");
-        graph.display();
-        graph.removeEdge(1,2);
-        System.out.println("Graphs Adjacency Matrix");
-        graph.display();
-        System.out.println("Edge between 1--2: "+graph.existEdge(1,2));
+		Graphs graph2 = new Graphs(7);
+		graph2.insertEdge(0, 1, 1);
+		graph2.insertEdge(0, 5, 1);
+		graph2.insertEdge(0, 6, 1);
+		graph2.insertEdge(1, 0, 1);
+		graph2.insertEdge(1, 2, 1);
+		graph2.insertEdge(1, 5, 1);
+		graph2.insertEdge(1, 6, 1);
+		graph2.insertEdge(2, 3, 1);
+		graph2.insertEdge(2, 4, 1);
+		graph2.insertEdge(2, 6, 1);
+		graph2.insertEdge(3, 4, 1);
+		graph2.insertEdge(4, 2, 1);
+		graph2.insertEdge(4, 5, 1);
+		graph2.insertEdge(5, 2, 1);
+		graph2.insertEdge(5, 3, 1);
+		graph2.insertEdge(6, 3, 1);
+		
+		System.out.println("DFS: ");	
+		graph2
+		.DFS(0);
 	}
 }
