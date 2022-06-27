@@ -1115,6 +1115,7 @@ customList = None
 > (2) In search function, we just implement the same operation with collision function without calling collision function.
 
 
+<!--
 
 ## [16] Hashing
 > * Hashing is a `method of sorting and indexing data`. The idea behind hashing is to allow large amounts of data to be indexed using keys commonly created by formulas.
@@ -1193,6 +1194,8 @@ customList = None
 > 1. Password verification: Change user information to hash value and keep it
 > 
 > 2. File system: File path is mapped to physical location on disk through Hashing
+
+-->
 
 ----
 
