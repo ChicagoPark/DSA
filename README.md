@@ -43,7 +43,8 @@ Data Structure &amp; Algorithm in Python
 Base case  	     				     |      Recursive call
 :--------------------------------------------------: | :-------------:
 When is the `appropriate moment` to stop algorithm?  | What is the `smallest unit of work` I can do to contribute to the goal?
-						     | How to `interact (contribute) with` the next connection.
+` `           | How to `interact (contribute) with` the next connection.
+
 
 #`Recursion in Programming: 23:00/1:51:35`
 
@@ -1109,10 +1110,6 @@ customList = None
 -->
 
 ----
-
-> (1) We need hash function and collision function
-
-> (2) In search function, we just implement the same operation with collision function without calling collision function.
 
 
 <!--
