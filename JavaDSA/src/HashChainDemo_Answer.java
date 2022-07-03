@@ -1,8 +1,8 @@
-public class HashChainDemo {
+public class HashChainDemo_Answer {
 	private int hashTableSize;
 	private LinkedList hashTable[];
 
-	public HashChainDemo() {
+	public HashChainDemo_Answer() {
 		this.hashTableSize = 10;
 		this.hashTable = new LinkedList[this.hashTableSize];
 		for (int i = 0; i < this.hashTableSize; i++)
@@ -15,8 +15,8 @@ public class HashChainDemo {
 	}
 
 	public void insert(int value) {
-		int hashCode = this.hashCode(value);
-		this.hashTable[hashCode].insertSorted(value);
+		int code = hashCode(value);
+		this.hashTable[code].insertSorted(value);
 
 	}
 
@@ -34,7 +34,7 @@ public class HashChainDemo {
 	}
 	
 	public static void main(String[] args) {
-		HashChainDemo hash = new HashChainDemo();
+		HashChainDemo_Answer hash = new HashChainDemo_Answer();
 		hash.insert(10);
 		hash.insert(4);
 		hash.insert(6);

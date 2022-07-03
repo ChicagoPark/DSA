@@ -1,11 +1,11 @@
 import java.util.Queue;
 
-public class Graphs {
+public class Graphs_Answer {
 	private int vertices;
 	private int adjMat[][];
 	int visited[];
 	
-	public Graphs(int n) {
+	public Graphs_Answer(int n) {
 		vertices = n;
 		adjMat = new int[n][n];
 		visited = new int[this.vertexCount()];
@@ -73,21 +73,19 @@ public class Graphs {
 	}
 
 	public void DFS(int starter) {
-		// base condition
+		// Base case
 		if (this.visited[starter] == 0) {
-			System.out.println(starter);
+			System.out.print(starter + " ");
 			this.visited[starter] = 1;
-			for(int i = 0 ; i < this.vertexCount(); i++) {
-				if (this.adjMat[starter][i] == 1 && this.visited[i] == 0) {
+			for (int i = 0; i < this.vertexCount(); i++) {
+				if (this.adjMat[starter][i] == 1 && this.visited[i] == 0)
 					this.DFS(i);
-				}
 			}
-			
 		}
 	}
 
 	public static void main(String[] args) {
-		Graphs graph = new Graphs(4);
+		Graphs_Answer graph = new Graphs_Answer(4);
 		System.out.println("Graphs Adjacency Matrix");
 		graph.display();
 		System.out.println("Vertices: " + graph.vertexCount());
@@ -118,7 +116,7 @@ public class Graphs {
 		System.out.println("Edge between 1--2: " + graph.existEdge(1, 2));
 
 		
-		Graphs graph2 = new Graphs(7);
+		Graphs_Answer graph2 = new Graphs_Answer(7);
 		graph2.insertEdge(0, 1, 1);
 		graph2.insertEdge(0, 5, 1);
 		graph2.insertEdge(0, 6, 1);

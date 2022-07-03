@@ -8,6 +8,7 @@ public class LinkedList {
 			this.next = n;
 		}
 	}
+
 	private Node head;
 	private Node tail;
 	private int size;
@@ -52,32 +53,28 @@ public class LinkedList {
 
 	public void insert(int value, int location) {
 		Node newNode = new Node(value, null);
-		if (this.head == null) {
+		if (this.isEmpty() == true) {
 			this.head = newNode;
 			this.tail = newNode;
+			this.size += 1;
+			return;
 		}
-		
 		if (location == 0) {
 			newNode.next = this.head;
 			this.head = newNode;
-		}
-
-		else if (location == -1) {
+		} else if (location == -1) {
 			this.tail.next = newNode;
-			this.tail = newNode;
+			this.tail = newNode;}
+		 else {
+			 int index = 0;
+			 Node temp = this.head;
+			 while (index < location - 1) {
+				 index += 1;
+				 temp = temp.next;
+			 }
+			 newNode.next = temp.next;
+			 temp.next = newNode;
 		}
-
-		else {
-			int index = 0;
-			Node temp = this.head;
-			while (index < location - 1) {
-				index += 1;
-				temp = temp.next;
-			}
-			newNode.next = temp.next.next;
-			temp.next = newNode;
-		}
-
 		this.size += 1;
 	}
 

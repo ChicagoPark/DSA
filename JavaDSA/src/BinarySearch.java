@@ -1,27 +1,23 @@
+import java.util.Arrays;
+
 public class BinarySearch {
 	public static void binarySearch(int a[], int value) {
-		int start = 0;
-		int end = a.length - 1;
-		int middle = (int) Math.floor((start + end) / 2);
-		while (start < end && a[middle] != value) {
+		int start = 0, end = a.length;
+		int middle = (int) Math.floor((start+end)/2);
+		
+		while(start < end && a[middle] != value) {
 			if (value < a[middle]) {
 				end = middle - 1;
 			}
 			else {
 				start = middle + 1;
 			}
-			middle = (int) Math.floor((start + end) / 2);
-			System.out.println(middle);
+			middle = (int) Math.floor((start+end)/2);
 		}
-		//System.out.println(middle);
-		//System.out.println(a[middle]);
-		
 		if (a[middle] == value) {
 			System.out.println("index: "+ middle);
 		}
-		else {
-			System.out.println("NOne");
-		}
+		System.out.println(Arrays.toString(a));
 	}
 
 	public static void main(String[] args) {

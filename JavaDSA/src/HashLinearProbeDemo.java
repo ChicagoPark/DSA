@@ -16,19 +16,19 @@ public class HashLinearProbeDemo {
 
 	// COLLISION
 	public int lProbe(int value) {
-		int i = this.hashCode(value);
-		int j = 1;
-		while (this.hashTable[(i + j) % this.hashTableSize] != 0)
-			j += 1;
-		return (i + j) % this.hashTableSize;
+		int i = 1;
+		while (this.hashTable[this.hashCode(value + i)] != 0) {
+			i += 1;
+		}
+		return this.hashCode(value + i);
 	}
 
 	public void insert(int value) {
-		int i = hashCode(value);
+		int i = this.hashCode(value);
 		if (this.hashTable[i] == 0) {
-			hashTable[i] = value;
+			this.hashTable[i] = value;
 		} else {
-			hashTable[this.lProbe(value)] = value;
+			this.hashTable[this.lProbe(value)] = value;
 		}
 	}
 
@@ -42,12 +42,13 @@ public class HashLinearProbeDemo {
 		}
 		return true;
 	}
+
 	public void display() {
-		for(int i = 0 ; i < this.hashTableSize; i++)
+		for (int i = 0; i < this.hashTableSize; i++)
 			System.out.print(this.hashTable[i] + " ");
 		System.out.println();
-		}
-	
+	}
+
 	public static void main(String[] args) {
 		HashLinearProbeDemo hashing = new HashLinearProbeDemo();
 		hashing.insert(54);
@@ -61,5 +62,3 @@ public class HashLinearProbeDemo {
 		System.out.println(hashing.search(54));
 	}
 }
-
-	

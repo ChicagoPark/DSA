@@ -80,7 +80,6 @@ public class LinkedList_Answer {
 			}
 		}
 		this.size += 1;
-
 	}
 
 	public int deleteNode(int location) {

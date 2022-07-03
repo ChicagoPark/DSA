@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Heap_Answer {
 	private int data[];
 	private int maxSize;
@@ -49,35 +51,54 @@ public class Heap_Answer {
 		System.out.println();
 	}
 
-	public void deleteMax() {
-		// necessary variable
-		// (1) Avoid the size of heap is zero
-		if (this.isEmpty()) {
-			System.out.println("Heap is Empty");
-			return;
+	public int deleteMax() {
+		if (this.cSize == 0) {
+			System.out.println("Size of heap is empty");
+			return -1;
 		}
-		// (2) Get rid of rootnode and put the last node to the root
+		// replace rootNode with the last node
+		int deletedNode = this.data[1];
 		this.data[1] = this.data[this.cSize];
 		this.data[this.cSize] = -1;
-		cSize = cSize - 1;
-
-		int tempIndex = 1;
-		while (tempIndex * 2 < this.cSize) {
-			// (3) Select the boss among children
-			int bossIndex = tempIndex*2;
-			if (this.data[tempIndex * 2] < this.data[tempIndex * 2 + 1]) {
-				bossIndex += 1;
+		// change size
+		this.cSize -=1;
+		// (2) Going down task
+		int i = 1;	
+		// use j to select boss child
+		while (i*2 <= this.cSize) {
+			int j = i*2;
+			if (this.data[j] < this.data[j+1]) {
+				j += 1;
 			}
-			if (this.data[tempIndex] < this.data[bossIndex]) {
-				int temp = this.data[tempIndex];
-				this.data[tempIndex] = this.data[bossIndex];
-				this.data[bossIndex] = temp;
-				tempIndex = bossIndex;
+			if (this.data[i] < this.data[j]) {
+				int temp = this.data[i];
+				this.data[i] = this.data[j];
+				this.data[j] = temp;
+				i = j;
 			}
 			else {
 				break;
 			}
 		}
+		return deletedNode;
+
+	}
+	public void heapsort(int a[]) {
+		// Create additional heap
+		Heap newHeap = new Heap(a.length+1);
+		
+		for (int i = 0; i < a.length; i++) {
+			newHeap.insert(a[i]);
+		}
+		
+		// Loop to delete the max node from the additional heap and put it into "a"
+		int k = a.length - 1;
+		for (int i = 0; i < a.length; i++) {
+			int temp = newHeap.deleteMax();
+			a[k] = temp;
+			k -= 1;
+		}
+		
 	}
 
 	public static void main(String[] args) {
@@ -95,5 +116,10 @@ public class Heap_Answer {
 		
 		h.deleteMax();
 		h.display();
+		
+		int a[] = {3,12,215,312,31,12,2,1241,4531};
+		
+		h.heapsort(a);
+		System.out.println(Arrays.toString(a));
 	}
 }

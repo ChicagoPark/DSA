@@ -60,49 +60,50 @@ public class Heap {
 	}
 
 	public int deleteMax() {
-		// replace the root node with the last node
-		int returnValue = this.data[1];
+		// check the size
+		if(this.cSize <= 0) {
+			System.out.println("Heap is empty");
+			return -1;
+		}
+		// delete value and get index
+		int max = this.data[1];
 		this.data[1] = this.data[this.cSize];
 		this.data[this.cSize] = -1;
 		this.cSize -= 1;
-		
-		// down heap
+		// get the boss index and find the proper location
 		int i = 1;
-		int j = i*2;
 		
-		// down heap
-		while(j < this.cSize) {
-			// select the boss child
-			if (this.data[j] < this.data[j+1]) {
+		while(2*i <= this.cSize) {
+			int j = i*2;
+			if (this.data[2*i] < this.data[2*i + 1] )
 				j += 1;
-			}
 			if (this.data[i] < this.data[j]) {
 				int temp = this.data[i];
 				this.data[i] = this.data[j];
 				this.data[j] = temp;
-				i *= 2;
-				j = i*2;
-			}			
+			}
+			else {
+				break;
+			}
+			
+			i = j;
 		}
-		return returnValue;
+		return max;
 	}
 
 	public void heapsort(int a[]) {
-		// Create additional heap
+		// create new heap
 		Heap newHeap = new Heap(a.length+1);
-		
-		for (int i = 0; i < a.length; i++) {
+		// insert all value into heapsort
+		for(int i = 0 ; i < a.length; i ++) {
 			newHeap.insert(a[i]);
 		}
-		
-		// Loop to delete the max node from the additional heap and put it into "a"
 		int k = a.length - 1;
-		for (int i = 0; i < a.length; i++) {
-			int temp = newHeap.deleteMax();
-			a[k] = temp;
+		// do deletemax operation
+		for(int i = 0 ; i < a.length; i ++) {
+			a[k] = newHeap.deleteMax();
 			k -= 1;
 		}
-		
 	}
 
 	public static void main(String[] args) {
