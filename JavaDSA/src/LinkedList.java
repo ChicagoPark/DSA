@@ -80,25 +80,29 @@ public class LinkedList {
 
 	public int deleteNode(int location) {
 		if (this.head == null) {
-			System.out.println("List is empty");
+			System.out.println("it is empty");
 			return -1;
 		}
 		int removedValue;
 		if (location == 0) {
 			removedValue = this.head.value;
 			this.head = this.head.next;
-		} else if (location == -1) {
+		}
+		else if (location == -1) {
+			int index = 0;
 			Node temp = this.head;
 			while (temp.next != this.tail) {
+				index += 1;
 				temp = temp.next;
 			}
 			removedValue = this.tail.value;
 			temp.next = null;
 			this.tail = temp;
-		} else {
+		}
+		else {
 			int index = 0;
 			Node temp = this.head;
-			while (index < location - 1) {
+			while (index < location -1) {
 				index += 1;
 				temp = temp.next;
 			}
@@ -136,26 +140,31 @@ public class LinkedList {
 
 	public void insertSorted(int value) {
 		Node newNode = new Node(value, null);
-		if (this.isEmpty()) {
+		// when the linkedlist is empty
+		if(this.head == null) {
 			this.head = newNode;
 			this.tail = newNode;
-		} else {
-			Node temp = this.head;
-			while (temp != null && value > temp.value) {
-				temp = temp.next;
+		}
+		// when there is an value inside
+		else {
+			Node tempNode = this.head;
+			while (tempNode != null && tempNode.value < value) {
+				tempNode = tempNode.next;
 			}
-			if (temp == this.head) {
+			
+			if (tempNode == null) {
+				this.tail.next = newNode;
+				this.tail = newNode;
+			}
+			else if(tempNode == this.head) {
 				newNode.next = this.head;
 				this.head = newNode;
-			} else if (temp != null) {
-				newNode.next = temp.next;
-				temp.next = newNode;
-
-			} else {
-				this.tail.next = newNode;
+			}
+			else {
+				newNode.next = tempNode.next;
+				tempNode.next = newNode;
 			}
 		}
-		this.size += 1;
 	}
 
 	public static void main(String[] args) {

@@ -134,8 +134,9 @@ public class Graphs_Answer {
 		graph2.insertEdge(5, 3, 1);
 		graph2.insertEdge(6, 3, 1);
 		
+		graph2.display();
+		
 		System.out.println("DFS: ");	
-		graph2
-		.DFS(0);
+		graph2.DFS(0);
 	}
 }

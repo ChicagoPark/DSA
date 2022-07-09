@@ -73,16 +73,14 @@ public class Graphs {
 	}
 
 	public void DFS(int starter) {
-		// base condition
 		if (this.visited[starter] == 0) {
-			System.out.println(starter);
+			System.out.println(starter + " ");
 			this.visited[starter] = 1;
-			for(int i = 0 ; i < this.vertexCount(); i++) {
-				if (this.adjMat[starter][i] == 1 && this.visited[i] == 0) {
+			for(int i = 0; i < this.vertices; i ++) {
+				if (this.adjMat[starter][i]==1 && this.visited[i]==0) {
 					this.DFS(i);
 				}
 			}
-			
 		}
 	}
 

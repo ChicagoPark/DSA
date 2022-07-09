@@ -79,18 +79,19 @@ public class Sort_Answer {
 	public static int partition(int a[], int low, int high) {
 		int pi = a[high];
 		int i = low - 1;
-		for (int j = low; j < high; j++) {
-			if (a[j] <= pi) {
+		for (int j = low; j < high + 1; j ++) {
+			if (a[j] < pi) {
 				i += 1;
 				int temp = a[i];
 				a[i] = a[j];
 				a[j] = temp;
 			}
 		}
-		int temp = a[i + 1];
-		a[i + 1] = a[high];
+		int temp = a[i+1];
+		a[i+1] = pi;
 		a[high] = temp;
-		return i + 1;
+		return i+1;
+		
 	}
 
 	public static void main(String[] args) {
@@ -102,12 +103,12 @@ public class Sort_Answer {
 
 		s.shellSort(a);
 
-		System.out.println(Arrays.toString(a));
+		System.out.println("Shell Sort: " + Arrays.toString(a));
 
 		s.mergeSort(b, 0, b.length - 1);
-		System.out.println(Arrays.toString(b));
+		System.out.println("Merge Sort: " + Arrays.toString(b));
 
 		s.quickSort(c, 0, c.length - 1);
-		System.out.println(Arrays.toString(c));
+		System.out.println("Quick Sort: " + Arrays.toString(c));
 	}
 }

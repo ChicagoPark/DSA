@@ -31,29 +31,31 @@ public class Sort {
 		while(i < mid + 1 && j < right + 1) {
 			if (a[i] < a[j]) {
 				b[k] = a[i];
-				i += 1;
-				k += 1;
+				i+=1;
+				k+=1;
 			}
 			else {
 				b[k] = a[j];
-				j += 1;
-				k += 1;
+				j+=1;
+				k+=1;
 			}
 		}
 		while (i < mid + 1) {
 			b[k] = a[i];
 			i += 1;
 			k += 1;
+			
 		}
-		while (j < right + 1) {
+
+		while(j <right+1) {
 			b[k] = a[j];
 			j += 1;
 			k += 1;
 		}
-		for (int x = left ; x < right + 1 ; x++) {
+		
+		for(int x = left; x < right+1; x++) {
 			a[x] = b[x];
 		}
-
 	}
 
 	public static void quickSort(int a[], int low, int high) {
@@ -66,21 +68,19 @@ public class Sort {
 
 	public static int partition(int a[], int low, int high) {
 		int pi = high;
-		int i = low-1;
-		for(int j = low; j < high ; j++) {
-			if (a[j]<=a[pi]) {
-				i+=1;
-				int temp = a[i];
-				a[i] = a[j];
-				a[j] = temp;
+		int j = low - 1;
+		for(int i = low; i < high; i ++) {
+			if (a[i] <= a[pi]) {
+				j += 1;
+				int temp = a[j];
+				a[j] = a[i];
+				a[i] = temp;
 			}
 		}
-		int temp = a[i+1];
-		a[i+1] =a[pi];
+		int temp = a[j+1];
+		a[j+1] = a[pi];
 		a[pi] = temp;
-		
-		return i+1;
-
+		return j+1;
 	}
 
 	public static void main(String[] args) {

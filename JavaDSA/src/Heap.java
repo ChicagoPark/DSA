@@ -22,26 +22,24 @@ public class Heap {
 		return this.cSize == 0;
 	}
 
-	public void insert(int newNode) {		
-		// check the size of the heap
-		if (this.cSize >= this.maxSize-1) {
-			System.out.println("Heap is already filled");
+	public void insert(int newNode) {
+		// check the size
+		if(this.cSize >= this.maxSize) {
+			System.out.println("Max size");
 			return;
 		}
-		// reflect the size
-		this.cSize +=1 ;
-		// put the value at the last
-		this.data[this.cSize] = newNode;	
-		// get index
+		// put the value and update the size
+		this.cSize += 1;
+		this.data[this.cSize] = newNode;
+		
+		// going up process
 		int i = this.cSize;
-		// compare and going up
-		while (i > 1 && this.data[i] > this.data[i/2]) {
-			int temp = this.data[i];
-			this.data[i] = this.data[i/2];
-			this.data[i/2] = temp;
-			i/=2;
+		while(i > 1 && newNode > this.data[(int)(i/2)]) {
+			this.data[i] = this.data[(int)(i/2)];
+			i /= 2;
 		}
-		// *No return*
+		this.data[i] = newNode;
+		
 	}
 
 	public int max() {
@@ -60,47 +58,48 @@ public class Heap {
 	}
 
 	public int deleteMax() {
-		// check the size
-		if(this.cSize <= 0) {
-			System.out.println("Heap is empty");
+		if (this.cSize == 0) {
+			System.out.println("Size of heap is empty");
 			return -1;
 		}
-		// delete value and get index
-		int max = this.data[1];
+		// replace rootNode with the last node
+		int deletedNode = this.data[1];
 		this.data[1] = this.data[this.cSize];
 		this.data[this.cSize] = -1;
-		this.cSize -= 1;
-		// get the boss index and find the proper location
-		int i = 1;
-		
-		while(2*i <= this.cSize) {
+		// change size
+		this.cSize -=1;
+		// (2) Going down task
+		int i = 1;	
+		// use j to select boss child
+		while (i*2 <= this.cSize) {
 			int j = i*2;
-			if (this.data[2*i] < this.data[2*i + 1] )
+			if (this.data[j] < this.data[j+1]) {
 				j += 1;
+			}
 			if (this.data[i] < this.data[j]) {
 				int temp = this.data[i];
 				this.data[i] = this.data[j];
 				this.data[j] = temp;
+				i = j;
 			}
 			else {
 				break;
 			}
-			
-			i = j;
 		}
-		return max;
+		return deletedNode;
+
 	}
 
 	public void heapsort(int a[]) {
 		// create new heap
-		Heap newHeap = new Heap(a.length+1);
+		Heap newHeap = new Heap(a.length + 1);
 		// insert all value into heapsort
-		for(int i = 0 ; i < a.length; i ++) {
+		for (int i = 0; i < a.length; i++) {
 			newHeap.insert(a[i]);
 		}
 		int k = a.length - 1;
 		// do deletemax operation
-		for(int i = 0 ; i < a.length; i ++) {
+		for (int i = 0; i < a.length; i++) {
 			a[k] = newHeap.deleteMax();
 			k -= 1;
 		}
@@ -121,9 +120,9 @@ public class Heap {
 
 		h.deleteMax();
 		h.display();
-		
-		int a[] = {3,12,215,312,31,12,2,1241,4531};
-		
+
+		int a[] = { 3, 12, 215, 312, 31, 12, 2, 1241, 4531 };
+
 		h.heapsort(a);
 		System.out.println(Arrays.toString(a));
 	}

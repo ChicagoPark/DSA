@@ -16,18 +16,24 @@ public class HashLinearProbeDemo {
 
 	// COLLISION
 	public int lProbe(int value) {
-		int i = 1;
-		while (this.hashTable[this.hashCode(value + i)] != 0) {
-			i += 1;
+		int i = this.hashCode(value);
+		int j = 1;
+		while(this.hashTable[i] != 0) {
+			int newCode = this.hashCode(value + j);
+			if(this.hashTable[newCode] == 0) {
+				return newCode;
+			}
+			j += 1;
 		}
-		return this.hashCode(value + i);
+		return -1;
 	}
 
 	public void insert(int value) {
-		int i = this.hashCode(value);
-		if (this.hashTable[i] == 0) {
-			this.hashTable[i] = value;
-		} else {
+		int code = hashCode(value);
+		if (this.hashTable[code] == 0) {
+			this.hashTable[code] = value;
+		}
+		else {
 			this.hashTable[this.lProbe(value)] = value;
 		}
 	}
