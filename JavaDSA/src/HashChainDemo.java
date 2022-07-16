@@ -15,9 +15,8 @@ public class HashChainDemo {
 	}
 
 	public void insert(int value) {
-		int hashCode = this.hashCode(value);
-		this.hashTable[hashCode].insertSorted(value);
-
+		int code = this.hashCode(value);
+		this.hashTable[code].insert(value, -1);;
 	}
 
 	public boolean search(int value) {

@@ -24,22 +24,24 @@ public class Heap {
 
 	public void insert(int newNode) {
 		// check the size
-		if(this.cSize >= this.maxSize) {
-			System.out.println("Max size");
+		if (this.cSize >= this.maxSize) {
+			System.out.println("The size is max");
 			return;
 		}
-		// put the value and update the size
 		this.cSize += 1;
+		// put the value
 		this.data[this.cSize] = newNode;
-		
-		// going up process
+
+		// going up
 		int i = this.cSize;
-		while(i > 1 && newNode > this.data[(int)(i/2)]) {
-			this.data[i] = this.data[(int)(i/2)];
-			i /= 2;
+		while (i > 1 && this.data[i] > this.data[i / 2]) {
+			int temp = this.data[i];
+			this.data[i] = this.data[i / 2];
+			this.data[i / 2] = temp;
+
+			i = i / 2;
 		}
-		this.data[i] = newNode;
-		
+
 	}
 
 	public int max() {
@@ -58,36 +60,31 @@ public class Heap {
 	}
 
 	public int deleteMax() {
-		if (this.cSize == 0) {
-			System.out.println("Size of heap is empty");
+		//check the size
+		if (this.isEmpty()) {
+			System.out.println("Already empty");
 			return -1;
 		}
-		// replace rootNode with the last node
-		int deletedNode = this.data[1];
+		// do the operation and reflect the size
+		int deletedValue = this.data[1];
 		this.data[1] = this.data[this.cSize];
 		this.data[this.cSize] = -1;
-		// change size
-		this.cSize -=1;
-		// (2) Going down task
-		int i = 1;	
-		// use j to select boss child
-		while (i*2 <= this.cSize) {
-			int j = i*2;
-			if (this.data[j] < this.data[j+1]) {
+		this.cSize -= 1;
+		
+		int i = 1;
+		while (2*i <= this.cSize) {
+			// Main Operation1: Get the child	
+			int j = i *2;
+			if(this.data[j] < this.data[j+1]) 
 				j += 1;
+			if (this.data[j] > this.data[i]) {
+				int temp = this.data[j];
+				this.data[j] = this.data[i];
+				this.data[i] = temp;
 			}
-			if (this.data[i] < this.data[j]) {
-				int temp = this.data[i];
-				this.data[i] = this.data[j];
-				this.data[j] = temp;
-				i = j;
-			}
-			else {
-				break;
-			}
+			i = j;
 		}
-		return deletedNode;
-
+		return deletedValue;
 	}
 
 	public void heapsort(int a[]) {

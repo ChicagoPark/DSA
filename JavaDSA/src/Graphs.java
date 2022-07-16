@@ -4,7 +4,7 @@ public class Graphs {
 	private int vertices;
 	private int adjMat[][];
 	int visited[];
-	
+
 	public Graphs(int n) {
 		vertices = n;
 		adjMat = new int[n][n];
@@ -74,10 +74,10 @@ public class Graphs {
 
 	public void DFS(int starter) {
 		if (this.visited[starter] == 0) {
-			System.out.println(starter + " ");
+			System.out.print(starter + " ");
 			this.visited[starter] = 1;
-			for(int i = 0; i < this.vertices; i ++) {
-				if (this.adjMat[starter][i]==1 && this.visited[i]==0) {
+			for (int i = 0 ; i < this.vertices ;i ++) {
+				if(this.visited[i] == 0 && this.adjMat[starter][i]==1) {
 					this.DFS(i);
 				}
 			}
@@ -115,7 +115,6 @@ public class Graphs {
 		graph.display();
 		System.out.println("Edge between 1--2: " + graph.existEdge(1, 2));
 
-		
 		Graphs graph2 = new Graphs(7);
 		graph2.insertEdge(0, 1, 1);
 		graph2.insertEdge(0, 5, 1);
@@ -133,9 +132,8 @@ public class Graphs {
 		graph2.insertEdge(5, 2, 1);
 		graph2.insertEdge(5, 3, 1);
 		graph2.insertEdge(6, 3, 1);
-		
-		System.out.println("DFS: ");	
-		graph2
-		.DFS(0);
+
+		System.out.println("DFS: ");
+		graph2.DFS(0);
 	}
 }

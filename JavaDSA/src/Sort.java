@@ -27,33 +27,31 @@ public class Sort {
 
 	public static void merge(int a[], int left, int mid, int right) {
 		int i = left, j = mid + 1, k = left;
+		
 		int b[] = new int[a.length];
-		while(i < mid + 1 && j < right + 1) {
+		while (i < mid + 1 && j < right + 1) {
 			if (a[i] < a[j]) {
 				b[k] = a[i];
-				i+=1;
-				k+=1;
+				i += 1;
+				k += 1;
 			}
 			else {
 				b[k] = a[j];
-				j+=1;
-				k+=1;
+				j += 1;
+				k += 1;
 			}
 		}
-		while (i < mid + 1) {
+		while(i < mid + 1) {
 			b[k] = a[i];
 			i += 1;
 			k += 1;
-			
 		}
-
-		while(j <right+1) {
+		while (j < right + 1) {
 			b[k] = a[j];
 			j += 1;
 			k += 1;
 		}
-		
-		for(int x = left; x < right+1; x++) {
+		for (int x = left ; x < right + 1; x ++) {
 			a[x] = b[x];
 		}
 	}
@@ -68,19 +66,20 @@ public class Sort {
 
 	public static int partition(int a[], int low, int high) {
 		int pi = high;
-		int j = low - 1;
-		for(int i = low; i < high; i ++) {
-			if (a[i] <= a[pi]) {
-				j += 1;
-				int temp = a[j];
-				a[j] = a[i];
-				a[i] = temp;
+		int i = low - 1;
+		for (int j = low; j < high; j ++) {
+			if (a[j] < a[pi]) {
+				i += 1;
+				int temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
 			}
 		}
-		int temp = a[j+1];
-		a[j+1] = a[pi];
+		int temp = a[i + 1];
+		a[i + 1] = a[pi];
 		a[pi] = temp;
-		return j+1;
+		return i + 1;
+		
 	}
 
 	public static void main(String[] args) {

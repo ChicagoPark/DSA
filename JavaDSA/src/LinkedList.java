@@ -53,51 +53,18 @@ public class LinkedList {
 
 	public void insert(int value, int location) {
 		Node newNode = new Node(value, null);
-		if (this.isEmpty() == true) {
+		if(this.isEmpty()) {
 			this.head = newNode;
 			this.tail = newNode;
-			this.size += 1;
-			return;
 		}
 		if (location == 0) {
 			newNode.next = this.head;
 			this.head = newNode;
-		} else if (location == -1) {
-			this.tail.next = newNode;
-			this.tail = newNode;}
-		 else {
-			 int index = 0;
-			 Node temp = this.head;
-			 while (index < location - 1) {
-				 index += 1;
-				 temp = temp.next;
-			 }
-			 newNode.next = temp.next;
-			 temp.next = newNode;
-		}
-		this.size += 1;
-	}
-
-	public int deleteNode(int location) {
-		if (this.head == null) {
-			System.out.println("it is empty");
-			return -1;
-		}
-		int removedValue;
-		if (location == 0) {
-			removedValue = this.head.value;
-			this.head = this.head.next;
+			
 		}
 		else if (location == -1) {
-			int index = 0;
-			Node temp = this.head;
-			while (temp.next != this.tail) {
-				index += 1;
-				temp = temp.next;
-			}
-			removedValue = this.tail.value;
-			temp.next = null;
-			this.tail = temp;
+			this.tail.next = newNode;
+			this.tail = newNode;
 		}
 		else {
 			int index = 0;
@@ -106,11 +73,42 @@ public class LinkedList {
 				index += 1;
 				temp = temp.next;
 			}
-			removedValue = temp.next.value;
-			temp.next = temp.next.next;
+			newNode.next = temp.next;
+			temp.next = newNode;
 		}
-		this.size -= 1;
-		return removedValue;
+		this.size += 1;
+	}
+
+	public int deleteNode(int location) {
+		if (this.isEmpty()) {
+			System.out.println("List is already empty");
+			return -1;
+		}
+		int deletedNode;
+		if (location == 0) {
+			deletedNode = this.head.value;
+			this.head = this.head.next;
+		}
+		else if (location == -1) {
+			Node temp = this.head;
+			while(temp.next != this.tail) {
+				temp = temp.next;
+			}
+			deletedNode = temp.next.value;
+			temp.next = null;
+			this.tail = temp;
+		}
+		else {
+			int index = 0;
+			Node temp = this.head;
+			while(index < location -1) {
+				index += 1;
+				temp = temp.next;
+			}
+			deletedNode = temp.next.value;
+			temp.next= temp.next.next;
+		}
+		return deletedNode;
 	}
 
 	public void display() {

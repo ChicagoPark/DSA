@@ -18,14 +18,11 @@ public class HashLinearProbeDemo {
 	public int lProbe(int value) {
 		int i = this.hashCode(value);
 		int j = 1;
-		while(this.hashTable[i] != 0) {
-			int newCode = this.hashCode(value + j);
-			if(this.hashTable[newCode] == 0) {
-				return newCode;
-			}
+		while(this.hashTable[(i + j)%this.hashTableSize] != 0) {
 			j += 1;
 		}
-		return -1;
+		return (i + j)%this.hashTableSize;
+
 	}
 
 	public void insert(int value) {
