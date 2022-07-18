@@ -9,12 +9,12 @@ public class Intermediate7_reverseNcopy {
 		List<Character> l = Arrays.asList(ray);
 		
 		System.out.print("List is : ");
-		System.out.printf("%s\n\n", l);
+		output(l);
 		
 		// reverse and print out the list
 		Collections.reverse(l);
 		System.out.print("After reverse : ");
-		System.out.printf("%s", l);
+		output(l);
 	
 		// create new array and a new list
 		Character[] newRay = new Character[3];
@@ -22,6 +22,19 @@ public class Intermediate7_reverseNcopy {
 		
 		// copy contents of list into listcopy
 		Collections.copy(listCopy, l);
-		System.out.printf("\n\nCopied one: %s", listCopy);
+		System.out.printf("\n\nCopied one:");
+		output(listCopy);
+		
+		// fill collection with crap
+		Collections.fill(l, 'X');
+		System.out.print("\nAfter filling the list: ");
+		//System.out.printf("%s", l);
+		output(l);
+	}
+	
+	private static void output(List<Character> theList) {
+		for(Character thing: theList)
+			System.out.printf("%s ", thing);
+		System.out.println();
 	}
 }

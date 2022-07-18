@@ -138,31 +138,29 @@ public class LinkedList {
 
 	public void insertSorted(int value) {
 		Node newNode = new Node(value, null);
-		// when the linkedlist is empty
-		if(this.head == null) {
-			this.head = newNode;
+		if(this.isEmpty()) {
 			this.tail = newNode;
+			this.head = newNode;
 		}
-		// when there is an value inside
 		else {
-			Node tempNode = this.head;
-			while (tempNode != null && tempNode.value < value) {
-				tempNode = tempNode.next;
+			Node temp = this.head;
+			while(temp != null && value > temp.value) {
+				temp = temp.next;
 			}
-			
-			if (tempNode == null) {
+			if(temp == null) {
 				this.tail.next = newNode;
-				this.tail = newNode;
+				this.tail= newNode;
 			}
-			else if(tempNode == this.head) {
-				newNode.next = this.head;
+			else if(temp == head) {
+				newNode.next = temp;
 				this.head = newNode;
 			}
 			else {
-				newNode.next = tempNode.next;
-				tempNode.next = newNode;
+				newNode.next = temp.next;
+				temp.next = newNode;
 			}
 		}
+
 	}
 
 	public static void main(String[] args) {
@@ -176,6 +174,7 @@ public class LinkedList {
 		l.display();
 
 		l.insertSorted(0);
+		l.insertSorted(15);
 		l.display();
 
 		System.out.println(l.search(6));
