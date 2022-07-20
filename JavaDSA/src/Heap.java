@@ -24,19 +24,19 @@ public class Heap {
 
 	public void insert(int newNode) {
 		// check the size
-		if(this.cSize >= this.maxSize) {
+		if (this.cSize >= this.maxSize) {
 			System.out.println("It is already empty");
 			return;
 		}
 		this.cSize += 1;
 		this.data[this.cSize] = newNode;
 		int i = this.cSize;
-		while(i > 1 && this.data[i] > this.data[i/2]) {
-			int temp =this.data[i];
-			this.data[i] = this.data[i/2];
-			this.data[i/2] = temp;
-			
-			i = i/2;
+		while (i > 1 && this.data[i] > this.data[i / 2]) {
+			int temp = this.data[i];
+			this.data[i] = this.data[i / 2];
+			this.data[i / 2] = temp;
+
+			i = i / 2;
 		}
 	}
 
@@ -56,31 +56,36 @@ public class Heap {
 	}
 
 	public int deleteMax() {
-		//check the size
-		if (this.isEmpty()) {
-			System.out.println("Already empty");
+		// check the size
+		if (this.cSize == 0) {
 			return -1;
 		}
-		// do the operation and reflect the size
-		int deletedValue = this.data[1];
+		int deletedNode = this.data[1];
+		// delete the root
 		this.data[1] = this.data[this.cSize];
+		// reflect the size
 		this.data[this.cSize] = -1;
 		this.cSize -= 1;
-		
+
 		int i = 1;
-		while (2*i <= this.cSize) {
-			// Main Operation1: Get the child	
-			int j = i *2;
-			if(this.data[j] < this.data[j+1]) 
+		while (2 * i <= this.cSize) {
+			// process the boss node first
+			int j = i * 2;
+			if (this.data[j] < this.data[j + 1])
 				j += 1;
-			if (this.data[j] > this.data[i]) {
-				int temp = this.data[j];
-				this.data[j] = this.data[i];
-				this.data[i] = temp;
+			// switch
+			if (this.data[i] < this.data[j]) {
+				int temp = this.data[i];
+				this.data[i] = this.data[j];
+				this.data[j] = temp;
 			}
+			else {
+				break;
+			}
+
 			i = j;
 		}
-		return deletedValue;
+		return deletedNode;
 	}
 
 	public void heapsort(int a[]) {

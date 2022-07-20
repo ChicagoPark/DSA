@@ -53,23 +53,21 @@ public class LinkedList {
 
 	public void insert(int value, int location) {
 		Node newNode = new Node(value, null);
-		if(this.isEmpty()) {
+		if (this.isEmpty()) {
 			this.head = newNode;
 			this.tail = newNode;
 		}
 		if (location == 0) {
 			newNode.next = this.head;
 			this.head = newNode;
-			
-		}
-		else if (location == -1) {
+
+		} else if (location == -1) {
 			this.tail.next = newNode;
 			this.tail = newNode;
-		}
-		else {
+		} else {
 			int index = 0;
 			Node temp = this.head;
-			while (index < location -1) {
+			while (index < location - 1) {
 				index += 1;
 				temp = temp.next;
 			}
@@ -80,35 +78,34 @@ public class LinkedList {
 	}
 
 	public int deleteNode(int location) {
+		int removedData;
 		if (this.isEmpty()) {
-			System.out.println("List is already empty");
 			return -1;
 		}
-		int deletedNode;
 		if (location == 0) {
-			deletedNode = this.head.value;
+			removedData = this.head.value;
 			this.head = this.head.next;
-		}
-		else if (location == -1) {
+		} else if (location == -1) {
 			Node temp = this.head;
-			while(temp.next != this.tail) {
+			while (temp.next != this.tail) {
 				temp = temp.next;
 			}
-			deletedNode = temp.next.value;
+			removedData = this.tail.value;
 			temp.next = null;
 			this.tail = temp;
-		}
-		else {
+		} else {
 			int index = 0;
 			Node temp = this.head;
-			while(index < location -1) {
+			while (index < location - 1) {
 				index += 1;
 				temp = temp.next;
 			}
-			deletedNode = temp.next.value;
-			temp.next= temp.next.next;
+			removedData = temp.next.value;
+			temp.next = temp.next.next;
+			
 		}
-		return deletedNode;
+		this.size -= 1;
+		return removedData;
 	}
 
 	public void display() {
@@ -138,24 +135,21 @@ public class LinkedList {
 
 	public void insertSorted(int value) {
 		Node newNode = new Node(value, null);
-		if(this.isEmpty()) {
+		if (this.isEmpty()) {
 			this.tail = newNode;
 			this.head = newNode;
-		}
-		else {
+		} else {
 			Node temp = this.head;
-			while(temp != null && value > temp.value) {
+			while (temp != null && value > temp.value) {
 				temp = temp.next;
 			}
-			if(temp == null) {
+			if (temp == null) {
 				this.tail.next = newNode;
-				this.tail= newNode;
-			}
-			else if(temp == head) {
+				this.tail = newNode;
+			} else if (temp == head) {
 				newNode.next = temp;
 				this.head = newNode;
-			}
-			else {
+			} else {
 				newNode.next = temp.next;
 				temp.next = newNode;
 			}

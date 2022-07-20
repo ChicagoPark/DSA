@@ -74,12 +74,11 @@ public class Graphs {
 
 	public void DFS(int starter) {
 		if(this.visited[starter] == 0) {
-			System.out.println(starter);
+			System.out.print(starter + " ");
 			this.visited[starter] = 1;
-			for(int i = 0; i < this.vertices; i++) {
-				if(this.adjMat[starter][i] == 1 && this.visited[i] == 0) {
-					DFS(i);
-				}
+			for(int i = 0; i < this.vertexCount(); i ++) {
+				if(this.visited[i] == 0 && this.adjMat[starter][i] == 1)
+					this.DFS(i);
 			}
 		}
 	}
