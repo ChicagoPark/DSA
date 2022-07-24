@@ -52,10 +52,13 @@ public class LinkedList {
 	}
 
 	public void insert(int value, int location) {
+		// check the size
 		Node newNode = new Node(value, null);
 		if (this.isEmpty()) {
 			this.head = newNode;
 			this.tail = newNode;
+			this.size += 1;
+			return;
 		}
 		if (location == 0) {
 			newNode.next = this.head;
@@ -75,37 +78,35 @@ public class LinkedList {
 			temp.next = newNode;
 		}
 		this.size += 1;
+
 	}
 
 	public int deleteNode(int location) {
-		int removedData;
+		// check the size
+		int removedValue = -1;
 		if (this.isEmpty()) {
-			return -1;
+			return removedValue;
 		}
-		if (location == 0) {
-			removedData = this.head.value;
+		if (location == 1) {
+			removedValue = this.head.value;
 			this.head = this.head.next;
 		} else if (location == -1) {
 			Node temp = this.head;
 			while (temp.next != this.tail) {
 				temp = temp.next;
 			}
-			removedData = this.tail.value;
 			temp.next = null;
 			this.tail = temp;
 		} else {
 			int index = 0;
 			Node temp = this.head;
 			while (index < location - 1) {
-				index += 1;
-				temp = temp.next;
+				removedValue = temp.next.value;
+				temp.next = temp.next.next;
 			}
-			removedData = temp.next.value;
-			temp.next = temp.next.next;
-			
 		}
-		this.size -= 1;
-		return removedData;
+		return removedValue;
+
 	}
 
 	public void display() {
@@ -154,7 +155,6 @@ public class LinkedList {
 				temp.next = newNode;
 			}
 		}
-
 	}
 
 	public static void main(String[] args) {

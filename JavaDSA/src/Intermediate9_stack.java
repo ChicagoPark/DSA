@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class Intermediate9_stack {
-	private static void printStack(Stack<String> s) {
+	private static <T> void printStack(Stack<T> s) {
 		if(s.isEmpty())
 			System.out.println("You have nothing in your stack");
 		else

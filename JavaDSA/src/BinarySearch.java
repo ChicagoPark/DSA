@@ -2,18 +2,18 @@ import java.util.Arrays;
 
 public class BinarySearch {
 	public static void binarySearch(int a[], int value) {
-		int start = 0, end = a.length, mid = (start+end)/2;
-		
-		while(start <= end && a[mid] != value) {
+		int start = 0, end = a.length;
+		int mid = (start+end)/2;
+		while(start < end && a[mid] != value) {
 			if (value < a[mid]) {
 				end = mid - 1;
 			}
 			else {
 				start = mid + 1;
 			}
-			mid = (start+end)/2; 
+			mid = (start+end)/2;
 		}
-		if (a[mid] == value) {
+		if(a[mid] == value) {
 			System.out.println("index: " + mid);
 		}
 	}
