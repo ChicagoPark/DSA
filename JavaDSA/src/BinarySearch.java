@@ -2,10 +2,9 @@ import java.util.Arrays;
 
 public class BinarySearch {
 	public static void binarySearch(int a[], int value) {
-		int start = 0, end = a.length;
-		int mid = (start+end)/2;
+		int start = 0, end = a.length-1, mid = (start+end)/2;
 		while(start < end && a[mid] != value) {
-			if (value < a[mid]) {
+			if(a[mid] > value) {
 				end = mid - 1;
 			}
 			else {
@@ -15,6 +14,9 @@ public class BinarySearch {
 		}
 		if(a[mid] == value) {
 			System.out.println("index: " + mid);
+		}
+		else {
+			System.out.println("NOne");
 		}
 	}
 

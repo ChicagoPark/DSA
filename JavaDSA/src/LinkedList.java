@@ -52,25 +52,24 @@ public class LinkedList {
 	}
 
 	public void insert(int value, int location) {
-		// check the size
+		// Todo
 		Node newNode = new Node(value, null);
-		if (this.isEmpty()) {
+		if(this.head == null) {
 			this.head = newNode;
 			this.tail = newNode;
-			this.size += 1;
-			return;
 		}
-		if (location == 0) {
+		else if (location == 0) {
 			newNode.next = this.head;
-			this.head = newNode;
-
-		} else if (location == -1) {
+			this.head= newNode;
+		}
+		else if (location == -1) {
 			this.tail.next = newNode;
 			this.tail = newNode;
-		} else {
+		}
+		else {
 			int index = 0;
 			Node temp = this.head;
-			while (index < location - 1) {
+			while(index < location -1) {
 				index += 1;
 				temp = temp.next;
 			}
@@ -82,32 +81,40 @@ public class LinkedList {
 	}
 
 	public int deleteNode(int location) {
-		// check the size
-		int removedValue = -1;
-		if (this.isEmpty()) {
-			return removedValue;
+		if(this.isEmpty() == true) {
+			return -1;
 		}
-		if (location == 1) {
-			removedValue = this.head.value;
+		int deletedValue;
+		if(location == 0) {
+			deletedValue = this.head.value;
 			this.head = this.head.next;
-		} else if (location == -1) {
+		}
+		else if(location == -1) {
+			deletedValue = this.tail.value;
 			Node temp = this.head;
-			while (temp.next != this.tail) {
+			while(temp.next != this.tail) {
 				temp = temp.next;
 			}
 			temp.next = null;
 			this.tail = temp;
-		} else {
+		}
+		else {
 			int index = 0;
 			Node temp = this.head;
-			while (index < location - 1) {
-				removedValue = temp.next.value;
-				temp.next = temp.next.next;
+			while(index < location -1) {
+				index +=1;
+				temp = temp.next;
 			}
+			deletedValue = temp.next.value;
+			temp.next = temp.next.next;
 		}
-		return removedValue;
-
+		
+		this.size -= 1;
+		
+		return deletedValue;
+		
 	}
+	
 
 	public void display() {
 		Node temp = this.head;
@@ -155,6 +162,7 @@ public class LinkedList {
 				temp.next = newNode;
 			}
 		}
+		this.size += 1;
 	}
 
 	public static void main(String[] args) {
