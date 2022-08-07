@@ -54,30 +54,31 @@ public class Heap {
 	}
 
 	public int deleteMax() {
-		if (this.isEmpty()) { 
+		// check the size
+		if (this.isEmpty()) {
 			return -1;
 		}
 		// replace the root
-		int deletedValue = this.data[1];
+		int deletedNumber = this.data[1];
 		this.data[1] = this.data[this.cSize];
 		this.data[this.cSize] = -1;
 		this.cSize -= 1;
 		
+		// going down
 		int i = 1;
-		int j;
-		while(2*i <= this.cSize) {
-			j = 2*i;
+		while(i*2 < this.cSize) {
+			int j = i * 2;
 			if(this.data[j] < this.data[j+1]) {
 				j += 1;
 			}
 			if(this.data[i] < this.data[j]) {
-				int temp = this.data[i];
-				this.data[i] = this.data[j];
-				this.data[j] = temp;
+				int temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
 			}
 			i = j;
 		}
-		return deletedValue;
+		return deletedNumber;
 	}
 
 	public void heapsort(int a[]) {

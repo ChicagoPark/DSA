@@ -19,7 +19,7 @@ public class HashLinearProbeDemo {
 		int code = this.hashCode(value);
 		int j = 1;
 		while(this.hashTable[(code + j) % this.hashTableSize] != 0) {
-			j += 1;
+			j++;
 		}
 		return (code + j) % this.hashTableSize;
 	}

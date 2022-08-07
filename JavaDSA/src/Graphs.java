@@ -75,8 +75,8 @@ public class Graphs {
 		if (this.visited[starter] == 0) {
 			this.visited[starter] = 1;
 			System.out.println(starter);
-			for(int i = 0; i < this.vertexCount(); i ++) {
-				if(this.visited[i] == 0 && this.adjMat[starter][i]==1) {
+			for(int i = 0 ; i < this.vertexCount(); i ++) {
+				if(this.adjMat[starter][i] == 1 && this.visited[i] == 0) {
 					this.DFS(i);
 				}
 			}
