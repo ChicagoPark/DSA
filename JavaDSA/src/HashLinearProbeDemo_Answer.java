@@ -16,12 +16,13 @@ public class HashLinearProbeDemo_Answer {
 
 	// COLLISION
 	public int lProbe(int value) {
-		int i  = this.hashCode(value);
-		int j = 1;
-		while (this.hashTable[(i+j)%this.hashTableSize] != 0) {
-			j+=1;
+		int code = this.hashCode(value);
+		int i = 1;
+		while(this.hashTable[(code + i) % this.hashTableSize] != 0) {
+			i += 1;
 		}
-		return (i+j)%this.hashTableSize;
+		return (code + i) % this.hashTableSize;
+
 
 	}
 	/*

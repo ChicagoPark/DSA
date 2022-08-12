@@ -52,22 +52,25 @@ public class LinkedList {
 	}
 
 	public void insert(int value, int location) {
-		// Todo
+		//TODO
 		Node newNode = new Node(value, null);
-		if (this.head == null) {
+		if(this.isEmpty()) {
 			this.head = newNode;
 			this.tail = newNode;
-		} else if (location == 0) {
+		}
+		if(location == 0) {
 			newNode.next = this.head;
 			this.head = newNode;
-		} else if (location == -1) {
+		}
+		else if(location == -1) {
 			this.tail.next = newNode;
 			this.tail = newNode;
-		} else {
+		}
+		else {
 			int index = 0;
 			Node temp = this.head;
-			while (index < location - 1) {
-				index += 1;
+			while(index < location -1) {
+				index+=1;
 				temp = temp.next;
 			}
 			newNode.next = temp.next;
@@ -78,17 +81,17 @@ public class LinkedList {
 	}
 
 	public int deleteNode(int location) {
-		if(this.isEmpty()) {
+		if(this.head == null) {
 			return -1;
 		}
-		int deletedValue;
+		int dNode;
 		if(location == 0) {
-			deletedValue = this.head.value;
+			dNode = this.head.value;
 			this.head = this.head.next;
 		}
-		else if (location == -1) {
+		else if(location == -1) {
 			Node temp = this.head;
-			deletedValue = this.tail.value;
+			dNode = this.tail.value;
 			while(temp.next != this.tail) {
 				temp = temp.next;
 			}
@@ -102,11 +105,11 @@ public class LinkedList {
 				index += 1;
 				temp = temp.next;
 			}
-			deletedValue = temp.next.value;
+			dNode = temp.next.value;
 			temp.next = temp.next.next;
 		}
 		this.size -= 1;
-		return deletedValue;
+		return dNode;
 	}
 
 	public void display() {

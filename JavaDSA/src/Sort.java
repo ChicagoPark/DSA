@@ -50,10 +50,11 @@ public class Sort {
 			j += 1;
 			k += 1;
 		}
-		for (int x = left ; x < right + 1; x ++) {
+		for(int x = left ; x < right + 1; x++) {
 			a[x] = b[x];
 		}
 	}
+
 	public static void quickSort(int a[], int low, int high) {
 		if (low < high) {
 			int pi = partition(a, low, high);
@@ -64,7 +65,7 @@ public class Sort {
 	public static int partition(int a[], int low, int high) {
 		int pi = high;
 		int j = low - 1;
-		for (int i = low ; i < high ; i ++) {
+		for(int i = low ; i < high + 1; i ++) {
 			if(a[i] < a[pi]) {
 				j += 1;
 				int temp = a[j];
@@ -72,10 +73,12 @@ public class Sort {
 				a[i] = temp;
 			}
 		}
-		int temp = a[j+1];
-		a[j + 1] = a[pi];
+		j += 1;
+		int temp = a[j];
+		a[j] = a[pi];
 		a[pi] = temp;
-		return j + 1;
+		
+		return j;
 	}
 
 	public static void main(String[] args) {
