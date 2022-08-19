@@ -54,11 +54,11 @@ public class LinkedList {
 	public void insert(int value, int location) {
 		//TODO
 		Node newNode = new Node(value, null);
-		if(this.isEmpty()) {
+		if(this.head == null) {
 			this.head = newNode;
 			this.tail = newNode;
 		}
-		if(location == 0) {
+		else if(location == 0) {
 			newNode.next = this.head;
 			this.head = newNode;
 		}
@@ -70,28 +70,28 @@ public class LinkedList {
 			int index = 0;
 			Node temp = this.head;
 			while(index < location -1) {
-				index+=1;
+				index += 1;
 				temp = temp.next;
 			}
 			newNode.next = temp.next;
 			temp.next = newNode;
 		}
 		this.size += 1;
-
 	}
 
 	public int deleteNode(int location) {
-		if(this.head == null) {
+		// Todo
+		int dNode;
+		if(this.isEmpty()) {
 			return -1;
 		}
-		int dNode;
-		if(location == 0) {
+		if (location == 0) {
 			dNode = this.head.value;
 			this.head = this.head.next;
 		}
-		else if(location == -1) {
-			Node temp = this.head;
+		else if (location == -1) {
 			dNode = this.tail.value;
+			Node temp = this.head;
 			while(temp.next != this.tail) {
 				temp = temp.next;
 			}

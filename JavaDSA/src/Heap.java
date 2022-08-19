@@ -23,22 +23,20 @@ public class Heap {
 	}
 
 	public void insert(int newNode) {
-		// put into the end of the index
+		// check the size
 		if(this.cSize >= this.maxSize) {
 			return;
 		}
 		this.cSize += 1;
+		// put at the end
 		this.data[this.cSize] = newNode;
 		
-		// going up
 		int i = this.cSize;
 		while(i > 1 && this.data[i] > this.data[i/2]) {
-			int j = i/2;
 			int temp = this.data[i];
-			this.data[i] = this.data[j];
-			this.data[j] = temp;
-			i = j;
-			
+			this.data[i] = this.data[i/2];
+			this.data[i/2] = temp;
+			i/=2;
 		}
 	}
 
@@ -59,30 +57,27 @@ public class Heap {
 
 	public int deleteMax() {
 		int dValue;
-		if(this.cSize == 0) {
+		if(this.isEmpty()) {
 			dValue = -1;
 		}
-		else {
-			dValue = this.data[1];
-			this.data[1] = this.data[this.cSize];
-			this.data[this.cSize] = -1;
-			this.cSize -= 1;
-			
-			int i = 1;
-			while(i * 2 <= this.cSize) {
-				int j = i *2;
-				if(this.data[j] < this.data[j+1]) {
-					j += 1;
-				}
-				if(this.data[i] < this.data[j]) {
-					int temp = this.data[j];
-					this.data[j] = this.data[i];
-					this.data[i] = temp;
-				}
-				i = j;
-			}
-		}
+		dValue = this.data[1];
+		this.data[1] = this.data[this.cSize];
+		this.data[this.cSize] = -1;
+		this.cSize -= 1;
 		
+		int i = 1;
+		while(2*i <= this.cSize) {
+			int j = 2 * i;
+			if(this.data[j] < this.data[j+1]) {
+				j += 1;
+			}
+			if(this.data[i] < this.data[j]) {
+				int temp = this.data[i];
+				this.data[i] = this.data[j];
+				this.data[j] = temp;
+			}
+			i = j;
+		}
 		return dValue;
 	}
 
