@@ -21,7 +21,7 @@ public class HashLinearProbeDemo {
 		while(this.hashTable[(code + i)%this.hashTableSize] != 0) {
 			i += 1;
 		}
-		return (code + i)%this.hashTableSize;
+		return this.hashTable[(code + i)%this.hashTableSize];
 	}
 
 	public void insert(int value) {

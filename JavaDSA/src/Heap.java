@@ -24,19 +24,17 @@ public class Heap {
 
 	public void insert(int newNode) {
 		// check the size
-		if(this.cSize >= this.maxSize) {
+		if(this.cSize > this.maxSize) {
 			return;
 		}
 		this.cSize += 1;
-		// put at the end
 		this.data[this.cSize] = newNode;
-		
 		int i = this.cSize;
 		while(i > 1 && this.data[i] > this.data[i/2]) {
 			int temp = this.data[i];
 			this.data[i] = this.data[i/2];
 			this.data[i/2] = temp;
-			i/=2;
+			i = i/2;
 		}
 	}
 
