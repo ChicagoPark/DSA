@@ -72,10 +72,10 @@ public class Graphs {
 		}
 	}
 	public void DFS(int starter) {
-		if(this.visited[starter] == 0) {
+		if (this.visited[starter] == 0) {
 			System.out.println(starter);
 			this.visited[starter] = 1;
-			for(int i = 0 ; i < this.vertexCount(); i ++) {
+			for (int i = 0 ; i < this.vertexCount(); i ++) {
 				if(this.adjMat[starter][i] == 1 && this.visited[i] == 0) {
 					this.DFS(i);
 				}

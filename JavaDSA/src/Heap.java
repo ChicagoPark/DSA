@@ -27,15 +27,18 @@ public class Heap {
 		if(this.cSize > this.maxSize) {
 			return;
 		}
-		this.cSize += 1;
+		this.cSize ++;
+		// insert the value
 		this.data[this.cSize] = newNode;
+
 		int i = this.cSize;
 		while(i > 1 && this.data[i] > this.data[i/2]) {
 			int temp = this.data[i];
 			this.data[i] = this.data[i/2];
 			this.data[i/2] = temp;
-			i = i/2;
+			i /= 2;
 		}
+		
 	}
 
 	public int max() {
@@ -55,26 +58,32 @@ public class Heap {
 
 	public int deleteMax() {
 		int dValue;
-		if(this.isEmpty()) {
+		if (this.isEmpty()) {
 			dValue = -1;
 		}
+		// replace the root one with the tail
 		dValue = this.data[1];
 		this.data[1] = this.data[this.cSize];
 		this.data[this.cSize] = -1;
 		this.cSize -= 1;
 		
 		int i = 1;
-		while(2*i <= this.cSize) {
-			int j = 2 * i;
+		while(i*2 <= this.cSize) {
+			int j = i * 2;
+			// get the boss child value
 			if(this.data[j] < this.data[j+1]) {
 				j += 1;
 			}
+			// compare and switch it
 			if(this.data[i] < this.data[j]) {
 				int temp = this.data[i];
 				this.data[i] = this.data[j];
 				this.data[j] = temp;
+				i = j;
 			}
-			i = j;
+			else {
+				break;
+			}
 		}
 		return dValue;
 	}

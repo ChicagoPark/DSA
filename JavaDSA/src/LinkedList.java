@@ -57,13 +57,16 @@ public class LinkedList {
 		if (this.head == null) {
 			this.head = newNode;
 			this.tail = newNode;
-		} else if (location == 0) {
+		}
+		else if (location == 0) {
 			newNode.next = this.head;
 			this.head = newNode;
-		} else if (location == -1) {
+		}
+		else if (location == -1) {
 			this.tail.next = newNode;
 			this.tail = newNode;
-		} else {
+		}
+		else {
 			int index = 0;
 			Node temp = this.head;
 			while(index < location - 1) {
@@ -71,23 +74,22 @@ public class LinkedList {
 				temp = temp.next;
 			}
 			newNode.next = temp.next;
-			temp.next = newNode;
+			temp.next= newNode;
 		}
 		this.size += 1;
 	}
 
 	public int deleteNode(int location) {
-		// Todo
-		int dNode;
-		if (this.isEmpty()) {
+		if (this.head == null) {
 			return -1;
 		}
+		int dNode;
 		if (location == 0) {
 			dNode = this.head.value;
 			this.head = this.head.next;
 		} else if (location == -1) {
-			dNode = this.tail.value;
 			Node temp = this.head;
+			dNode = this.tail.value;
 			while (temp.next != this.tail) {
 				temp = temp.next;
 			}
