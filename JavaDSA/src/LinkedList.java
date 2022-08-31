@@ -57,14 +57,43 @@ public class LinkedList {
 		if (this.head == null) {
 			this.head = newNode;
 			this.tail = newNode;
-		}
-		else if (location == 0) {
+		} else if (location == 0) {
 			newNode.next = this.head;
 			this.head = newNode;
-		}
-		else if (location == -1) {
+		} else if (location == -1) {
 			this.tail.next = newNode;
 			this.tail = newNode;
+		} else {
+			int index = 0;
+			Node temp = this.head;
+			while(index < location - 1) {
+				index += 1;
+				temp = temp.next;
+			}
+			newNode.next = temp.next;
+			temp.next = newNode;
+		}
+		this.size += 1;
+	}
+
+	public int deleteNode(int location) {
+		// Todo
+		int dValue;
+		if(this.head == null) {
+			return -1;
+		}
+		if (location == 0) {
+			dValue = this.head.value;
+			this.head = this.head.next;
+		}
+		else if(location == -1) {
+			Node temp = this.head;
+			dValue =this.tail.value;
+			while(temp.next != this.tail) {
+				temp = temp.next;
+			}
+			temp.next = null;
+			this.tail = temp;
 		}
 		else {
 			int index = 0;
@@ -73,40 +102,11 @@ public class LinkedList {
 				index += 1;
 				temp = temp.next;
 			}
-			newNode.next = temp.next;
-			temp.next= newNode;
-		}
-		this.size += 1;
-	}
-
-	public int deleteNode(int location) {
-		if (this.head == null) {
-			return -1;
-		}
-		int dNode;
-		if (location == 0) {
-			dNode = this.head.value;
-			this.head = this.head.next;
-		} else if (location == -1) {
-			Node temp = this.head;
-			dNode = this.tail.value;
-			while (temp.next != this.tail) {
-				temp = temp.next;
-			}
-			temp.next = null;
-			this.tail = temp;
-		} else {
-			int index = 0;
-			Node temp = this.head;
-			while (index < location - 1) {
-				index += 1;
-				temp = temp.next;
-			}
-			dNode = temp.next.value;
+			dValue = temp.next.value;
 			temp.next = temp.next.next;
 		}
-		this.size -= 1;
-		return dNode;
+		this.size --;
+		return dValue;
 	}
 
 	public void display() {
